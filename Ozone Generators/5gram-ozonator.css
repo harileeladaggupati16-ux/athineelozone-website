@@ -1,0 +1,96 @@
+body{
+    font-family:Arial,sans-serif;
+    color:#333;
+}
+
+.hero{
+    background:linear-gradient(135deg,#007bff,#00c6ff);
+    color:white;
+    padding:90px 0;
+}
+
+.hero h1{
+    font-size:55px;
+    font-weight:700;
+}
+
+.hero p{
+    font-size:20px;
+    margin:20px 0;
+}
+
+.product-img{
+    max-height:420px;
+    border-radius:20px;
+    box-shadow:0 20px 40px rgba(0,0,0,.3);
+}
+
+.feature-card{
+    padding:30px;
+    background:white;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+    height:100%;
+}
+
+.feature-card:hover{
+    transform:translateY(-8px);
+}
+
+.spec-section{
+    background:#f5f8fc;
+    padding:80px 0;
+}
+
+.table{
+    background:white;
+}
+
+.table th{
+    width:35%;
+    background:#0d6efd;
+    color:white;
+}
+
+.app-box{
+    padding:30px;
+    background:white;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.1);
+    font-weight:bold;
+    transition:.3s;
+}
+
+.app-box:hover{
+    background:#0d6efd;
+    color:white;
+    transform:translateY(-5px);
+}
+
+.cta{
+    background:#0d6efd;
+    color:white;
+    padding:80px 0;
+}
+
+.btn-light{
+    font-weight:bold;
+    padding:14px 35px;
+    border-radius:40px;
+}
+
+@media(max-width:768px){
+    .hero{
+        text-align:center;
+    }
+    
+    .hero h1{
+        font-size:38px;
+    }
+
+    .product-img{
+        margin-top:40px;
+        max-height:300px;
+    }
+}

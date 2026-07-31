@@ -29,6 +29,7 @@ body{
     color:#222;
     line-height:1.7;
     overflow-x:hidden;
+    padding: 80px;
 }
 
 img{
@@ -184,7 +185,7 @@ p{
     color:#fff;
     font-weight:600;
     padding:12px 20px;
-    border-radius: 50px;
+    border-radius:50px;
     transition:all 0.3s ease;
 }
 
@@ -196,8 +197,87 @@ p{
 }
 
 .btn-wa i{
-    font-size: 20px;
-    vertical-align: middle;
+    font-size:20px;
+    vertical-align:middle;
+}
+
+/* Modern Dropdown Menu */
+.dropdown-menu {
+    position:absolute;
+    min-width:250px;
+    padding:10px;
+    border:1px solid #1380f4;
+    border-radius:18px;
+    background:#fff;
+    box-shadow:0 12px 30px rgba(0, 0, 0, 0.12);
+    overflow:hidden;
+    z-index:1;
+}
+
+/* Animated Gradient Border */
+.dropdown-menu::before {
+    content:"";
+    position:absolute;
+    inset:0;
+    padding:2px;
+    border-radius:inherit;
+    background:linear-gradient(90deg, #0d6efd, #00c6ff, #4da3ff, #0d6efd);
+    background-size:300% 300%;
+    animation:borderRotate 4s linear infinite;
+
+    /* Create transparent center */
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Dropdown Items */
+.dropdown-menu .dropdown-item {
+    color:#1f2937;
+    font-size:15px;
+    font-weight:500;
+    padding:12px 18px;
+    border-radius:10px;
+    transition:all 0.3s ease;
+    position:relative;
+}
+
+/* Hover Effect */
+.dropdown-menu .dropdown-item:hover {
+    background:linear-gradient(135deg, #2777ee, #00b4ff, #41ce93);
+    color:#fff;
+    transform:translateX(5px);
+}
+
+/* Arrow Animation */
+.dropdown-menu .dropdown-item::after {
+    content:"→";
+    float:right;
+    opacity:0;
+    transition:all 0.3s ease;
+}
+
+.dropdown-menu .dropdown-item:hover::after {
+    opacity:1;
+    transform:translateX(4px);
+}
+
+/* Dropdown Hover Glow */
+.dropdown-menu:hover {
+    border-color:#00c6ff;
+    box-shadow:
+        0 0 10px rgba(77, 163, 255, 0.7),
+        0 0 20px rgba(0, 198, 255, 0.5),
+        0 0 35px rgba(13, 110, 253, 0.3);
 }
 
 /* HERO */
@@ -995,7 +1075,6 @@ iframe{
         margin-top:20px;
     }
 }
-
 
 @media(max-width:576px){
     .hero h1{
