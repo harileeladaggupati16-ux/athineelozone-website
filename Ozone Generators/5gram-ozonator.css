@@ -4,7 +4,7 @@ body{
 }
 
 .hero{
-    background:linear-gradient(135deg,#007bff,#00c6ff);
+    background:linear-gradient(135deg,#014084,#0375d8);
     color:white;
     padding:90px 0;
 }
@@ -36,6 +36,16 @@ body{
 
 .feature-card:hover{
     transform:translateY(-8px);
+    background:linear-gradient(135deg,#0056ff,#00cfff);
+}
+
+.feature-card:hover h4,
+.feature-card:hover p{
+    color:#fff;
+}
+
+.feature-card:hover i{
+    color:#fff;
 }
 
 .spec-section{
@@ -49,7 +59,7 @@ body{
 
 .table th{
     width:35%;
-    background:#0d6efd;
+    background:#0344a6;
     color:white;
 }
 
@@ -63,13 +73,13 @@ body{
 }
 
 .app-box:hover{
-    background:#0d6efd;
+    background:#024cbb;
     color:white;
     transform:translateY(-5px);
 }
 
 .cta{
-    background:#0d6efd;
+    background:#02409e;
     color:white;
     padding:80px 0;
 }

@@ -1,0 +1,167 @@
+:root{
+    --primary:#0A66C2;
+    --secondary:#00B8D9;
+    --dark:#0B1F33;
+    --light:#F4F8FC;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f8fc;
+    color:#333;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    background:linear-gradient(135deg,#0B1F33,#0A66C2);
+    color:#fff;
+}
+
+.hero h1{
+    font-size:4rem;
+    font-weight:700;
+}
+
+.hero p{
+    font-size:1.2rem;
+    opacity:.9;
+}
+
+.glass-card{
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:20px;
+    padding:35px;
+}
+
+.product-image{
+    width:100%;
+    transition:.5s;
+}
+
+.product-image:hover{
+    transform:scale(1.05) rotate(-2deg);
+}
+
+.feature-card{
+    background:#fff;
+    border-radius:18px;
+    padding:35px;
+    transition:.4s;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.feature-box:hover{
+    transform:translateY(-10px);
+    background:linear-gradient(135deg,#0056ff,#00cfff);
+}
+
+.feature-box:hover h5,
+.feature-box:hover p{
+    color:#fff;
+}
+
+.feature-box:hover i{
+    color:#fff;
+}
+
+.spec-card{
+    background:#fff;
+    border-left:5px solid var(--primary);
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.btn-custom{
+    padding:15px 40px;
+    border-radius:50px;
+    background:linear-gradient(135deg,#00B8D9,#0A66C2);
+    color:#fff;
+    font-weight:600;
+}
+
+.btn-custom:hover{
+    transform:translateY(-3px);
+    color:#fff;
+}
+
+.section-title{
+    font-weight:700;
+    color:#0056b3;
+    margin-bottom:25px;
+}
+
+.product-img{
+    width:100%;
+    border-radius:10px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.feature-box{
+    background:#fff;
+    border-radius:10px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    transition:.3s;
+    height:100%;
+}
+
+.feature-box:hover{
+    transform:translateY(-8px);
+}
+
+.feature-box i{
+    font-size:40px;
+    color:#0d6efd;
+    margin-bottom:15px;
+}
+
+
+
+/* Specification Table */
+.table{
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.table th{
+    width:35%;
+    background:#0d6efd;
+    color:#fff;
+    font-weight:600;
+}
+
+.table td{
+    background:#fff;
+}
+
+.application-card{
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    height:100%;
+}
+
+.footer{
+    background:#003366;
+    color:#fff;
+    padding:25px 0;
+}
+
+@media(max-width:768px){
+    .hero{
+        padding:60px 0;
+        text-align:center;
+    }
+
+    .hero h1{
+        font-size:2rem;
+    }
+}
