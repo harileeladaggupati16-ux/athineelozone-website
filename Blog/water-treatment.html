@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Water Treatment | Ozone Technology</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+body{
+    font-family:Arial, sans-serif;
+    background:#f5fbff;
+}
+
+.hero{
+    background:linear-gradient(135deg,#0d6efd,#00b4d8);
+    color:#fff;
+    text-align:center;
+    padding:90px 20px;
+}
+
+.hero h1{
+    font-size:48px;
+    font-weight:bold;
+}
+
+.hero p{
+    font-size:18px;
+    max-width:700px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:32px;
+    font-weight:bold;
+}
+
+.section-title p{
+    font-size:20px;
+}
+
+.feature-card{
+    background:#fff;
+    border-radius:15px;
+    padding:30px;
+    text-align:center;
+    transition:.4s;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    height:100%;
+}
+
+.feature-card:hover{
+    transform:translateY(-10px);
+}
+
+.icon-box{
+    width:90px;
+    height:90px;
+    margin:auto;
+    border-radius:50%;
+    background:#0d6efd;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.benefits{
+    background:#fff;
+    padding:60px 0;
+}
+
+.benefit-icon{
+    color:#0d6efd;
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.benefit-icon:hover{
+    color:#0061ff;
+}
+
+.cta{
+    background: linear-gradient(135deg, #0061ff, #60efff);
+    color:#fff;
+    text-align:center;
+    padding:70px 20px;
+}
+
+.btn-custom{
+    background:#fff;
+    color:#0d6efd;
+    padding:12px 30px;
+    font-weight:bold;
+    border-radius:50px;
+    text-decoration:none;
+}
+
+.btn-custom:hover{
+    background:#eaf4ff;
+}
+
+.feature-card{
+    background:#fff;
+    border-radius:18px;
+    padding:35px 25px;
+    text-align:center;
+    transition:all .4s ease;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    overflow:hidden;
+    position:relative;
+    height:100%;
+}
+
+.feature-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:5px;
+    background:linear-gradient(90deg,#0d6efd,#00c6ff);
+    transition:.5s;
+}
+
+.feature-card:hover::before{
+    left:0;
+}
+
+.feature-card:hover{
+    transform:translateY(-12px) scale(1.03);
+    box-shadow:0 20px 40px rgba(13,110,253,.25);
+}
+
+.feature-icon{
+    width:90px;
+    height:90px;
+    margin:0 auto 20px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#0d6efd,#00c6ff);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:38px;
+    transition:.4s;
+}
+
+.feature-card:hover .feature-icon{
+    transform:rotateY(180deg) scale(1.15);
+    background:linear-gradient(135deg,#00c6ff,#0d6efd);
+}
+
+.feature-card h4{
+    font-weight:700;
+    margin-bottom:15px;
+    transition:.3s;
+}
+
+.feature-card p{
+    color:#666;
+    line-height:1.7;
+}
+
+.feature-card:hover h4{
+    color:#0d6efd;
+}
+</style>
+</head>
+
+<body>
+<!-- Hero -->
+<section class="hero">
+    <div class="container">
+        <h1>Water Treatment Using Ozone</h1>
+        <p>
+            Advanced ozone technology removes bacteria, viruses, odor,
+            and harmful contaminants from water without harmful chemicals.
+        </p>
+    </div>
+</section>
+
+<!-- Features -->
+<section class="py-5">
+    <div class="container">
+        <div class="section-title">
+            <h2>Why Choose Ozone Water Treatment?</h2>
+            <p>Clean • Safe • Eco-Friendly</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="icon-box">
+                        <i class="fas fa-droplet"></i>
+                    </div>
+                    <h4>Pure Water</h4>
+                    <p>Removes impurities and improves water quality for homes and industries.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="icon-box">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
+                    <h4>99.9% Disinfection</h4>
+                    <p>Kills bacteria, viruses, fungi, and microorganisms naturally.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="icon-box">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h4>Eco Friendly</h4>
+                    <p>No chemical residue. Ozone converts back into oxygen after treatment.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Benefits -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5 section-title p">
+            <h2 class="fw-bold">Benefits of Ozone Water Treatment</h2>
+            <p class="text-muted">Clean Water • Healthy Life • Sustainable Future</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h4>Crystal Clear Water</h4>
+                    <p>Removes suspended particles and improves water clarity.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h4>Chemical Free</h4>
+                    <p>No harmful chemicals or chlorine residues remain in water.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h4>Odor Removal</h4>
+                    <p>Eliminates unpleasant smells and improves water taste.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <h4>Eco Friendly</h4>
+                    <p>Ozone naturally converts back to oxygen without pollution.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <div class="container">
+        <h2>Need Water Treatment Solutions?</h2>
+        <p class="mb-4">
+            Contact us today for customized ozone systems for residential,
+            commercial, and industrial applications.
+        </p>
+        <a href="contact.html" class="btn-custom">Contact Us</a>
+    </div>
+</section>
+
+</body>
+</html>

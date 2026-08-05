@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Industrial Ozone Applications</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+body{
+    font-family:Arial,sans-serif;
+    background:#f5fbff;
+}
+
+/* Hero */
+.hero{
+    background:linear-gradient(135deg,#0d47a1,#00b4d8);
+    color:#fff;
+    padding:100px 20px;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:48px;
+    font-weight:700;
+}
+
+.hero p{
+    max-width:800px;
+    margin:auto;
+    font-size:18px;
+}
+
+/* Section */
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-weight:bold;
+}
+
+/* Cards */
+.feature-card{
+    background:#fff;
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.4s;
+    height:100%;
+}
+
+.feature-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 35px rgba(0,123,255,.25);
+}
+
+.icon-box{
+    width:90px;
+    height:90px;
+    background:linear-gradient(135deg,#0d6efd,#00c6ff);
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:auto;
+    margin-bottom:20px;
+    color:#fff;
+    font-size:40px;
+}
+
+.feature-card{
+    background:#fff;
+    border-radius:18px;
+    padding:35px 25px;
+    text-align:center;
+    transition:all .4s ease;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    overflow:hidden;
+    position:relative;
+    height:100%;
+}
+
+.feature-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:5px;
+    background:linear-gradient(90deg,#0d6efd,#00c6ff);
+    transition:.5s;
+}
+
+.feature-card:hover::before{
+    left:0;
+}
+
+.feature-card:hover{
+    transform:translateY(-12px) scale(1.03);
+    box-shadow:0 20px 40px rgba(13,110,253,.25);
+}
+
+.icon-box{
+    width:90px;
+    height:90px;
+    margin:0 auto 20px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#0d6efd,#00c6ff);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:38px;
+    transition:.4s;
+}
+
+.feature-card:hover .icon-box{
+    transform:rotateY(180deg) scale(1.15);
+    background:linear-gradient(135deg,#00c6ff,#0d6efd);
+}
+
+.feature-card h4{
+    font-weight:700;
+    margin-bottom:15px;
+    transition:.3s;
+}
+
+.feature-card p{
+    color:#666;
+    line-height:1.7;
+}
+
+.feature-card:hover h4{
+    color:#0d6efd;
+}
+
+/* Blue Strip */
+.feature-strip{
+    background:linear-gradient(135deg,#0d47a1,#1565c0);
+    padding:22px 0;
+}
+
+.feature-list{
+    display:flex;
+    justify-content:center;
+    gap:60px;
+    flex-wrap:wrap;
+}
+
+.feature-item{
+    color:#fff;
+    font-size:20px;
+    font-weight:600;
+}
+
+.feature-item i{
+    color:#20e77b;
+    margin-right:10px;
+}
+
+/* CTA */
+.cta{
+    background:#0d6efd;
+    color:#fff;
+    text-align:center;
+    padding:70px 20px;
+}
+
+.btn-custom{
+    display:inline-block;
+    padding:12px 35px;
+    border-radius:40px;
+    background:#fff;
+    color:#0d6efd;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.btn-custom:hover{
+    background:#e8f2ff;
+}
+</style>
+</head>
+
+<body>
+<!-- Hero -->
+<section class="hero">
+    <div class="container">
+        <h1>Industrial Ozone Applications</h1>
+        <p>
+            Industrial ozone systems are widely used for water treatment, wastewater processing,
+            food sanitation, textile bleaching, odor control, and industrial disinfection,
+            helping improve efficiency while reducing chemical usage.
+        </p>
+    </div>
+</section>
+
+<!-- Applications -->
+<section class="py-5">
+    <div class="container">
+        <div class="section-title">
+            <h2>Industrial Applications</h2>
+            <p>Powerful • Sustainable • Reliable</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="feature-card">
+                    <div class="icon-box">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h4>Manufacturing</h4>
+                    <p>Supports industrial cleaning and sanitation processes.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="feature-card">
+                    <div class="icon-box">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h4>Wastewater</h4>
+                    <p>Helps reduce pollutants, color, and odors in industrial wastewater.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="feature-card">
+                    <div class="icon-box">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h4>Food Industry</h4>
+                    <p>Used for food processing equipment sanitation and surface disinfection.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="feature-card">
+                    <div class="icon-box">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <h4>Odor Control</h4>
+                    <p>Helps reduce unpleasant industrial odors in controlled applications.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Feature Strip -->
+<section class="feature-strip">
+    <div class="container">
+        <div class="feature-list">
+            <div class="feature-item">
+                <i class="fa-solid fa-circle-check"></i>
+                Chemical Reduction
+            </div>
+            
+            <div class="feature-item">
+                <i class="fa-solid fa-circle-check"></i>
+                Eco Friendly
+            </div>
+            
+            <div class="feature-item">
+                <i class="fa-solid fa-circle-check"></i>
+                High Efficiency
+            </div>
+            
+            <div class="feature-item">
+                <i class="fa-solid fa-circle-check"></i>
+                Cost Effective
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Benefits -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="section-title">
+            <h2>Key Benefits</h2>
+            <p>Improving Industrial Productivity</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="feature-card">
+                    <div class="icon-box">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h4>Environment Friendly</h4>
+                    <p>Reduces dependence on many traditional chemical disinfectants in suitable processes.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="feature-card">
+                    <div class="icon-box">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h4>Fast Oxidation</h4>
+                    <p>Strong oxidizing properties help treat contaminants efficiently.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="feature-card">
+                    <div class="icon-box">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
+                    <h4>Effective Disinfection</h4>
+                    <p>Used in many industrial systems to reduce microorganisms under controlled conditions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <div class="container">
+        <h2>Looking for Industrial Ozone Solutions?</h2>
+        <p class="mb-4">
+            Our industrial ozone systems are designed for water treatment,
+            food processing, textile, pharmaceutical, and manufacturing industries.
+        </p>
+        <a href="contact.html" class="btn-custom">Contact Us</a>
+    </div>
+</section>
+
+</body>
+</html>

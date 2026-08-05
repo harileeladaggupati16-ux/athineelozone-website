@@ -1,0 +1,278 @@
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* GLOBAL */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f7fb;
+    color:#222;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+/* HERO */
+.blog-hero{
+    background:linear-gradient(135deg,#0056ff,#00c6ff);
+    color:#fff;
+    padding:120px 0;
+}
+
+.blog-hero h1{
+    font-size:58px;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.blog-hero p{
+    font-size:18px;
+    opacity:.9;
+}
+
+.search-box{
+    max-width:600px;
+    margin:35px auto 0;
+}
+
+.search-box input{
+    height:58px;
+    border:none;
+    border-radius:50px;
+    padding:0 25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.search-box input:focus{
+    box-shadow:0 10px 30px rgba(0,86,255,.25);
+    outline:none;
+}
+
+/* SECTION TITLE */
+.section-title{
+    font-size:38px;
+    font-weight:700;
+    margin-bottom:40px;
+    color:#222;
+}
+
+/* FEATURED BLOG */
+.featured-blog{
+    background:#fff;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+.featured-blog:hover{
+    transform:translateY(-5px);
+}
+
+.featured-blog img{
+    height:100%;
+    object-fit:cover;
+}
+
+.featured-content{
+    padding:45px;
+}
+
+.badge-custom{
+    display:inline-block;
+    background:#0056ff;
+    color:#fff;
+    padding:8px 20px;
+    border-radius:50px;
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+.featured-content h2{
+    font-size:34px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.featured-content p{
+    color:#666;
+    line-height:1.8;
+}
+
+.btn-read{
+    margin-top:25px;
+    padding:12px 35px;
+    border-radius:40px;
+    font-weight:600;
+}
+
+/* BLOG CARD */
+.blog-card{
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.4s;
+    height:100%;
+}
+
+.blog-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+.blog-card img{
+    height:230px;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.blog-card:hover img{
+    transform:scale(1.08);
+}
+
+.blog-content{
+    padding:25px;
+}
+
+.blog-content .badge{
+    font-size:13px;
+    padding:8px 18px;
+    border-radius:30px;
+}
+
+.blog-content h4{
+    margin:18px 0 15px;
+    font-size:24px;
+    font-weight:600;
+}
+
+.blog-content p{
+    color:#666;
+    line-height:1.8;
+}
+
+/* BLOG FOOTER */
+.blog-footer{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:20px;
+    font-size:14px;
+    color:#777;
+}
+
+.blog-footer a{
+    color:#0056ff;
+    font-weight:600;
+    transition:.3s;
+}
+
+.blog-footer a:hover{
+    color:#00a0ff;
+}
+
+/* BUTTON */
+.btn-primary{
+    background:#0056ff;
+    border:none;
+}
+
+.btn-primary:hover{
+    background:#0046d5;
+}
+
+/* RESPONSIVE */
+@media(max-width:991px){
+    .blog-hero{
+        padding:90px 0;
+    }
+    
+    .blog-hero h1{
+        font-size:42px;
+    }
+
+    .featured-content{
+        padding:30px;
+    }   
+
+    .featured-content h2{
+        font-size:28px;
+    }
+
+    .section-title{
+        font-size:30px;
+    }
+
+}
+
+@media(max-width:768px){
+    .blog-hero{
+        padding:70px 0;
+    }
+    
+    .blog-hero h1{
+        font-size:34px;
+    }
+
+    .blog-hero p{
+        font-size:16px;
+    }
+
+    .section-title{
+        font-size:28px;
+    }
+
+    .blog-card img{
+        height:220px;
+    }
+    
+    .featured-content{
+        padding:25px;
+    }
+
+    .featured-content h2{
+        font-size:24px;
+    }
+
+}
+
+@media(max-width:576px){
+    .blog-hero h1{
+        font-size:30px;
+    }
+
+    .search-box input{
+        height:50px;
+        padding:0 20px;
+    }
+    
+    .blog-content{
+        padding:20px;
+    }
+
+    .blog-content h4{
+        font-size:20px;
+    }
+
+    .featured-content{
+        padding:20px;
+    }
+
+    .featured-content h2{
+        font-size:22px;
+    }
+
+}
