@@ -185,6 +185,7 @@ section{
 
 /* Responsive */
 @media(max-width:992px){
+    
     .hero{
         text-align:center;
     }
@@ -199,6 +200,7 @@ section{
 }
 
 @media(max-width:768px){
+    
     .hero h1{
         font-size:34px;
     }

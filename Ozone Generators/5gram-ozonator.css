@@ -91,6 +91,7 @@ body{
 }
 
 @media(max-width:768px){
+    
     .hero{
         text-align:center;
     }
