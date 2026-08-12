@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Molecular Service | Ozone & Water Treatment</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+    <link rel="icon" href="../Assets/Images/Athineel Ozone Logo.jpg">
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        * {
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body {
+            font-family:'Poppins', sans-serif;
+            background:#f5fbff;
+            color:#222;
+            line-height:1.6;
+        }
+
+        a {
+            text-decoration:none;
+        }
+        
+        /* HERO */
+        .hero {
+            min-height:500px;
+            padding:80px 7%;
+            display:flex;
+            align-items:center;
+            background:
+                linear-gradient(135deg,
+                rgba(5,113,200,0.94),
+                rgba(0,157,108,0.90)),
+                url("images/molecular-service-banner.jpg");
+
+            background-size:cover;
+            background-position:center;
+            color:white;
+        }
+
+        .hero-content {
+            max-width:700px;
+        }
+
+        .hero-tag {
+            display:inline-block;
+            padding:8px 18px;
+            border-radius:30px;
+            background:rgba(255,255,255,0.18);
+            border:1px solid rgba(255,255,255,0.4);
+            margin-bottom:20px;
+            font-size:14px;
+        }
+
+        .hero h1 {
+            font-size:52px;
+            line-height:1.15;
+            margin-bottom:20px;
+        }
+
+        .hero h1 span {
+            color:#d9fff0;
+        }
+
+        .hero p {
+            font-size:18px;
+            max-width:650px;
+            margin-bottom:30px;
+        }
+
+        .hero-buttons {
+            display:flex;
+            gap:15px;
+            flex-wrap:wrap;
+        }
+
+        .btn {
+            display:inline-block;
+            padding:13px 25px;
+            border-radius:30px;
+            font-weight:600;
+            transition:0.3s;
+        }
+
+        .btn-primary {
+            background:white;
+            color:#087fda;
+        }
+
+        .btn-primary:hover {
+            transform:translateY(-3px);
+        }
+
+        .btn-outline {
+            border:2px solid white;
+            color:white;
+        }
+
+        .btn-outline:hover {
+            background:white;
+            color:#087fda;
+        }
+
+        /* SECTION */
+        .section {
+            padding:75px 7%;
+        }
+
+        .section-title {
+            text-align:center;
+            margin-bottom:45px;
+        }
+
+        .section-title h2 {
+            font-size:36px;
+            color:#123;
+            margin-bottom:10px;
+        }
+
+        .section-title p {
+            max-width:700px;
+            margin:auto;
+            color:#68737d;
+        }
+
+        /* SERVICE CARDS */
+        .services {
+            display:grid;
+            grid-template-columns:repeat(3, 1fr);
+            gap:25px;
+        }
+
+        .service-card {
+            background:white;
+            padding:35px 25px;
+            border-radius:18px;
+            text-align:center;
+            box-shadow:0 8px 25px rgba(0,0,0,0.07);
+            border:1px solid #e5eef3;
+            transition:0.35s;
+        }
+
+        .service-card:hover {
+            transform:translateY(-8px);
+            box-shadow:0 18px 35px rgba(0,0,0,0.12);
+        }
+
+        .service-icon {
+            width:75px;
+            height:75px;
+            margin:0 auto 20px;
+            border-radius:50%;
+            background:#e9f8ff;
+            color:#087fda;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-size:30px;
+        }
+
+        .service-card h3 {
+            margin-bottom:12px;
+            color:#123;
+        }
+
+        .service-card p {
+            font-size:14px;
+            color:#68737d;
+        }
+
+        /* MOLECULAR SECTION */
+        .molecular-section {
+            background:#eef9ff;
+        }
+
+        .molecular-content {
+            max-width:1100px;
+            margin:auto;
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:50px;
+            align-items:center;
+        }
+
+        .molecular-image {
+            background:white;
+            border-radius:20px;
+            overflow:hidden;
+            box-shadow:0 8px 30px rgba(0,0,0,0.08);
+        }
+
+        .molecular-image img {
+            width:100%;
+            height:380px;
+            object-fit:cover;
+        }
+
+        .molecular-text h2 {
+            font-size:35px;
+            margin-bottom:15px;
+            color:#123;
+        }
+
+        .molecular-text p {
+            color:#68737d;
+            margin-bottom:20px;
+        }
+
+        .check-list {
+            list-style:none;
+        }
+
+        .check-list li {
+            margin-bottom:12px;
+            font-size:15px;
+        }
+
+        .check-list i {
+            color:#08a36c;
+            margin-right: 10px;
+        }
+
+        /* PROCESS */
+        .process {
+            display:grid;
+            grid-template-columns:repeat(4, 1fr);
+            gap:20px;
+        }
+
+        .process-card {
+            text-align:center;
+            padding:30px 20px;
+            background:white;
+            border-radius:15px;
+            box-shadow:0 5px 20px rgba(0,0,0,0.06);
+        }
+
+        .process-number {
+            width:55px;
+            height:55px;
+            border-radius:50%;
+            margin:0 auto 15px;
+            background:#087fda;
+            color:white;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-weight:700;
+            font-size:20px;
+        }
+
+        .process-card h3 {
+            margin-bottom:8px;
+        }
+
+        .process-card p {
+            font-size:14px;
+            color:#68737d;
+        }
+
+        /* APPLICATIONS */
+        .applications {
+            display:grid;
+            grid-template-columns:repeat(3, 1fr);
+            gap:25px;
+        }
+
+        .application {
+            background:white;
+            padding:30px;
+            border-radius:15px;
+            box-shadow:0 5px 20px rgba(0,0,0,0.06);
+        }
+
+        .application i {
+            font-size:35px;
+            color:#08a36c;
+            margin-bottom:15px;
+        }
+
+        .application h3 {
+            margin-bottom:8px;
+        }
+
+        .application p {
+            font-size:14px;
+            color:#68737d;
+        }
+
+        /* BENEFITS */
+        .benefits {
+            display:grid;
+            grid-template-columns:repeat(4, 1fr);
+            gap:20px;
+        }
+
+        .benefit {
+            text-align:center;
+            background:white;
+            padding:30px 20px;
+            border-radius:15px;
+            box-shadow:0 5px 20px rgba(0,0,0,0.06);
+        }
+
+        .benefit i {
+            font-size:32px;
+            color:#087fda;
+            margin-bottom:15px;
+        }
+
+        .benefit h3 {
+            margin-bottom:8px;
+        }
+
+        .benefit p {
+            color:#68737d;
+            font-size:14px;
+        }
+
+        /* CTA */
+        .cta {
+            background:linear-gradient(135deg, #087fda, #08a36c);
+            color:white;
+            text-align:center;
+            padding:75px 7%;
+        }
+
+        .cta h2 {
+            font-size:38px;
+            margin-bottom:15px;
+        }
+
+        .cta p {
+            max-width:700px;
+            margin:0 auto 25px;
+        }
+
+        /* FOOTER */
+        footer {
+            background:#031b25;
+            color:#b9ccd3;
+            text-align:center;
+            padding:30px 7%;
+            font-size:14px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width:1000px) {
+
+            .services,
+            .applications {
+                grid-template-columns:repeat(2, 1fr);
+            }
+
+            .benefits,
+            .process {
+                grid-template-columns:repeat(2, 1fr);
+            }
+
+            .hero h1 {
+                font-size:42px;
+            }
+        }
+
+        @media (max-width:700px) {
+
+            .hero {
+                text-align:center;
+            }
+            
+            .hero h1 {
+                font-size:35px;
+            }
+            
+            .hero-buttons {
+                justify-content:center;
+            }
+            
+            .services,
+            .applications,
+            .benefits,
+            .process,
+            .molecular-content {
+                grid-template-columns:1fr;
+            }
+
+            .section-title h2 {
+                font-size:30px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <span class="hero-tag"><i class="fas fa-atom"></i>Advanced Molecular Technology</span>
+        <h1>Molecular<span>Service</span>Solutions</h1>
+        <p>
+            Professional molecular service solutions for
+            ozone, water treatment, process optimization
+            and advanced treatment applications.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#services" class="btn btn-primary">Explore Services</a>
+
+            <a href="contact.html" class="btn btn-outline">Get a Quote</a>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+    <div class="section-title">
+        <h2>Our Molecular Services</h2>
+        <p>
+            Specialized technical services designed to
+            improve treatment performance and system
+            reliability.
+        </p>
+    </div>
+    
+    <div class="services">
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-atom"></i>
+            </div>
+            <h3>Molecular Analysis</h3>
+            <p>Detailed analysis and evaluation of molecular-level treatment requirements.</p>
+        </div>
+        
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-flask"></i>
+            </div>
+            <h3>Water Analysis</h3>
+            <p>Water-quality assessment to determine suitable treatment requirements.</p>
+        </div>
+        
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-gears"></i>
+            </div>
+            <h3>System Optimization</h3>
+            <p>Technical evaluation and optimization of ozone and water treatment systems.</p>
+        </div>
+        
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-microscope"></i>
+            </div>
+            <h3>Technical Testing</h3>
+            <p>Testing and monitoring services for treatment performance and process control.</p>
+        </div>
+        
+        <div class="service-card">
+            <div class="service-icon">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <h3>Performance Monitoring</h3>
+            <p>Monitor system performance and identify opportunities for improvement.</p>
+        </div>
+        
+        <div class="service-card">
+
+            <div class="service-icon">
+                <i class="fas fa-screwdriver-wrench"></i>
+            </div>
+            <h3>Technical Support</h3>
+            <p>Professional support for installation, operation and maintenance requirements.</p>
+        </div>
+    </div>
+</section>
+
+<!-- MOLECULAR TECHNOLOGY -->
+<section class="section molecular-section">
+    <div class="molecular-content">
+        <div class="molecular-image">
+            <img src="images/molecular-service.jpg" alt="Molecular Service">
+        </div>
+        
+        <div class="molecular-text">
+            <h2>Advanced Molecular Approach</h2>
+            <p>
+                Our molecular service approach focuses on
+                understanding treatment requirements and
+                selecting appropriate technologies for
+                efficient and reliable operation.
+            </p>
+            <ul class="check-list">
+                <li><i class="fas fa-check-circle"></i>Application-specific analysis</li>
+                <li><i class="fas fa-check-circle"></i>Water and process evaluation</li>
+                <li><i class="fas fa-check-circle"></i>Ozone treatment optimization</li>
+                <li><i class="fas fa-check-circle"></i>System performance evaluation</li>
+                <li><i class="fas fa-check-circle"></i>Technical consultation</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section">
+    <div class="section-title">
+        <h2>Our Service Process</h2>
+        <p>
+            A simple process for understanding your
+            requirements and providing the right solution.
+        </p>
+    </div>
+    
+    <div class="process">
+        <div class="process-card">
+            <div class="process-number">01</div>
+            <h3>Consultation</h3>
+            <p>Understand your application and treatment requirements.</p>
+        </div>
+        
+        <div class="process-card">
+            <div class="process-number">02</div>
+            <h3>Analysis</h3>
+            <p>Evaluate water, process and system conditions.</p>
+        </div>
+        
+        <div class="process-card">
+            <div class="process-number">03</div>
+            <h3>Solution</h3>
+            <p>Recommend an appropriate technical treatment solution.</p>
+        </div>
+        
+        <div class="process-card">
+            <div class="process-number">04</div>
+            <h3>Support</h3>
+            <p>Provide technical assistance and performance support.</p>
+        </div>
+    </div>
+</section>
+
+<!-- APPLICATIONS -->
+<section class="section">
+    <div class="section-title">
+        <h2>Service Applications</h2>
+        <p>Our technical services can support various water and ozone treatment applications.</p>
+    </div>
+    
+    <div class="applications">
+        <div class="application">
+            <i class="fas fa-water"></i>
+            <h3>Water Treatment</h3>
+            <p>Technical evaluation for water treatment and purification applications.</p>
+        </div>
+        
+        <div class="application">
+            <i class="fas fa-industry"></i>
+            <h3>Industrial Systems</h3>
+            <p>Support for industrial process-water treatment systems.</p>
+        </div>
+        
+        <div class="application">
+            <i class="fas fa-droplet"></i>
+            <h3>Ozone Water</h3>
+            <p>Ozone water treatment monitoring and optimization services.
+            </p>
+        </div>
+        
+        <div class="application">
+            <i class="fas fa-hospital"></i>
+            <h3>Healthcare</h3>
+            <p>Technical consultation for specialized water treatment applications.</p>
+        </div>
+        
+        <div class="application">
+            <i class="fas fa-fish"></i>
+            <h3>Aquaculture</h3>
+            <p>Water-quality and ozone treatment support for aquaculture systems.</p>
+        </div>
+        
+        <div class="application">
+            <i class="fas fa-flask"></i>
+            <h3>Laboratory</h3>
+            <p>Technical analysis and testing support for laboratory applications.</p>
+        </div>
+    </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="section" style="background:#eef9ff;">
+    <div class="section-title">
+        <h2>Benefits of Our Service</h2>
+        <p>Professional support helps improve system performance, reliability and operational control.</p>
+    </div>
+    
+    <div class="benefits">
+        <div class="benefit">
+            <i class="fas fa-bullseye"></i>
+            <h3>Better Performance</h3>
+            <p>Improve treatment system performance.</p>
+        </div>
+        
+        <div class="benefit">
+            <i class="fas fa-chart-line"></i>
+            <h3>Process Control</h3>
+            <p>Better monitoring and process control.</p>
+        </div>
+        
+        <div class="benefit">
+            <i class="fas fa-shield-halved"></i>
+            <h3>Reliable Operation</h3>
+            <p>Support reliable long-term operation.</p>
+        </div>
+        
+        <div class="benefit">
+            <i class="fas fa-headset"></i>
+            <h3>Expert Support</h3>
+            <p>Professional technical assistance.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <h2>Need Molecular Service Support?</h2>
+    <p>Contact our technical team to discuss your application, testing and treatment requirements.</p>
+
+    <a href="contact.html" class="btn btn-primary">Contact Us</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2022 ATHINEEL OZONE SYSTEMS. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
