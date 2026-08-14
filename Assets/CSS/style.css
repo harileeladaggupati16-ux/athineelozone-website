@@ -95,6 +95,12 @@ p{
     color:#00d4ff;
 }
 
+.top-bar a{
+    position:relative;
+    z-index:9999;
+    cursor:pointer;
+}
+
 /* NAVBAR */
 .navbar{
     background:#fff;

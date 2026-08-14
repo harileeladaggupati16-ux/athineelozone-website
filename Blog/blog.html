@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Static Mixer | Ozone & Water Treatment</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        body {
+            font-family:Arial, sans-serif;
+            background:#f7faff;
+            color:#222;
+        }
+
+        /* Navbar */
+        .navbar {
+            background:white;
+            box-shadow:0 3px 15px rgba(0,0,0,0.08);
+        }
+
+        .navbar-brand {
+            font-size:28px;
+            font-weight:bold;
+            color:#075bbb;
+        }
+
+        .navbar-brand span {
+            color:#00aeea;
+        }
+
+        .nav-link {
+            font-weight:600;
+            color:#333;
+        }
+
+        .nav-link:hover {
+            color:#087cf0;
+        }
+
+        /* Hero */
+        .hero {
+            min-height:520px;
+            display:flex;
+            align-items:center;
+            background:
+                linear-gradient(120deg, #003b91, #087cf0, #00b8e6);
+            color:white;
+            padding:80px 0;
+        }
+
+        .hero h1 {
+            font-size:52px;
+            font-weight:800;
+        }
+
+        .hero p {
+            font-size:19px;
+            line-height:1.7;
+            margin-top:20px;
+        }
+
+        .hero-buttons {
+            margin-top:30px;
+        }
+
+        .btn-main {
+            background:white;
+            color:#075bbb;
+            padding:14px 30px;
+            border-radius:50px;
+            font-weight:bold;
+            text-decoration:none;
+            display:inline-block;
+            margin-right:10px;
+        }
+
+        .btn-main:hover {
+            background:#e9f5ff;
+            color:#003b91;
+        }
+
+        .btn-outline-light-custom {
+            border:2px solid white;
+            color:white;
+            padding:12px 30px;
+            border-radius:50px;
+            font-weight:bold;
+            text-decoration:none;
+            display:inline-block;
+        }
+
+        .btn-outline-light-custom:hover {
+            background:white;
+            color:#075bbb;
+        }
+
+        /* Product Image */
+        .product-image {
+            background:white;
+            border-radius:25px;
+            padding:30px;
+            box-shadow:0 15px 40px rgba(0,0,0,0.2);
+            text-align:center;
+        }
+
+        .product-image img {
+            max-width:100%;
+            height:350px;
+            object-fit:contain;
+        }
+
+        .product-placeholder {
+            height:350px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:#087cf0;
+            font-size:130px;
+        }
+
+        /* Section */
+        .section-title {
+            text-align:center;
+            margin-bottom:50px;
+        }
+
+        .section-title h2 {
+            font-size:38px;
+            font-weight:800;
+            color:#003b91;
+        }
+
+        .section-title p {
+            color:#666;
+            font-size:17px;
+        }
+
+        /* Features */
+        .feature-card {
+            background:white;
+            border-radius:18px;
+            padding:30px;
+            text-align:center;
+            height:100%;
+            box-shadow:0 8px 25px rgba(0,0,0,0.08);
+            transition:0.3s;
+        }
+
+        .feature-card:hover {
+            transform:translateY(-10px);
+            box-shadow:0 15px 35px rgba(0,0,0,0.13);
+        }
+
+        .feature-icon {
+            width:75px;
+            height:75px;
+            border-radius:50%;
+            background:#e8f5ff;
+            color:#087cf0;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-size:30px;
+            margin:auto auto 20px;
+        }
+
+        .feature-card h4 {
+            font-weight:700;
+            color:#003b91;
+        }
+
+        /* About */
+        .about-section {
+            background:white;
+        }
+
+        .about-box {
+            padding:25px;
+        }
+
+        .about-box h2 {
+            color:#003b91;
+            font-weight:800;
+        }
+
+        .about-box p {
+            line-height:1.8;
+            color:#555;
+        }
+
+        .check-list {
+            list-style:none;
+            padding:0;
+        }
+
+        .check-list li {
+            margin-bottom:15px;
+            font-size:17px;
+        }
+
+        .check-list i {
+            color:#00a651;
+            margin-right:10px;
+        }
+
+        /* Applications */
+        .application-card {
+            background:white;
+            border-radius:15px;
+            padding:25px;
+            margin-bottom:20px;
+            box-shadow:0 6px 20px rgba(0,0,0,0.07);
+        }
+
+        .application-card i {
+            color:#087cf0;
+            font-size:30px;
+            margin-bottom:15px;
+        }
+
+        .application-card h5 {
+            font-weight:700;
+            color:#003b91;
+        }
+
+        /* Specifications */
+        .spec-section {
+            background:#f0f7ff;
+        }
+
+        .spec-table {
+            background:white;
+            border-radius:15px;
+            overflow:hidden;
+            box-shadow:0 8px 25px rgba(0,0,0,0.08);
+        }   
+
+        .spec-table table {
+            margin:0;
+        }
+
+        .spec-table th {
+            background:#075bbb;
+            color:white;
+            padding:15px;
+        }
+
+        .spec-table td {
+            padding:15px;
+            vertical-align:middle;
+        }
+
+        /* CTA */
+        .cta {
+            background:linear-gradient(120deg, #003b91, #087cf0);
+            color:white;
+            text-align:center;
+            padding:70px 20px;
+        }
+
+        .cta h2 {
+            font-size:40px;
+            font-weight:800;
+        }
+
+        .cta p {
+            font-size:18px;
+            margin:20px 0 30px;
+        }
+
+        /* Footer */
+        footer {
+            background:#071b35;
+            color:white;
+            padding:30px 0;
+            text-align:center;
+        }
+
+        /* Responsive */
+        @media(max-width:768px) {
+
+            .hero h1 {
+                font-size:38px;
+            }
+
+            .hero {
+                text-align:center;
+            }
+
+            .product-image {
+                margin-top:40px;
+            }
+
+            .cta h2 {
+                font-size:30px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Athineel<span>OZONE</span></a>
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                <li class="nav-item"><a class="nav-link" href="#applications">Applications</a></li>
+                <li class="nav-item"><a class="nav-link" href="#specifications">Specifications</a></li>
+                <li class="nav-item ms-lg-3"><a class="btn btn-primary rounded-pill px-4" href="contact.html">Get a Quote</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1>Static Mixer</h1>
+                <p>
+                    High-performance static mixers designed for efficient
+                    mixing of ozone, water, chemicals and other fluids in
+                    water treatment and industrial applications.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#features" class="btn-main"><i class="fas fa-arrow-down me-2"></i>Explore Product</a>
+
+                    <a href="contact.html" class="btn-outline-light-custom">Get a Quote</a>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="product-image">
+                    <!-- Replace this icon with your actual product image -->
+                    <div class="product-placeholder"><i class="fas fa-sliders"></i></div>
+                    <h4 class="text-primary mt-3">Industrial Static Mixer</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about-section py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="about-box">
+                    <h2>Industrial Static Mixer</h2>
+                    <p>
+                        A static mixer is a specially designed mixing device
+                        installed inside a pipeline to provide continuous
+                        and efficient mixing without moving mechanical parts.
+                    </p>
+                    <p>
+                        Our static mixers are suitable for ozone injection,
+                        chemical dosing, water treatment and various
+                        industrial fluid-mixing applications.
+                    </p>
+                    <ul class="check-list">
+                        <li><i class="fas fa-check-circle"></i>Efficient inline mixing</li>
+                        <li><i class="fas fa-check-circle"></i>No moving components</li>
+                        <li><i class="fas fa-check-circle"></i>Low maintenance requirement</li>
+                        <li><i class="fas fa-check-circle"></i>Compact pipeline installation</li>
+                        <li><i class="fas fa-check-circle"></i>Suitable for ozone-water mixing</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="about-box">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-water"></i></div>
+                        <h4>Efficient Mixing Technology</h4>
+                        <p>
+                            Static mixing elements create turbulence and
+                            controlled flow patterns to achieve effective
+                            mixing throughout the pipeline.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" class="py-5">
+    <div class="container">
+        <div class="section-title">
+            <h2>Static Mixer Features</h2>
+            <p>Designed for reliable and efficient inline mixing</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-gears"></i></div>
+                    <h4>No Moving Parts</h4>
+                    <p>Static mixers operate without motors or rotating components, reducing maintenance requirements.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-flask"></i></div>
+                    <h4>Excellent Mixing</h4>
+                    <p>Specially designed internal elements provide efficient mixing of gases, chemicals and liquids.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-wrench"></i></div>
+                    <h4>Low Maintenance</h4>
+                    <p>With no external moving components, the mixer requires minimal routine maintenance.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-compress-arrows-alt"></i></div>
+                    <h4>Compact Design</h4>
+                    <p>Inline construction allows installation directly into existing pipeline systems.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-shield-halved"></i></div>
+                    <h4>Durable Construction</h4>
+                    <p>Available in suitable materials for demanding water treatment and industrial environments.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-leaf"></i></div>
+                    <h4>Energy Efficient</h4>
+                    <p>Uses pipeline flow energy to achieve mixing without requiring a separate mechanical drive system.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- APPLICATIONS -->
+<section id="applications" class="py-5 bg-white">
+    <div class="container">
+        <div class="section-title">
+            <h2>Applications</h2>
+            <p>Suitable for a wide range of water and industrial processes</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="application-card">
+                    <i class="fas fa-water"></i>
+                    <h5>Water Treatment</h5>
+                    <p>Efficient mixing of treatment chemicals and gases throughout water pipelines.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="application-card">
+                    <i class="fas fa-wind"></i>
+                    <h5>Ozone Injection</h5>
+                    <p>Used for effective dispersion and mixing of ozone into water for disinfection and oxidation.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="application-card">
+                    <i class="fas fa-flask"></i>
+                    <h5>Chemical Dosing</h5>
+                    <p>Provides uniform distribution of chemicals in continuous-flow systems.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="application-card">
+                    <i class="fas fa-industry"></i>
+                    <h5>Industrial Processes</h5>
+                    <p>Suitable for various industrial liquid and gas mixing processes.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="application-card">
+                    <i class="fas fa-fish"></i>
+                    <h5>Aquaculture</h5>
+                    <p>Supports ozone and oxygen mixing applications in aquaculture water treatment.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="application-card">
+                    <i class="fas fa-recycle"></i>
+                    <h5>Wastewater Treatment</h5>
+                    <p>Helps achieve uniform mixing during wastewater treatment and oxidation processes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SPECIFICATIONS -->
+<section id="specifications" class="spec-section py-5">
+    <div class="container">
+        <div class="section-title">
+            <h2>Technical Specifications</h2>
+            <p>Configuration can be customized according to application requirements.</p>
+        </div>
+        
+        <div class="spec-table">
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <th>Product</th>
+                        <td>Static Mixer</td>
+                    </tr>
+                    <tr>
+                        <th>Application</th>
+                        <td>Water / Ozone / Chemical Mixing</td>
+                    </tr>
+                    <tr>
+                        <th>Installation</th>
+                        <td>Inline Pipeline</td>
+                    </tr>
+                    <tr>
+                        <th>Construction</th>
+                        <td>PP / PVC / SS / Other Options</td>
+                    </tr>
+                    <tr>
+                        <th>Mixing Type</th>
+                        <td>Static / Inline Mixing</td>
+                    </tr>
+                    <tr>
+                        <th>Operation</th>
+                        <td>Continuous Flow</td>
+                    </tr>
+                    <tr>
+                        <th>Maintenance</th>
+                        <td>Low Maintenance</td>
+                    </tr>
+                    <tr>
+                        <th>Customization</th>
+                        <td>Available as per requirement</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="py-5">
+    <div class="container">
+        <div class="section-title">
+            <h2>Why Choose Our Static Mixer?</h2>
+            <p>Reliable mixing technology for efficient treatment systems</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+                    <h5>Efficient</h5>
+                    <p>Excellent mixing performance.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-screwdriver-wrench"></i></div>
+                    <h5>Low Maintenance</h5>
+                    <p>No rotating mechanical parts.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-expand"></i></div>
+                    <h5>Compact</h5>
+                    <p>Easy inline installation.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-certificate"></i></div>
+                    <h5>Reliable</h5>
+                    <p>Designed for continuous operation.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <div class="container">
+        <h2>Need a Static Mixer?</h2>
+        <p>Contact our experts for the right static mixer for your water treatment or industrial application.</p>
+        
+        <a href="contact.html" class="btn btn-light btn-lg rounded-pill px-5">
+            <i class="fas fa-envelope me-2"></i>
+            Get a Free Quote
+        </a>
+
+        <a href="https://wa.me/919160011136?text=Hello,%20I%20want%20to%20know%20about%20your%20Static%20Mixers."
+           target="_blank"
+           class="btn btn-success btn-lg rounded-pill px-5 ms-2">
+           <i class="fab fa-whatsapp me-2"></i>
+            WhatsApp Us
+        </a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <p class="mb-0">© 2022 Athineel OZONE. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
