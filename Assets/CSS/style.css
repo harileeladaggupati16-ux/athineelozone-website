@@ -129,6 +129,10 @@ p{
 .nav-link.active{
     color:var(--primary)!important;
 }
+.navbar-brand img {
+    height: 90px;
+    width: auto;
+}
 
 .quote-btn {
     margin-left:25px;

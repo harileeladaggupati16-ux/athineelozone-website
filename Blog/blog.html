@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Static Mixer | Ozone & Water Treatment</title>
+    <title>Blog | Athineel OZONE</title>
+
+    <link rel="icon" href="../Assets/Images/Athineel Ozone Logo.jpg">
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -14,643 +16,660 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+        :root {
+            --primary: #0056ff;
+            --cyan: #00cfff;
+            --dark: #07111f;
+            --text: #536174;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
-            font-family:Arial, sans-serif;
-            background:#f7faff;
-            color:#222;
+            font-family:'Poppins',sans-serif;
+            background: #f5f9ff;
+            color: var(--dark);
         }
 
-        /* Navbar */
+
+        /* ================= NAVBAR ================= */
+
         .navbar {
-            background:white;
-            box-shadow:0 3px 15px rgba(0,0,0,0.08);
+            background: rgba(255,255,255,.95);
+            backdrop-filter: blur(15px);
+            padding: 14px 0;
+            box-shadow: 0 5px 30px rgba(0,0,0,.07);
+            position: sticky;
+            top: 0;
+            z-index: 999;
         }
 
-        .navbar-brand {
-            font-size:28px;
-            font-weight:bold;
-            color:#075bbb;
-        }
-
-        .navbar-brand span {
-            color:#00aeea;
+        .navbar-brand img {
+            height: 60px;
+            width: auto;
         }
 
         .nav-link {
-            font-weight:600;
-            color:#333;
+            color: #222 !important;
+            font-weight: 500;
+            margin-left: 18px;
+            transition: .3s;
         }
 
-        .nav-link:hover {
-            color:#087cf0;
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary) !important;
         }
 
-        /* Hero */
-        .hero {
-            min-height:520px;
-            display:flex;
-            align-items:center;
+
+        /* ================= HERO ================= */
+
+        .blog-hero {
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+
             background:
-                linear-gradient(120deg, #003b91, #087cf0, #00b8e6);
-            color:white;
-            padding:80px 0;
+                radial-gradient(circle at 10% 20%,
+                rgba(0,207,255,.25),
+                transparent 30%),
+
+                radial-gradient(circle at 90% 80%,
+                rgba(0,86,255,.35),
+                transparent 35%),
+
+                linear-gradient(135deg,#03152d,#0056ff);
         }
 
-        .hero h1 {
-            font-size:52px;
-            font-weight:800;
+        .blog-label {
+            display: inline-block;
+            padding: 8px 18px;
+            border-radius: 50px;
+            background: rgba(255,255,255,.15);
+            border: 1px solid rgba(255,255,255,.25);
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
         }
 
-        .hero p {
-            font-size:19px;
-            line-height:1.7;
-            margin-top:20px;
+        .blog-hero h1 {
+            font-size: clamp(40px,5vw,65px);
+            font-weight: 800;
+            margin-bottom: 20px;
         }
 
-        .hero-buttons {
-            margin-top:30px;
+        .blog-hero p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.7;
+            opacity: .9;
         }
 
-        .btn-main {
-            background:white;
-            color:#075bbb;
-            padding:14px 30px;
-            border-radius:50px;
-            font-weight:bold;
-            text-decoration:none;
-            display:inline-block;
-            margin-right:10px;
+
+        /* ================= BLOG SECTION ================= */
+
+        .blog-section {
+            max-width: 1150px;
+            margin: 70px auto;
+            padding: 0 20px;
         }
 
-        .btn-main:hover {
-            background:#e9f5ff;
-            color:#003b91;
+
+        /* ================= FEATURED ================= */
+
+        .featured-card {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,30,80,.10);
+            margin-bottom: 60px;
         }
 
-        .btn-outline-light-custom {
-            border:2px solid white;
-            color:white;
-            padding:12px 30px;
-            border-radius:50px;
-            font-weight:bold;
-            text-decoration:none;
-            display:inline-block;
+        .featured-image {
+            min-height: 420px;
+            overflow: hidden;
         }
 
-        .btn-outline-light-custom:hover {
-            background:white;
-            color:#075bbb;
+        .featured-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .5s;
         }
 
-        /* Product Image */
-        .product-image {
-            background:white;
-            border-radius:25px;
-            padding:30px;
-            box-shadow:0 15px 40px rgba(0,0,0,0.2);
-            text-align:center;
+        .featured-card:hover .featured-image img {
+            transform: scale(1.05);
         }
 
-        .product-image img {
-            max-width:100%;
-            height:350px;
-            object-fit:contain;
+        .featured-content {
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
-        .product-placeholder {
-            height:350px;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            color:#087cf0;
-            font-size:130px;
+        .badge-custom {
+            display: inline-block;
+            width: fit-content;
+            padding: 7px 15px;
+            border-radius: 50px;
+            background: #eaf3ff;
+            color: var(--primary);
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 18px;
         }
 
-        /* Section */
-        .section-title {
-            text-align:center;
-            margin-bottom:50px;
+        .featured-content h2 {
+            font-size: 32px;
+            font-weight: 750;
+            line-height: 1.25;
+            margin-bottom: 18px;
         }
 
-        .section-title h2 {
-            font-size:38px;
-            font-weight:800;
-            color:#003b91;
+        .featured-content p {
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 16px;
         }
 
-        .section-title p {
-            color:#666;
-            font-size:17px;
+        .blog-meta {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+            color: #68778b;
+            font-size: 14px;
         }
 
-        /* Features */
-        .feature-card {
-            background:white;
-            border-radius:18px;
-            padding:30px;
-            text-align:center;
-            height:100%;
-            box-shadow:0 8px 25px rgba(0,0,0,0.08);
-            transition:0.3s;
+        .blog-meta span {
+            display: flex;
+            align-items: center;
+            gap: 7px;
         }
 
-        .feature-card:hover {
-            transform:translateY(-10px);
-            box-shadow:0 15px 35px rgba(0,0,0,0.13);
+        .blog-meta i {
+            color: var(--primary);
         }
 
-        .feature-icon {
-            width:75px;
-            height:75px;
-            border-radius:50%;
-            background:#e8f5ff;
-            color:#087cf0;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            font-size:30px;
-            margin:auto auto 20px;
+
+        /* ================= BUTTON ================= */
+
+        .read-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            width: fit-content;
+            margin-top: 25px;
+            padding: 13px 25px;
+            border-radius: 50px;
+            background: linear-gradient(135deg,#0056ff,#00cfff);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: .3s;
         }
 
-        .feature-card h4 {
-            font-weight:700;
-            color:#003b91;
+        .read-button:hover {
+            color: white;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,86,255,.25);
         }
 
-        /* About */
-        .about-section {
-            background:white;
+
+        /* ================= BLOG CARDS ================= */
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 35px;
         }
 
-        .about-box {
-            padding:25px;
+        .section-heading h2 {
+            font-size: 35px;
+            font-weight: 750;
         }
 
-        .about-box h2 {
-            color:#003b91;
-            font-weight:800;
+        .section-heading p {
+            color: var(--text);
         }
 
-        .about-box p {
-            line-height:1.8;
-            color:#555;
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 25px;
         }
 
-        .check-list {
-            list-style:none;
-            padding:0;
+        .blog-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 12px 35px rgba(0,30,80,.07);
+            transition: .35s;
         }
 
-        .check-list li {
-            margin-bottom:15px;
-            font-size:17px;
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 45px rgba(0,30,80,.12);
         }
 
-        .check-list i {
-            color:#00a651;
-            margin-right:10px;
+        .blog-card-image {
+            height: 220px;
+            overflow: hidden;
         }
 
-        /* Applications */
-        .application-card {
-            background:white;
-            border-radius:15px;
-            padding:25px;
-            margin-bottom:20px;
-            box-shadow:0 6px 20px rgba(0,0,0,0.07);
+        .blog-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .5s;
         }
 
-        .application-card i {
-            color:#087cf0;
-            font-size:30px;
-            margin-bottom:15px;
+        .blog-card:hover img {
+            transform: scale(1.06);
         }
 
-        .application-card h5 {
-            font-weight:700;
-            color:#003b91;
+        .blog-card-content {
+            padding: 25px;
         }
 
-        /* Specifications */
-        .spec-section {
-            background:#f0f7ff;
+        .blog-card-content h3 {
+            font-size: 21px;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 12px 0;
         }
 
-        .spec-table {
-            background:white;
-            border-radius:15px;
-            overflow:hidden;
-            box-shadow:0 8px 25px rgba(0,0,0,0.08);
-        }   
-
-        .spec-table table {
-            margin:0;
+        .blog-card-content p {
+            color: var(--text);
+            font-size: 15px;
+            line-height: 1.7;
         }
 
-        .spec-table th {
-            background:#075bbb;
-            color:white;
-            padding:15px;
+        .small-category {
+            color: var(--primary);
+            font-size: 13px;
+            font-weight: 700;
         }
 
-        .spec-table td {
-            padding:15px;
-            vertical-align:middle;
-        }
 
-        /* CTA */
-        .cta {
-            background:linear-gradient(120deg, #003b91, #087cf0);
-            color:white;
-            text-align:center;
-            padding:70px 20px;
-        }
+        /* ================= FOOTER ================= */
 
-        .cta h2 {
-            font-size:40px;
-            font-weight:800;
-        }
-
-        .cta p {
-            font-size:18px;
-            margin:20px 0 30px;
-        }
-
-        /* Footer */
         footer {
-            background:#071b35;
-            color:white;
-            padding:30px 0;
-            text-align:center;
+            margin-top: 80px;
+            padding: 35px 20px;
+            text-align: center;
+            background: #07111f;
+            color: white;
         }
 
-        /* Responsive */
-        @media(max-width:768px) {
+        footer p {
+            margin: 0;
+            color: #aeb9c9;
+        }
 
-            .hero h1 {
-                font-size:38px;
+
+        /* ================= MOBILE ================= */
+
+        @media(max-width: 850px) {
+
+            .featured-card {
+                grid-template-columns: 1fr;
             }
 
-            .hero {
-                text-align:center;
+            .featured-image {
+                min-height: 300px;
             }
 
-            .product-image {
-                margin-top:40px;
+            .featured-content {
+                padding: 30px;
             }
 
-            .cta h2 {
-                font-size:30px;
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media(max-width: 500px) {
+
+            .blog-hero {
+                padding: 70px 20px;
+            }
+
+            .featured-content h2 {
+                font-size: 27px;
+            }
+
+            .blog-meta {
+                gap: 10px;
             }
         }
 
     </style>
-
 </head>
+
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg sticky-top">
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg">
+
     <div class="container">
-        <a class="navbar-brand" href="index.html">Athineel<span>OZONE</span></a>
+
+        <a class="navbar-brand" href="../index.html">
+            <img src="../Assets/Images/Athineel Ozone Logo.jpg"
+                 alt="Athineel OZONE">
+        </a>
+
+
         <button class="navbar-toggler"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#navbarMenu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
 
         <div class="collapse navbar-collapse" id="navbarMenu">
+
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-                <li class="nav-item"><a class="nav-link" href="#applications">Applications</a></li>
-                <li class="nav-item"><a class="nav-link" href="#specifications">Specifications</a></li>
-                <li class="nav-item ms-lg-3"><a class="btn btn-primary rounded-pill px-4" href="contact.html">Get a Quote</a></li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#products">
+                        Products
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="blog.html">
+                        Blog
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../FAQ/faq.html">
+                        FAQ
+                    </a>
+                </li>
+
             </ul>
+
         </div>
+
     </div>
+
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-                <h1>Static Mixer</h1>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="blog-hero">
+
+    <span class="blog-label">
+        ATHINEEL OZONE INSIGHTS
+    </span>
+
+    <h1>
+        Our Blog
+    </h1>
+
+    <p>
+        Explore the latest insights, technologies and applications
+        in ozone generation, water treatment and industrial
+        purification.
+    </p>
+
+</section>
+
+
+
+<!-- ================= BLOG ================= -->
+
+<section class="blog-section">
+
+
+    <!-- FEATURED -->
+
+    <div class="featured-card">
+
+        <div class="featured-image">
+
+            <img src="../Assets/Images/blog-feature.jpg"
+                 alt="Ozone Water Treatment">
+
+        </div>
+
+
+        <div class="featured-content">
+
+            <span class="badge-custom">
+                FEATURED ARTICLE
+            </span>
+
+            <h2>
+                Benefits of Ozone Technology
+                in Modern Water Treatment
+            </h2>
+
+            <p>
+                Discover how ozone technology is transforming modern
+                water treatment through powerful oxidation and
+                effective disinfection.
+            </p>
+
+
+            <div class="blog-meta">
+
+                <span>
+                    <i class="fa-solid fa-user"></i>
+                    Athineel OZONE Team
+                </span>
+
+                <span>
+                    <i class="fa-solid fa-calendar"></i>
+                    04 Aug 2026
+                </span>
+
+                <span>
+                    <i class="fa-regular fa-clock"></i>
+                    5 min read
+                </span>
+
+            </div>
+
+
+            <a href="read-article.html" class="read-button">
+
+                Read Article
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- OTHER ARTICLES -->
+
+    <div class="section-heading">
+
+        <h2>
+            Latest Articles
+        </h2>
+
+        <p>
+            Learn more about ozone technology and its applications.
+        </p>
+
+    </div>
+
+
+
+    <div class="blog-grid">
+
+
+        <!-- CARD 1 -->
+
+        <div class="blog-card">
+
+            <div class="blog-card-image">
+
+                <img src="../Assets/Images/blog-feature.jpg"
+                     alt="Industrial Ozone Generator">
+
+            </div>
+
+            <div class="blog-card-content">
+
+                <span class="small-category">
+                    OZONE TECHNOLOGY
+                </span>
+
+                <h3>
+                    How Industrial Ozone Generators Work
+                </h3>
+
                 <p>
-                    High-performance static mixers designed for efficient
-                    mixing of ozone, water, chemicals and other fluids in
-                    water treatment and industrial applications.
+                    Learn how ozone generators produce ozone and
+                    how the technology is used in industrial
+                    applications.
                 </p>
-                <div class="hero-buttons">
-                    <a href="#features" class="btn-main"><i class="fas fa-arrow-down me-2"></i>Explore Product</a>
 
-                    <a href="contact.html" class="btn-outline-light-custom">Get a Quote</a>
+                <div class="blog-meta">
+
+                    <span>
+                        <i class="fa-solid fa-calendar"></i>
+                        Aug 2026
+                    </span>
+
                 </div>
+
             </div>
-            
-            <div class="col-lg-6">
-                <div class="product-image">
-                    <!-- Replace this icon with your actual product image -->
-                    <div class="product-placeholder"><i class="fas fa-sliders"></i></div>
-                    <h4 class="text-primary mt-3">Industrial Static Mixer</h4>
-                </div>
-            </div>
+
         </div>
+
+
+
+        <!-- CARD 2 -->
+
+        <div class="blog-card">
+
+            <div class="blog-card-image">
+
+                <img src="../Assets/Images/blog-feature.jpg"
+                     alt="Water Treatment">
+
+            </div>
+
+            <div class="blog-card-content">
+
+                <span class="small-category">
+                    WATER TREATMENT
+                </span>
+
+                <h3>
+                    Ozone Applications in Water Treatment
+                </h3>
+
+                <p>
+                    Explore how ozone can be integrated into
+                    modern water-treatment systems.
+                </p>
+
+                <div class="blog-meta">
+
+                    <span>
+                        <i class="fa-solid fa-calendar"></i>
+                        Aug 2026
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CARD 3 -->
+
+        <div class="blog-card">
+
+            <div class="blog-card-image">
+
+                <img src="../Assets/Images/blog-feature.jpg"
+                     alt="Ozone Disinfection">
+
+            </div>
+
+            <div class="blog-card-content">
+
+                <span class="small-category">
+                    DISINFECTION
+                </span>
+
+                <h3>
+                    Understanding Ozone Disinfection
+                </h3>
+
+                <p>
+                    Understand the role of ozone oxidation and
+                    disinfection in modern treatment processes.
+                </p>
+
+                <div class="blog-meta">
+
+                    <span>
+                        <i class="fa-solid fa-calendar"></i>
+                        Aug 2026
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
     </div>
+
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="about-section py-5">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-                <div class="about-box">
-                    <h2>Industrial Static Mixer</h2>
-                    <p>
-                        A static mixer is a specially designed mixing device
-                        installed inside a pipeline to provide continuous
-                        and efficient mixing without moving mechanical parts.
-                    </p>
-                    <p>
-                        Our static mixers are suitable for ozone injection,
-                        chemical dosing, water treatment and various
-                        industrial fluid-mixing applications.
-                    </p>
-                    <ul class="check-list">
-                        <li><i class="fas fa-check-circle"></i>Efficient inline mixing</li>
-                        <li><i class="fas fa-check-circle"></i>No moving components</li>
-                        <li><i class="fas fa-check-circle"></i>Low maintenance requirement</li>
-                        <li><i class="fas fa-check-circle"></i>Compact pipeline installation</li>
-                        <li><i class="fas fa-check-circle"></i>Suitable for ozone-water mixing</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="col-lg-6">
-                <div class="about-box">
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-water"></i></div>
-                        <h4>Efficient Mixing Technology</h4>
-                        <p>
-                            Static mixing elements create turbulence and
-                            controlled flow patterns to achieve effective
-                            mixing throughout the pipeline.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- FEATURES -->
-<section id="features" class="py-5">
-    <div class="container">
-        <div class="section-title">
-            <h2>Static Mixer Features</h2>
-            <p>Designed for reliable and efficient inline mixing</p>
-        </div>
-        
-        <div class="row g-4">
-            <div class="col-lg-4 col-md-6">
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-gears"></i></div>
-                    <h4>No Moving Parts</h4>
-                    <p>Static mixers operate without motors or rotating components, reducing maintenance requirements.</p>
-                </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6">
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-flask"></i></div>
-                    <h4>Excellent Mixing</h4>
-                    <p>Specially designed internal elements provide efficient mixing of gases, chemicals and liquids.</p>
-                </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6">
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-wrench"></i></div>
-                    <h4>Low Maintenance</h4>
-                    <p>With no external moving components, the mixer requires minimal routine maintenance.</p>
-                </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6">
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-compress-arrows-alt"></i></div>
-                    <h4>Compact Design</h4>
-                    <p>Inline construction allows installation directly into existing pipeline systems.</p>
-                </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6">
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-shield-halved"></i></div>
-                    <h4>Durable Construction</h4>
-                    <p>Available in suitable materials for demanding water treatment and industrial environments.</p>
-                </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6">
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-leaf"></i></div>
-                    <h4>Energy Efficient</h4>
-                    <p>Uses pipeline flow energy to achieve mixing without requiring a separate mechanical drive system.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- APPLICATIONS -->
-<section id="applications" class="py-5 bg-white">
-    <div class="container">
-        <div class="section-title">
-            <h2>Applications</h2>
-            <p>Suitable for a wide range of water and industrial processes</p>
-        </div>
-        
-        <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <div class="application-card">
-                    <i class="fas fa-water"></i>
-                    <h5>Water Treatment</h5>
-                    <p>Efficient mixing of treatment chemicals and gases throughout water pipelines.</p>
-                </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6">
-                <div class="application-card">
-                    <i class="fas fa-wind"></i>
-                    <h5>Ozone Injection</h5>
-                    <p>Used for effective dispersion and mixing of ozone into water for disinfection and oxidation.</p>
-                </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6">
-                <div class="application-card">
-                    <i class="fas fa-flask"></i>
-                    <h5>Chemical Dosing</h5>
-                    <p>Provides uniform distribution of chemicals in continuous-flow systems.</p>
-                </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6">
-                <div class="application-card">
-                    <i class="fas fa-industry"></i>
-                    <h5>Industrial Processes</h5>
-                    <p>Suitable for various industrial liquid and gas mixing processes.</p>
-                </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6">
-                <div class="application-card">
-                    <i class="fas fa-fish"></i>
-                    <h5>Aquaculture</h5>
-                    <p>Supports ozone and oxygen mixing applications in aquaculture water treatment.</p>
-                </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6">
-                <div class="application-card">
-                    <i class="fas fa-recycle"></i>
-                    <h5>Wastewater Treatment</h5>
-                    <p>Helps achieve uniform mixing during wastewater treatment and oxidation processes.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<!-- ================= FOOTER ================= -->
 
-<!-- SPECIFICATIONS -->
-<section id="specifications" class="spec-section py-5">
-    <div class="container">
-        <div class="section-title">
-            <h2>Technical Specifications</h2>
-            <p>Configuration can be customized according to application requirements.</p>
-        </div>
-        
-        <div class="spec-table">
-            <table class="table table-bordered">
-                <tbody>
-                    <tr>
-                        <th>Product</th>
-                        <td>Static Mixer</td>
-                    </tr>
-                    <tr>
-                        <th>Application</th>
-                        <td>Water / Ozone / Chemical Mixing</td>
-                    </tr>
-                    <tr>
-                        <th>Installation</th>
-                        <td>Inline Pipeline</td>
-                    </tr>
-                    <tr>
-                        <th>Construction</th>
-                        <td>PP / PVC / SS / Other Options</td>
-                    </tr>
-                    <tr>
-                        <th>Mixing Type</th>
-                        <td>Static / Inline Mixing</td>
-                    </tr>
-                    <tr>
-                        <th>Operation</th>
-                        <td>Continuous Flow</td>
-                    </tr>
-                    <tr>
-                        <th>Maintenance</th>
-                        <td>Low Maintenance</td>
-                    </tr>
-                    <tr>
-                        <th>Customization</th>
-                        <td>Available as per requirement</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</section>
-
-<!-- BENEFITS -->
-<section class="py-5">
-    <div class="container">
-        <div class="section-title">
-            <h2>Why Choose Our Static Mixer?</h2>
-            <p>Reliable mixing technology for efficient treatment systems</p>
-        </div>
-        
-        <div class="row g-4">
-            <div class="col-md-3">
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-bolt"></i></div>
-                    <h5>Efficient</h5>
-                    <p>Excellent mixing performance.</p>
-                </div>
-            </div>
-            
-            <div class="col-md-3">
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-screwdriver-wrench"></i></div>
-                    <h5>Low Maintenance</h5>
-                    <p>No rotating mechanical parts.</p>
-                </div>
-            </div>
-            
-            <div class="col-md-3">
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-expand"></i></div>
-                    <h5>Compact</h5>
-                    <p>Easy inline installation.</p>
-                </div>
-            </div>
-            
-            <div class="col-md-3">
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-certificate"></i></div>
-                    <h5>Reliable</h5>
-                    <p>Designed for continuous operation.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- CTA -->
-<section class="cta">
-    <div class="container">
-        <h2>Need a Static Mixer?</h2>
-        <p>Contact our experts for the right static mixer for your water treatment or industrial application.</p>
-        
-        <a href="contact.html" class="btn btn-light btn-lg rounded-pill px-5">
-            <i class="fas fa-envelope me-2"></i>
-            Get a Free Quote
-        </a>
-
-        <a href="https://wa.me/919160011136?text=Hello,%20I%20want%20to%20know%20about%20your%20Static%20Mixers."
-           target="_blank"
-           class="btn btn-success btn-lg rounded-pill px-5 ms-2">
-           <i class="fab fa-whatsapp me-2"></i>
-            WhatsApp Us
-        </a>
-    </div>
-</section>
-
-<!-- FOOTER -->
 <footer>
-    <div class="container">
-        <p class="mb-0">© 2022 Athineel OZONE. All Rights Reserved.</p>
-    </div>
+
+    <p>
+        © 2026 Athineel OZONE. All Rights Reserved.
+    </p>
+
 </footer>
 
-<!-- Bootstrap JS -->
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
-
