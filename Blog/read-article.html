@@ -10,493 +10,349 @@
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="icon" href="../Assets/Images/Athineel Ozone Logo.jpg">
 
     <!-- Font Awesome -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
         
-        :root {
-            --primary: #0056ff;
-            --cyan: #00cfff;
-            --dark: #07111f;
-            --text: #536174;
-        }
+    :root {
+        --primary:#0056ff;
+        --cyan:#00cfff;
+        --dark:#07111f;
+        --text:#536174;
+    }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    * {
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
 
-        body {
-            font-family:'Poppins',sans-serif;
-            background: #f5f9ff;
-            color: var(--dark);
-        }
+    body {
+        font-family:'Poppins',sans-serif;
+        background:#f5f9ff;
+        color:var(--dark);
+    }
+        
+    /* HERO */
+    .article-hero {
+        position:relative;
+        overflow:hidden;
+        padding:110px 20px 150px;
+        background:
+            radial-gradient(circle at 10% 20%, rgba(0,207,255,.25), transparent 30%),
+            radial-gradient(circle at 90% 80%, rgba(0,86,255,.35), transparent 35%),
+            linear-gradient(135deg,#03152d,#0056ff);
+        color:white;
+    }
 
+    .hero-content {
+        max-width:950px;
+        margin:auto;
+        text-align:center;
+    }
 
-        /* ================= NAVBAR ================= */
+    .category {
+        display:inline-block;
+        padding:8px 18px;
+        border-radius:50px;
+        background:rgba(255,255,255,.15);
+        border:1px solid rgba(255,255,255,.25);
+        backdrop-filter:blur(10px);
+        font-size:14px;
+        font-weight:600;
+        margin-bottom:25px;
+    }
 
-        .navbar {
-            background: rgba(255,255,255,0.95);
-            backdrop-filter: blur(15px);
-            padding: 14px 0;
-            box-shadow: 0 5px 30px rgba(0,0,0,.07);
-            position: sticky;
-            top: 0;
-            z-index: 999;
-        }
+    .article-hero h1 {
+        font-size:clamp(32px, 4vw, 60px);
+        line-height:1.08;
+        font-weight:600;
+        letter-spacing:-2px;
+        margin-bottom:25px;
+    }
 
-        .navbar-brand img {
-            height: 60px;
-            width: auto;
-        }
+    .hero-description {
+        max-width:700px;
+        margin:auto;
+        font-size:18px;
+        line-height:1.7;
+        opacity:.9;
+    }
 
-        .nav-link {
-            color: #222 !important;
-            font-weight: 500;
-            margin-left: 18px;
-            transition: .3s;
-        }
+    .meta {
+        display:flex;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:25px;
+        margin-top:30px;
+        font-size:14px;
+    }
 
-        .nav-link:hover {
-            color: var(--primary) !important;
-        }
+    .meta span {
+        display:flex;
+        align-items:center;
+        gap:8px;
+    }
+        
+    /* ARTICLE IMAGE */
+    .article-image-wrapper {
+        max-width:1100px;
+        margin:-80px auto 0;
+        padding:0 20px;
+        position:relative;
+        z-index:5;
+    }
 
+    .article-image-wrapper img {
+        width:100%;
+        height:520px;
+        object-fit:cover;
+        border-radius:25px;
+        box-shadow:0 30px 70px rgba(0,30,80,.22);
+        display:block;
+    }
 
-        /* ================= HERO ================= */
+    /* ARTICLE */
+    .article-layout {
+        max-width:1100px;
+        margin:60px auto;
+        padding:0 20px;
+    }
 
+    .article-card {
+        background:white;
+        border-radius:25px;
+        padding:55px;
+        box-shadow:0 15px 50px rgba(0,30,80,.07);
+    }
+
+    .article-card p {
+        font-size:17px;
+        line-height:1.9;
+        color:var(--text);
+        margin-bottom:25px;
+    }
+
+    .article-card h2 {
+        font-size:30px;
+        font-weight:750;
+        margin-top:45px;
+        margin-bottom:18px;
+        position:relative;
+        padding-left:18px;
+    }
+
+    .article-card h2::before {
+        content:"";
+        position:absolute;
+        left:0;
+        top:5px;
+        width:5px;
+        height:30px;
+        border-radius:10px;
+        background:linear-gradient(#0056ff,#00cfff);
+    }
+        
+    /* BENEFITS */
+    .benefits {
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+        gap:18px;
+        margin-top:25px;
+    }
+
+    .benefit {
+        padding:25px;
+        border-radius:18px;
+        background:#f7faff;
+        border:1px solid #e5edfa;
+        transition:.3s;
+    }
+
+    .benefit:hover {
+        transform:translateY(-6px);
+        box-shadow:0 15px 35px rgba(0,86,255,.10);
+    }
+
+    .benefit-icon {
+        width:48px;
+        height:48px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        border-radius:14px;
+        background:linear-gradient(135deg, #0056ff, #00cfff);
+        color:white;
+        margin:0 auto 15px;
+        font-size:20px;
+    }
+        
+    .benefit h4 {
+        font-size:19px;
+        font-weight:700;
+        margin-bottom:8px;
+        text-align:center;
+    }
+
+    .benefit p {
+        font-size:15px;
+        line-height:1.7;
+        margin:0;
+        text-align:center;
+    }
+
+    /* INFO BOX */
+    .info-box {
+        margin:40px 0;
+        padding:30px;
+        border-radius:20px;
+        background:linear-gradient(135deg,#eef7ff,#f8fcff);
+        border:1px solid #dcecff;
+    }
+
+    .info-box i {
+        font-size:30px;
+        color:var(--primary);
+        margin-bottom:15px;
+    }
+
+    .info-box h3 {
+        font-size:22px;
+        font-weight:700;
+    }
+
+    /* AUTHOR */
+    .author {
+        margin-top:55px;
+        padding:30px;
+        border-radius:20px;
+        background:linear-gradient(135deg,#03152d,#0056ff);
+        color:white;
+        display:flex;
+        align-items:center;
+        gap:20px;
+    }
+
+    .author-icon {
+        min-width:65px;
+        height:65px;
+        border-radius:50%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        background:rgba(255,255,255,.15);
+        font-size:25px;
+    }
+
+    .author h4 {
+        margin:0 0 5px;
+        font-size:20px;
+    }
+
+    .author p {
+        margin:0;
+        color:rgba(255,255,255,.8);
+        font-size:14px;
+    }
+
+    /* BUTTON */
+    .back-button {
+        display:inline-flex;
+        align-items:center;
+        gap:10px;
+        margin-top:35px;
+        padding:14px 25px;
+        border-radius:50px;
+        background:linear-gradient(135deg,#0056ff,#00cfff);
+        color:white;
+        text-decoration:none;
+        font-weight:600;
+        transition:.3s;
+    }
+
+    .back-button:hover {
+        transform:translateY(-4px);
+        box-shadow:0 12px 30px rgba(0,86,255,.25);
+        color:white;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:768px) {
         .article-hero {
-            position: relative;
-            overflow: hidden;
-            padding: 110px 20px 150px;
-            background:
-                radial-gradient(circle at 10% 20%, rgba(0,207,255,.25), transparent 30%),
-                radial-gradient(circle at 90% 80%, rgba(0,86,255,.35), transparent 35%),
-                linear-gradient(135deg,#03152d,#0056ff);
-            color: white;
-        }
-
-        .hero-content {
-            max-width: 950px;
-            margin: auto;
-            text-align: center;
-        }
-
-        .category {
-            display: inline-block;
-            padding: 8px 18px;
-            border-radius: 50px;
-            background: rgba(255,255,255,.15);
-            border: 1px solid rgba(255,255,255,.25);
-            backdrop-filter: blur(10px);
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 25px;
+            padding:80px 20px 120px;
         }
 
         .article-hero h1 {
-            font-size: clamp(38px, 5vw, 68px);
-            line-height: 1.08;
-            font-weight: 800;
-            letter-spacing: -2px;
-            margin-bottom: 25px;
-        }
-
-        .hero-description {
-            max-width: 700px;
-            margin: auto;
-            font-size: 18px;
-            line-height: 1.7;
-            opacity: .9;
-        }
-
-        .meta {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 25px;
-            margin-top: 30px;
-            font-size: 14px;
-        }
-
-        .meta span {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-
-        /* ================= ARTICLE IMAGE ================= */
-
-        .article-image-wrapper {
-            max-width: 1100px;
-            margin: -80px auto 0;
-            padding: 0 20px;
-            position: relative;
-            z-index: 5;
+            letter-spacing:-1px;
         }
 
         .article-image-wrapper img {
-            width: 100%;
-            height: 520px;
-            object-fit: cover;
-            border-radius: 25px;
-            box-shadow: 0 30px 70px rgba(0,30,80,.22);
-            display: block;
-        }
-
-
-        /* ================= ARTICLE ================= */
-
-        .article-layout {
-            max-width: 1100px;
-            margin: 60px auto;
-            padding: 0 20px;
+            height:280px;
+            border-radius:18px;
         }
 
         .article-card {
-            background: white;
-            border-radius: 25px;
-            padding: 55px;
-            box-shadow: 0 15px 50px rgba(0,30,80,.07);
+            padding:30px 22px;
+            border-radius:20px;
         }
-
-        .article-card p {
-            font-size: 17px;
-            line-height: 1.9;
-            color: var(--text);
-            margin-bottom: 25px;
-        }
-
-        .article-card h2 {
-            font-size: 30px;
-            font-weight: 750;
-            margin-top: 45px;
-            margin-bottom: 18px;
-            position: relative;
-            padding-left: 18px;
-        }
-
-        .article-card h2::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 5px;
-            width: 5px;
-            height: 30px;
-            border-radius: 10px;
-            background: linear-gradient(#0056ff,#00cfff);
-        }
-
-
-        /* ================= BENEFITS ================= */
 
         .benefits {
-            display: grid;
-            grid-template-columns: repeat(2,1fr);
-            gap: 18px;
-            margin-top: 25px;
+            grid-template-columns:1fr;
         }
-
-        .benefit {
-            padding: 25px;
-            border-radius: 18px;
-            background: #f7faff;
-            border: 1px solid #e5edfa;
-            transition: .3s;
-        }
-
-        .benefit:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 15px 35px rgba(0,86,255,.10);
-        }
-
-        .benefit-icon {
-    width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 14px;
-    background: linear-gradient(135deg, #0056ff, #00cfff);
-    color: white;
-    margin: 0 auto 15px;
-    font-size: 20px;
-}
-        
-        
-
-        .benefit h4 {
-            font-size: 19px;
-            font-weight: 700;
-            margin-bottom: 8px;
-            text-align: center;
-        }
-
-        .benefit p {
-            font-size: 15px;
-            line-height: 1.7;
-            margin: 0;
-            text-align: center;
-        }
-
-
-        /* ================= INFO BOX ================= */
-
-        .info-box {
-            margin: 40px 0;
-            padding: 30px;
-            border-radius: 20px;
-            background: linear-gradient(135deg,#eef7ff,#f8fcff);
-            border: 1px solid #dcecff;
-        }
-
-        .info-box i {
-            font-size: 30px;
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
-
-        .info-box h3 {
-            font-size: 22px;
-            font-weight: 700;
-        }
-
-
-        /* ================= AUTHOR ================= */
 
         .author {
-            margin-top: 55px;
-            padding: 30px;
-            border-radius: 20px;
-            background: linear-gradient(135deg,#03152d,#0056ff);
-            color: white;
-            display: flex;
-            align-items: center;
-            gap: 20px;
+            align-items:flex-start;
         }
 
-        .author-icon {
-            min-width: 65px;
-            height: 65px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(255,255,255,.15);
-            font-size: 25px;
+        .meta {
+            gap:12px;
         }
-
-        .author h4 {
-            margin: 0 0 5px;
-            font-size: 20px;
-        }
-
-        .author p {
-            margin: 0;
-            color: rgba(255,255,255,.8);
-            font-size: 14px;
-        }
-
-
-        /* ================= BUTTON ================= */
-
-        .back-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            margin-top: 35px;
-            padding: 14px 25px;
-            border-radius: 50px;
-            background: linear-gradient(135deg,#0056ff,#00cfff);
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            transition: .3s;
-        }
-
-        .back-button:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 30px rgba(0,86,255,.25);
-            color: white;
-        }
-
-
-        /* ================= RESPONSIVE ================= */
-
-        @media(max-width:768px) {
-
-            .article-hero {
-                padding: 80px 20px 120px;
-            }
-
-            .article-hero h1 {
-                letter-spacing: -1px;
-            }
-
-            .article-image-wrapper img {
-                height: 280px;
-                border-radius: 18px;
-            }
-
-            .article-card {
-                padding: 30px 22px;
-                border-radius: 20px;
-            }
-
-            .benefits {
-                grid-template-columns: 1fr;
-            }
-
-            .author {
-                align-items: flex-start;
-            }
-
-            .meta {
-                gap: 12px;
-            }
-        }
+    }
 
     </style>
 </head>
 
-
 <body>
 
-
-<!-- ================= NAVBAR ================= -->
-
-<nav class="navbar navbar-expand-lg">
-
-    <div class="container">
-
-        <a class="navbar-brand" href="index.html">
-            <img src="Assets/Images/Athineel Ozone Logo.jpg"
-                 alt="Athineel OZONE">
-        </a>
-
-        <button class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarMenu">
-
-            <span class="navbar-toggler-icon"></span>
-
-        </button>
-
-
-        <div class="collapse navbar-collapse" id="navbarMenu">
-
-            <ul class="navbar-nav ms-auto">
-
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">
-                        Home
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#products">
-                        Products
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link active" href="blog.html">
-                        Blog
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="FAQ/faq.html">
-                        FAQ
-                    </a>
-                </li>
-
-            </ul>
-
-        </div>
-
-    </div>
-
-</nav>
-
-
-
-<!-- ================= HERO ================= -->
-
+<!-- HERO -->
 <section class="article-hero">
-
     <div class="hero-content">
-
-        <span class="category">
-            WATER TREATMENT
-        </span>
-
-        <h1>
-            Benefits of Ozone Technology
-            in Modern Water Treatment
-        </h1>
-
+        <span class="category">WATER TREATMENT</span>
+        <h1>Benefits of Ozone Technology in Modern Water Treatment</h1>
         <p class="hero-description">
             Discover how ozone technology is transforming modern
             water treatment through powerful oxidation and
             effective disinfection.
         </p>
-
+        
         <div class="meta">
-
-            <span>
-                <i class="fa-solid fa-user"></i>
-                Athineel OZONE Team
-            </span>
-
-            <span>
-                <i class="fa-solid fa-calendar"></i>
-                04 Aug 2026
-            </span>
-
-            <span>
-                <i class="fa-regular fa-clock"></i>
-                5 min read
-            </span>
-
+            <span><i class="fa-solid fa-user"></i>Athineel OZONE Team</span>
+            <span><i class="fa-solid fa-calendar"></i>17 Aug 2026</span>
+            <span><i class="fa-regular fa-clock"></i>5 min read</span>
         </div>
-
     </div>
-
 </section>
 
-
-
-<!-- ================= IMAGE ================= -->
-
+<!-- IMAGE -->
 <div class="article-image-wrapper">
-
-    <img src="/Assets/Images/blog-feature.jpg"
-         alt="Ozone Water Treatment">
-
+    <img src="/Assets/Images/blog-feature.jpg" alt="Ozone Water Treatment">
 </div>
 
-
-
-<!-- ================= ARTICLE ================= -->
-
+<!-- ARTICLE -->
 <section class="article-layout">
-
     <article class="article-card">
-
         <p>
             Ozone technology is becoming an increasingly important
             solution in modern water treatment. Its powerful oxidation
             properties allow it to react with a wide range of
             microorganisms and contaminants present in water.
         </p>
-
         <p>
             Unlike many traditional treatment approaches, ozone can
             provide both oxidation and disinfection within the same
@@ -504,144 +360,74 @@
             for a wide variety of industrial and water-treatment
             applications.
         </p>
-
-
         <h2>What Is Ozone?</h2>
-
         <p>
             Ozone is a naturally occurring form of oxygen consisting
             of three oxygen atoms, represented by the chemical formula
             O₃. It is a highly reactive oxidizing agent.
         </p>
-
         <p>
             Ozone is generated on-site using an ozone generator and
             introduced into the water through an appropriate contact
             system.
         </p>
-
-
         <h2>Key Benefits of Ozone Technology</h2>
-
-
+        
         <div class="benefits">
-
-
             <div class="benefit">
-
-                <div class="benefit-icon">
-                    <i class="fa-solid fa-shield-halved"></i>
-                </div>
-
+                <div class="benefit-icon"><i class="fa-solid fa-shield-halved"></i></div>
                 <h4>Effective Disinfection</h4>
-
-                <p>
-                    Ozone can help control many microorganisms,
-                    including bacteria and viruses.
-                </p>
-
+                <p>Ozone can help control many microorganisms, including bacteria and viruses.</p>
             </div>
-
-
+            
             <div class="benefit">
-
-                <div class="benefit-icon">
-                    <i class="fa-solid fa-wind"></i>
-                </div>
-
+                <div class="benefit-icon"><i class="fa-solid fa-wind"></i></div>
                 <h4>Odor Reduction</h4>
-
-                <p>
-                    Ozone can help reduce unpleasant odors associated
-                    with certain compounds in water.
-                </p>
-
+                <p>Ozone can help reduce unpleasant odors associated with certain compounds in water.</p>
             </div>
-
-
+            
             <div class="benefit">
-
-                <div class="benefit-icon">
-                    <i class="fa-solid fa-droplet"></i>
-                </div>
-
+                <div class="benefit-icon"><i class="fa-solid fa-droplet"></i></div>
                 <h4>Water Quality Improvement</h4>
-
-                <p>
-                    Ozone oxidation can help reduce certain substances
-                    responsible for unwanted color and taste.
-                </p>
-
+                <p>Ozone oxidation can help reduce certain substances responsible for unwanted color and taste.</p>
             </div>
-
-
+            
             <div class="benefit">
-
-                <div class="benefit-icon">
-                    <i class="fa-solid fa-leaf"></i>
-                </div>
-
+                <div class="benefit-icon"><i class="fa-solid fa-leaf"></i></div>
                 <h4>Breaks Down Naturally</h4>
-
-                <p>
-                    Ozone decomposes naturally after treatment rather
-                    than remaining as a persistent chemical disinfectant.
-                </p>
-
+                <p>Ozone decomposes naturally after treatment rather than remaining as a persistent chemical disinfectant.</p>
             </div>
-
-
         </div>
-
-
-
         <h2>How Does Ozone Water Treatment Work?</h2>
-
         <p>
             The treatment process begins with the generation of ozone
             from oxygen. The generated ozone is then transferred into
             water using a suitable injection or contact system.
         </p>
-
         <p>
             Once dissolved, ozone reacts with oxidizable substances
             and microorganisms. The ozone then naturally decomposes
             over time.
         </p>
-
-
+        
         <div class="info-box">
-
             <i class="fa-solid fa-lightbulb"></i>
-
-            <h3>
-                Why is ozone useful?
-            </h3>
-
+            <h3>Why is ozone useful?</h3>
             <p>
                 Ozone combines oxidation and disinfection capabilities,
                 making it a versatile technology for applications where
                 water quality improvement and contaminant control are
                 important.
             </p>
-
         </div>
-
-
-
         <h2>Applications of Ozone Technology</h2>
-
         <p>
             Ozone technology can be used in various applications,
             including industrial water treatment, process water
             treatment, wastewater treatment and other systems where
             oxidation or disinfection is required.
         </p>
-
-
-
         <h2>Conclusion</h2>
-
         <p>
             Ozone technology offers a modern approach to water
             treatment by combining strong oxidation with effective
@@ -650,50 +436,22 @@
             characteristics of the water and the desired treatment
             objectives.
         </p>
-
-
-
+        
         <!-- AUTHOR -->
-
         <div class="author">
-
-            <div class="author-icon">
-                <i class="fa-solid fa-building"></i>
-            </div>
-
+            <div class="author-icon"><i class="fa-solid fa-building"></i></div>
             <div>
-
-                <h4>
-                    Athineel OZONE Team
-                </h4>
-
-                <p>
-                    Providing information and solutions related to
-                    ozone generation and water treatment technology.
-                </p>
-
+                <h4>Athineel OZONE Team</h4>
+                <p>Providing information and solutions related to ozone generation and water treatment technology.</p>
             </div>
-
         </div>
-
-
-
+        
         <!-- BACK -->
-
-        <a href="blog.html" class="back-button">
-
-            <i class="fa-solid fa-arrow-left"></i>
-
-            Back to Blog
-
-        </a>
-
+        <a href="blog.html" class="back-button"><i class="fa-solid fa-arrow-left"></i>Back to Blog</a>
     </article>
-
 </section>
 
-
-
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

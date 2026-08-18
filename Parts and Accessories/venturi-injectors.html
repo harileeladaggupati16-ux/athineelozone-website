@@ -4,643 +4,1111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Ozone Analyzers | Ozone Measurement & Monitoring</title>
+    <title>Venturi Injectors | Ozone Injection & Water Treatment</title>
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <link rel="icon" href="../Assets/Images/Athineel Ozone Logo.jpg">
+
     <!-- Font Awesome -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-        * {
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
+    /* GLOBAL */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');    
+    
+    * {
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
 
-        body {
-            font-family:'Poppins',sans-serif;
-            color:#333;
-            background:#f5faff;
-        }
+    html {
+        scroll-behavior:smooth;
+    }
 
-        /* HERO */
+    body {
+        font-family:'Poppins', sans-serif;
+        color:#333;
+        background:#f5faff;
+    }
+
+    /* HERO */
+    .hero {
+        min-height:480px;
+        display:flex;
+        align-items:center;
+        position:relative;
+        overflow:hidden;
+        background:linear-gradient(120deg,rgba(32, 129, 194, 0.95),rgba(0, 180, 216, 0.85)),
+            url("/Assets/Images/v.jpg");
+        background-size:cover;
+        background-position:center;
+    }
+
+    .hero-content {
+        color:white;
+        max-width:780px;
+        padding:60px 20px;
+    }
+
+    .hero-content h1 {
+        font-size:52px;
+        font-weight:700;
+        margin-bottom:20px;
+    }
+
+    .hero-content h1 span {
+        color:#b9f5ff;
+    }
+
+    .hero-content p {
+        font-size:19px;
+        line-height:1.7;
+        margin-bottom:30px;
+    }
+
+    .hero-btn {
+        display:inline-block;
+        padding:13px 28px;
+        background:white;
+        color:#006494;
+        text-decoration:none;
+        border-radius:30px;
+        font-weight:bold;
+        transition:0.3s;
+    }
+
+    .hero-btn:hover {
+        background:#003f5c;
+        color:white;
+        transform:translateY(-3px);
+    }
+    
+    /* SECTIONS */
+    .section {
+        padding:75px 0;
+    }
+
+    .section-title {
+        text-align:center;
+        margin-bottom:50px;
+    }
+
+    .section-title h2 {
+        color:#006494;
+        font-size:36px;
+        font-weight:700;
+    }
+
+    .section-title p {
+        color:#666;
+        margin-top:10px;
+        font-size:17px;
+    }
+
+    /* INTRODUCTION */
+    .intro-img {
+        width:100%;
+        min-height:350px;
+        object-fit:cover;
+        border-radius:15px;
+        box-shadow:0 10px 30px rgba(0,0,0,0.12);
+    }
+
+    .intro-content h2 {
+        color:#006494;
+        margin-bottom:20px;
+        font-weight:700;
+    }
+
+    .intro-content p {
+        line-height:1.8;
+        color:#555;
+        margin-bottom:18px;
+    }
+
+    /* BENEFITS */
+    .benefit-card {
+        background:white;
+        padding:35px 25px;
+        text-align:center;
+        border-radius:15px;
+        height:100%;
+        box-shadow:0 8px 25px rgba(0,0,0,0.08);
+        transition:0.35s;
+        border-bottom:4px solid transparent;
+    }
+
+    .benefit-card:hover {
+        transform:translateY(-10px);
+        border-bottom:4px solid #00a6c7;
+        box-shadow:0 15px 35px rgba(0,0,0,0.15);
+    }
+
+    .benefit-icon {
+        width:75px;
+        height:75px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        margin:auto;
+        margin-bottom:20px;
+        border-radius:50%;
+        background:#e6f9ff;
+        color:#008bb2;
+        font-size:30px;
+    }
+
+    .benefit-card h4 {
+        color:#006494;
+        font-size:21px;
+        margin-bottom:12px;
+    }
+
+    .benefit-card p {
+        color:#666;
+        line-height:1.6;
+    }
+
+    /* WORKING PRINCIPLE */
+    .working-section {
+        background:#eef9fd;
+    }
+
+    .step {
+        text-align:center;
+        padding:25px;
+    }
+
+    .step-number {
+        width:60px;
+        height:60px;
+        margin:auto;
+        margin-bottom:20px;
+        border-radius:50%;
+        background:#007ea7;
+        color:white;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-size:23px;
+        font-weight:bold;
+        box-shadow:0 8px 20px rgba(0,126,167,0.25);
+    }
+
+    .step h4 {
+        color:#006494;
+        margin-bottom:10px;
+    }
+
+    .step p {
+        color:#666;
+        line-height:1.6;
+    }
+
+    /* APPLICATIONS */
+    .application-card {
+        background:white;
+        border-radius:12px;
+        padding:25px;
+        height:100%;
+        box-shadow:0 7px 20px rgba(0,0,0,0.07);
+        transition:0.3s;
+        border:1px solid transparent;
+    }
+
+    .application-card:hover {
+        transform:translateY(-6px);
+        border-color:#b9eaf4;
+        box-shadow:0 12px 28px rgba(0,0,0,0.10);
+    }
+
+    .application-card i {
+        color:#0096b2;
+        font-size:30px;
+        margin-bottom:15px;
+    }
+
+    .application-card h4 {
+        color:#006494;
+        font-size:20px;
+        margin-bottom:10px;
+    }
+
+    .application-card p {
+        color:#666;
+        line-height:1.6;
+    }
+    
+    /* FEATURES */
+    .feature-list {
+        background:white;
+        padding:35px;
+        border-radius:15px;
+        box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    }
+
+    .feature-list ul {
+        list-style:none;
+    }
+
+    .feature-list li {
+        list-style:none;
+        padding:14px 0;
+        border-bottom:1px solid #eee;
+        color:#555;
+    }
+
+    .feature-list li:last-child {
+        border-bottom:none;
+    }
+
+    .feature-list i {
+        color:#00a6c7;
+        margin-right:10px;
+    }
+    
+    /* SPECIFICATIONS */
+    .spec-table {
+        background:white;
+        border-radius:15px;
+        overflow:hidden;
+        box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    }
+
+    .spec-table table {
+        margin-bottom:0;
+    }
+
+    .spec-table th {
+        background:#006494;
+        color:white;
+        padding:16px;
+        font-weight:600;
+    }
+
+    .spec-table td {
+        padding:15px;
+        color:#555;
+        vertical-align:middle;
+    }
+
+    .spec-table tbody tr:hover {
+        background:#f1fbfe;
+    }
+    
+    /* CTA */
+    .cta {
+        background:linear-gradient(120deg,#005b96,#00a6c7);
+        color:white;
+        text-align:center;
+        padding:70px 20px;
+    }
+
+    .cta h2 {
+        font-size:36px;
+        margin-bottom:15px;
+    }
+
+    .cta p {
+        font-size:18px;
+        margin-bottom:25px;
+    }
+
+    .cta-btn {
+        display:inline-block;
+        background:white;
+        color:#006494;
+        padding:13px 30px;
+        border-radius:30px;
+        text-decoration:none;
+        font-weight:bold;
+        transition:0.3s;
+    }
+
+    .cta-btn:hover {
+        background:#003f5c;
+        color:white;
+        transform:translateY(-3px);
+    }
+
+
+    /* ================================
+    RESPONSIVE
+    ================================ */
+
+    @media (max-width: 768px) {
+
         .hero {
-            min-height:480px;
-            display:flex;
-            align-items:center;
-            position:relative;
-            overflow:hidden;
-
-            background:
-                linear-gradient(120deg,
-                rgba(0, 91, 150, 0.95),
-                rgba(0, 180, 216, 0.85)),
-                url("images/ozone-analyzer-banner.jpg");
-
-            background-size:cover;
-            background-position:center;
+            min-height: 420px;
         }
 
         .hero-content {
-            color:white;
-            max-width:750px;
-            padding:60px 20px;
+            padding: 50px 20px;
         }
 
         .hero-content h1 {
-            font-size:52px;
-            font-weight:700;
-            margin-bottom:20px;
-        }
-
-        .hero-content h1 span {
-            color:#b9f5ff;
+            font-size: 38px;
         }
 
         .hero-content p {
-            font-size:19px;
-            line-height:1.7;
-            margin-bottom:30px;
-        }
-
-        .hero-btn {
-            display:inline-block;
-            padding:13px 28px;
-            background:white;
-            color:#006494;
-            text-decoration:none;
-            border-radius:30px;
-            font-weight:bold;
-            transition:0.3s;
-        }
-
-        .hero-btn:hover {
-            background:#003f5c;
-            color:white;
-            transform:translateY(-3px);
-        }
-
-        /* SECTION */
-        .section {
-            padding:75px 0;
-        }
-
-        .section-title {
-            text-align:center;
-            margin-bottom:50px;
+            font-size: 16px;
         }
 
         .section-title h2 {
-            color:#006494;
-            font-size:36px;
-            font-weight:700;
+            font-size: 30px;
         }
 
-        .section-title p {
-            color:#666;
-            margin-top:10px;
-            font-size:17px;
-        }
-
-        /* INTRO */
         .intro-img {
-            width:100%;
-            border-radius:15px;
-            box-shadow:0 10px 30px rgba(0,0,0,0.12);
-        }
-
-        .intro-content h2 {
-            color:#006494;
-            margin-bottom:20px;
-            font-weight:700;
-        }
-
-        .intro-content p {
-            line-height:1.8;
-            color:#555;
-        }
-
-        /* BENEFITS */
-        .benefit-card {
-            background:white;
-            padding:35px 25px;
-            text-align:center;
-            border-radius:15px;
-            height:100%;
-            box-shadow:0 8px 25px rgba(0,0,0,0.08);
-            transition:0.35s;
-            border-bottom:4px solid transparent;
-        }
-
-        .benefit-card:hover {
-            transform:translateY(-10px);
-            border-bottom:4px solid #00a6c7;
-            box-shadow:0 15px 35px rgba(0,0,0,0.15);
-        }
-
-        .benefit-icon {
-            width:75px;
-            height:75px;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            margin:auto;
-            margin-bottom:20px;
-            border-radius:50%;
-            background:#e6f9ff;
-            color:#008bb2;
-            font-size:30px;
-        }
-
-        .benefit-card h4 {
-            color:#006494;
-            font-size:21px;
-            margin-bottom:12px;
-        }
-
-        .benefit-card p {
-            color:#666;
-            line-height:1.6;
-        }
-
-        /* WORKING */
-        .working-section {
-            background:#eef9fd;
-        }
-
-        .step {
-            text-align:center;
-            padding:20px;
-        }
-
-        .step-number {
-            width:60px;
-            height:60px;
-            margin:auto;
-            margin-bottom:20px;
-            border-radius:50%;
-            background:#007ea7;
-            color:white;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            font-size:23px;
-            font-weight:bold;
-        }
-
-        .step h4 {
-            color:#006494;
-            margin-bottom:10px;
-        }
-
-        .step p {
-            color:#666;
-            line-height:1.6;
-        }
-
-        /* APPLICATIONS */
-        .application-card {
-            background: white;
-            border-radius: 12px;
-            padding: 25px;
-            height: 100%;
-            box-shadow: 0 7px 20px rgba(0,0,0,0.07);
-            transition: 0.3s;
-        }
-
-        .application-card:hover {
-            transform: translateY(-6px);
-        }
-
-        .application-card i {
-            color:#0096b2;
-            font-size:30px;
-            margin-bottom:15px;
-        }
-
-        .application-card h4 {
-            color:#006494;
-            font-size:20px;
-        }
-
-        .application-card p {
-            color:#666;
-            line-height:1.6;
-        }
-
-        /* SPECIFICATIONS */
-        .spec-table {
-            background:white;
-            border-radius:15px;
-            overflow:hidden;
-            box-shadow:0 8px 25px rgba(0,0,0,0.08);
-        }
-
-        .spec-table table {
-            margin-bottom: 0;
-        }
-
-        .spec-table th {
-            background:#006494;
-            color:white;
-            padding:16px;
-        }
-
-        .spec-table td {
-            padding:15px;
-            color:#555;
-        }
-
-        /* FEATURES */
-        .feature-list {
-            background:white;
-            padding:35px;
-            border-radius:15px;
-            box-shadow:0 8px 25px rgba(0,0,0,0.08);
-        }
-
-        .feature-list li {
-            list-style:none;
-            padding:12px 0;
-            border-bottom:1px solid #eee;
-            color:#555;
-        }
-
-        .feature-list li:last-child {
-            border-bottom:none;
-        }
-
-        .feature-list i {
-            color:#00a6c7;
-            margin-right:10px;
-        }
-
-        /* CTA */
-        .cta {
-            background:linear-gradient(120deg, #005b96, #00a6c7);
-            color:white;
-            text-align:center;
-            padding:70px 20px;
+            min-height: 250px;
         }
 
         .cta h2 {
-            font-size:36px;
-            margin-bottom:15px;
+            font-size: 30px;
         }
 
-        .cta p {
-            font-size:18px;
-            margin-bottom:25px;
-        }
-
-        .cta-btn {
-            display:inline-block;
-            background:white;
-            color:#006494;
-            padding:13px 30px;
-            border-radius:30px;
-            text-decoration:none;
-            font-weight:bold;
-            transition:0.3s;
-        }
-
-        .cta-btn:hover {
-            background:#003f5c;
-            color:white;
-        }
-
-        /* RESPONSIVE */
-        @media (max-width:768px) {
-            
-            .hero-content h1 {
-                font-size:38px;
-            }
-
-            .hero-content p {
-                font-size:16px;
-            }
-
-            .section-title h2 {
-                font-size:30px;
-            }
-
-            .hero {
-                min-height:420px;
-            }
-        }
+    }
 
     </style>
 </head>
 
+
 <body>
 
-<!-- HERO -->
+
+<!-- ================================
+     HERO
+================================ -->
+
 <section class="hero">
+
     <div class="container">
+
         <div class="hero-content">
-            <h1>Ozone <span>Analyzers</span></h1>
+
+            <h1>
+                Venturi <span>Injectors</span>
+            </h1>
+
             <p>
-                Accurate and reliable ozone measurement solutions designed
-                for ozone generation systems, water treatment, air treatment
-                and industrial process monitoring.
+                Efficient ozone injection solutions designed for water treatment,
+                disinfection systems and industrial water treatment applications.
             </p>
-            <a href="#products" class="hero-btn">Explore Analyzers</a>
+
+            <a href="#products" class="hero-btn">
+                Explore Injectors
+            </a>
+
         </div>
+
     </div>
+
 </section>
 
-<!-- INTRODUCTION -->
+
+
+<!-- ================================
+     INTRODUCTION
+================================ -->
+
 <section class="section">
+
     <div class="container">
+
         <div class="row align-items-center g-5">
+
             <div class="col-lg-6">
-                <img src="images/ozone-analyzer.jpg"
-                     alt="Ozone Analyzer"
+
+                <img src="/Assets/Images/p.jpg"
+                     alt="Venturi Injector for Ozone Water Treatment"
                      class="intro-img">
+
             </div>
+
 
             <div class="col-lg-6 intro-content">
-                <h2>What is an Ozone Analyzer?</h2>
+
+                <h2>
+                    What is a Venturi Injector?
+                </h2>
+
                 <p>
-                    An ozone analyzer is a precision measurement instrument
-                    used to monitor and measure the concentration of ozone
-                    present in gas or water treatment systems.
+                    A Venturi injector is a fluid injection device used to
+                    introduce ozone or other gases into a flowing water stream.
                 </p>
+
                 <p>
-                    Ozone analyzers help operators monitor ozone generation,
-                    injection and treatment performance. Accurate measurement
-                    allows treatment systems to be monitored and adjusted
-                    according to operating requirements.
+                    It works by creating a pressure difference as water passes
+                    through a specially designed narrow section. This pressure
+                    difference creates suction, allowing ozone gas to be drawn
+                    into the water stream.
                 </p>
+
                 <p>
-                    These instruments can be used in ozone generators,
-                    water treatment plants, swimming pools, aquaculture,
-                    wastewater treatment and industrial applications.
+                    Venturi injectors are widely used in ozone water treatment,
+                    swimming pools, aquaculture, wastewater treatment and
+                    industrial water treatment systems.
                 </p>
+
             </div>
+
         </div>
+
     </div>
+
 </section>
 
-<!-- BENEFITS -->
+
+
+<!-- ================================
+     BENEFITS
+================================ -->
+
 <section class="section" id="products">
+
     <div class="container">
+
         <div class="section-title">
-            <h2>Benefits of Ozone Analyzers</h2>
-            <p>Reliable ozone measurement for efficient treatment monitoring</p>
+
+            <h2>
+                Benefits of Venturi Injectors
+            </h2>
+
+            <p>
+                Efficient gas injection for reliable ozone water treatment
+            </p>
+
         </div>
-        
+
+
         <div class="row g-4">
-            
+
+
+            <!-- CARD 1 -->
+
             <div class="col-lg-3 col-md-6">
+
                 <div class="benefit-card">
-                    <div class="benefit-icon"><i class="fas fa-crosshairs"></i></div>
-                    <h4>Accurate Measurement</h4>
+
+                    <div class="benefit-icon">
+                        <i class="fas fa-wind"></i>
+                    </div>
+
+                    <h4>
+                        Efficient Injection
+                    </h4>
+
                     <p>
-                        Provides accurate monitoring of ozone concentration
-                        for improved process control.
+                        Efficiently introduces ozone gas into the
+                        flowing water stream.
                     </p>
+
                 </div>
+
             </div>
-            
+
+
+            <!-- CARD 2 -->
+
             <div class="col-lg-3 col-md-6">
+
                 <div class="benefit-card">
-                    <div class="benefit-icon"><i class="fas fa-chart-line"></i></div>
-                    <h4>Real-Time Monitoring</h4>
+
+                    <div class="benefit-icon">
+                        <i class="fas fa-droplet"></i>
+                    </div>
+
+                    <h4>
+                        Improved Mixing
+                    </h4>
+
                     <p>
-                        Allows operators to continuously monitor ozone levels
-                        during system operation.
+                        Helps promote effective contact between ozone
+                        and treated water.
                     </p>
+
                 </div>
+
             </div>
-            
+
+
+            <!-- CARD 3 -->
+
             <div class="col-lg-3 col-md-6">
+
                 <div class="benefit-card">
-                    <div class="benefit-icon"><i class="fas fa-shield-halved"></i></div>
-                    <h4>Process Safety</h4>
+
+                    <div class="benefit-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+
+                    <h4>
+                        Simple Design
+                    </h4>
+
                     <p>
-                        Helps maintain controlled ozone concentrations and
-                        supports safe system operation.
+                        Compact construction makes the injector easy
+                        to integrate into treatment systems.
                     </p>
+
                 </div>
+
             </div>
-            
+
+
+            <!-- CARD 4 -->
+
             <div class="col-lg-3 col-md-6">
+
                 <div class="benefit-card">
-                    <div class="benefit-icon"><i class="fas fa-cogs"></i></div>
-                    <h4>Easy Monitoring</h4>
+
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+
+                    <h4>
+                        Reliable Operation
+                    </h4>
+
                     <p>
-                        Designed for convenient installation, operation
-                        and routine monitoring.
+                        Designed for continuous operation in water
+                        treatment applications.
                     </p>
+
                 </div>
+
             </div>
+
         </div>
+
     </div>
+
 </section>
 
-<!-- WORKING PRINCIPLE -->
+
+
+<!-- ================================
+     WORKING PRINCIPLE
+================================ -->
+
 <section class="section working-section">
+
     <div class="container">
+
         <div class="section-title">
-            <h2>How Does an Ozone Analyzer Work?</h2>
-            <p>Simple ozone measurement and monitoring process</p>
+
+            <h2>
+                How Does a Venturi Injector Work?
+            </h2>
+
+            <p>
+                Simple and efficient ozone injection process
+            </p>
+
         </div>
-        
+
+
         <div class="row g-4">
+
+
+            <!-- STEP 1 -->
+
             <div class="col-lg-4">
+
                 <div class="step">
-                    <div class="step-number">1</div>
-                    <h4>Sample Collection</h4>
+
+                    <div class="step-number">
+                        1
+                    </div>
+
+                    <h4>
+                        Water Flow
+                    </h4>
+
                     <p>
-                        A gas or water sample is introduced into the analyzer
-                        through the appropriate sampling connection.
+                        Water enters the Venturi injector through
+                        the inlet connection.
                     </p>
+
                 </div>
+
             </div>
-            
+
+
+            <!-- STEP 2 -->
+
             <div class="col-lg-4">
+
                 <div class="step">
-                    <div class="step-number">2</div>
-                    <h4>Ozone Detection</h4>
+
+                    <div class="step-number">
+                        2
+                    </div>
+
+                    <h4>
+                        Pressure Difference
+                    </h4>
+
                     <p>
-                        The analyzer detects ozone concentration using its
-                        measurement system and sensing technology.
+                        Water velocity increases through the narrow
+                        Venturi section, creating a pressure difference.
                     </p>
+
                 </div>
+
             </div>
-            
+
+
+            <!-- STEP 3 -->
+
             <div class="col-lg-4">
+
                 <div class="step">
-                    <div class="step-number">3</div>
-                    <h4>Concentration Display</h4>
+
+                    <div class="step-number">
+                        3
+                    </div>
+
+                    <h4>
+                        Ozone Injection
+                    </h4>
+
                     <p>
-                        The measured ozone concentration is displayed or
-                        transmitted for monitoring and process control.
+                        The pressure difference draws ozone gas into
+                        the water stream for treatment.
                     </p>
+
                 </div>
+
             </div>
+
         </div>
+
     </div>
+
 </section>
 
-<!-- APPLICATIONS -->
+
+
+<!-- ================================
+     APPLICATIONS
+================================ -->
+
 <section class="section">
+
     <div class="container">
+
         <div class="section-title">
-            <h2>Ozone Analyzer Applications</h2>
-            <p>Suitable for a wide range of ozone treatment and monitoring systems</p>
+
+            <h2>
+                Venturi Injector Applications
+            </h2>
+
+            <p>
+                Suitable for a wide range of ozone and water treatment systems
+            </p>
+
         </div>
-        
+
+
         <div class="row g-4">
+
+
+            <!-- APPLICATION 1 -->
+
             <div class="col-lg-4 col-md-6">
+
                 <div class="application-card">
-                    <i class="fas fa-flask"></i>
-                    <h4>Ozone Generators</h4>
-                    <p>Used to monitor ozone concentration produced by ozone generation equipment.</p>
-                </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6">
-                <div class="application-card">
+
                     <i class="fas fa-droplet"></i>
-                    <h4>Water Treatment</h4>
-                    <p>Helps monitor ozone levels in water purification and disinfection systems.</p>
+
+                    <h4>
+                        Water Treatment
+                    </h4>
+
+                    <p>
+                        Used for injecting ozone into water purification
+                        and disinfection systems.
+                    </p>
+
                 </div>
+
             </div>
-            
+
+
+            <!-- APPLICATION 2 -->
+
             <div class="col-lg-4 col-md-6">
+
                 <div class="application-card">
+
                     <i class="fas fa-swimming-pool"></i>
-                    <h4>Swimming Pools</h4>
-                    <p>Supports monitoring of ozone treatment systems used in swimming pools and spas.</p>
+
+                    <h4>
+                        Swimming Pools
+                    </h4>
+
+                    <p>
+                        Suitable for ozone injection systems used in
+                        swimming pools and recreational water treatment.
+                    </p>
+
                 </div>
+
             </div>
-            
+
+
+            <!-- APPLICATION 3 -->
+
             <div class="col-lg-4 col-md-6">
+
                 <div class="application-card">
-                    <i class="fas fa-industry"></i>
-                    <h4>Industrial Systems</h4>
-                    <p>Suitable for monitoring ozone in industrial water and process treatment systems.</p>
-                </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6">
-                <div class="application-card">
+
                     <i class="fas fa-fish"></i>
-                    <h4>Aquaculture</h4>
-                    <p>Helps monitor ozone treatment in aquaculture and recirculating water systems.</p>
+
+                    <h4>
+                        Aquaculture
+                    </h4>
+
+                    <p>
+                        Helps introduce ozone into recirculating
+                        water treatment systems.
+                    </p>
+
                 </div>
+
             </div>
-            
+
+
+            <!-- APPLICATION 4 -->
+
             <div class="col-lg-4 col-md-6">
+
                 <div class="application-card">
+
+                    <i class="fas fa-industry"></i>
+
+                    <h4>
+                        Industrial Treatment
+                    </h4>
+
+                    <p>
+                        Used in industrial water treatment and
+                        process-water applications.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- APPLICATION 5 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="application-card">
+
                     <i class="fas fa-recycle"></i>
-                    <h4>Wastewater Treatment</h4>
-                    <p>Used for monitoring ozone concentration in wastewater and advanced oxidation systems.</p>
+
+                    <h4>
+                        Wastewater Treatment
+                    </h4>
+
+                    <p>
+                        Can be integrated into ozone-based wastewater
+                        treatment systems.
+                    </p>
+
                 </div>
+
             </div>
+
+
+            <!-- APPLICATION 6 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="application-card">
+
+                    <i class="fas fa-flask"></i>
+
+                    <h4>
+                        Ozone Systems
+                    </h4>
+
+                    <p>
+                        Designed to connect ozone generation equipment
+                        with water treatment pipelines.
+                    </p>
+
+                </div>
+
+            </div>
+
         </div>
+
     </div>
+
 </section>
 
-<!-- FEATURES -->
+
+
+<!-- ================================
+     FEATURES
+================================ -->
+
 <section class="section working-section">
+
     <div class="container">
+
         <div class="section-title">
-            <h2>Ozone Analyzer Features</h2>
-            <p>Designed for reliable ozone measurement and process monitoring</p>
+
+            <h2>
+                Venturi Injector Features
+            </h2>
+
+            <p>
+                Designed for efficient ozone gas injection
+            </p>
+
         </div>
-        
+
+
         <div class="row justify-content-center">
+
             <div class="col-lg-8">
+
                 <div class="feature-list">
+
                     <ul class="p-0 m-0">
-                        <li><i class="fas fa-check-circle"></i>Reliable ozone concentration monitoring</li>
-                        <li><i class="fas fa-check-circle"></i>Easy-to-read measurement display</li>
-                        <li><i class="fas fa-check-circle"></i>Suitable for ozone treatment systems</li>
-                        <li><i class="fas fa-check-circle"></i>Continuous process monitoring capability</li>
-                        <li><i class="fas fa-check-circle"></i>Compact and convenient installation</li>
-                        <li><i class="fas fa-check-circle"></i>Suitable for industrial and commercial applications</li>
+
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            Efficient ozone gas injection
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            Compact and simple construction
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            Suitable for water treatment systems
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            Easy integration with pipelines
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            Reliable continuous operation
+                        </li>
+
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            Suitable for industrial applications
+                        </li>
+
                     </ul>
+
                 </div>
+
             </div>
+
         </div>
+
     </div>
+
 </section>
 
-<!-- SPECIFICATIONS -->
+
+
+<!-- ================================
+     SPECIFICATIONS
+================================ -->
+
 <section class="section">
+
     <div class="container">
 
         <div class="section-title">
-            <h2>Ozone Analyzer Specifications</h2>
-            <p>Specifications can be customized according to application requirements</p>
+
+            <h2>
+                Venturi Injector Specifications
+            </h2>
+
+            <p>
+                Specifications can be selected according to application requirements
+            </p>
+
         </div>
+
+
         <div class="spec-table">
+
             <div class="table-responsive">
+
                 <table class="table table-bordered">
+
                     <thead>
+
                         <tr>
-                            <th>Parameter</th>
-                            <th>Specification</th>
+
+                            <th>
+                                Parameter
+                            </th>
+
+                            <th>
+                                Specification
+                            </th>
+
                         </tr>
+
                     </thead>
+
+
                     <tbody>
+
                         <tr>
-                            <td>Measurement</td>
-                            <td>Ozone Concentration</td>
+
+                            <td>
+                                Application
+                            </td>
+
+                            <td>
+                                Ozone / Gas Injection
+                            </td>
+
                         </tr>
+
                         <tr>
-                            <td>Application</td>
-                            <td>Gas / Water Ozone Monitoring</td>
+
+                            <td>
+                                Fluid
+                            </td>
+
+                            <td>
+                                Water
+                            </td>
+
                         </tr>
+
                         <tr>
-                            <td>Display</td>
-                            <td>Digital Display / Monitoring Interface</td>
+
+                            <td>
+                                Injection Type
+                            </td>
+
+                            <td>
+                                Venturi Suction
+                            </td>
+
                         </tr>
+
                         <tr>
-                            <td>Installation</td>
-                            <td>Panel / Wall / Process Installation</td>
+
+                            <td>
+                                Connection
+                            </td>
+
+                            <td>
+                                Threaded / Flanged
+                            </td>
+
                         </tr>
+
                         <tr>
-                            <td>Monitoring</td>
-                            <td>Continuous Ozone Measurement</td>
+
+                            <td>
+                                Material
+                            </td>
+
+                            <td>
+                                Application Dependent
+                            </td>
+
                         </tr>
+
                         <tr>
-                            <td>Output</td>
-                            <td>Analog / Digital / Optional Communication</td>
+
+                            <td>
+                                Installation
+                            </td>
+
+                            <td>
+                                Pipeline Installation
+                            </td>
+
                         </tr>
+
                         <tr>
-                            <td>Maintenance</td>
-                            <td>Low Maintenance</td>
+
+                            <td>
+                                Suitable Applications
+                            </td>
+
+                            <td>
+                                Water & Wastewater Treatment
+                            </td>
+
                         </tr>
+
                     </tbody>
+
                 </table>
+
             </div>
+
         </div>
+
     </div>
+
 </section>
 
-<!-- CTA -->
+
+
+<!-- ================================
+     CTA
+================================ -->
+
 <section class="cta">
+
     <div class="container">
-        <h2>Looking for the Right Ozone Analyzer?</h2>
+
+        <h2>
+            Looking for the Right Venturi Injector?
+        </h2>
+
         <p>
-            Choose the appropriate ozone analyzer according to your
-            application, measurement range and monitoring requirements.
+            Choose the appropriate Venturi injector according to your
+            water flow, ozone injection and treatment requirements.
         </p>
-        <a href="contact.html" class="cta-btn">Contact Us</a>
+
+        <a href="contact.html" class="cta-btn">
+            Contact Us
+        </a>
+
     </div>
+
 </section>
+
+
 
 <!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
 
 </body>
+
 </html>

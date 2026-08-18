@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Medical Ozone Uses | Athineel OZONE</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="icon" href="../Assets/Images/Athineel Ozone Logo.jpg">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');    
+    
+    * {
+        box-sizing:border-box;
+    }
+
+    body {
+        margin:0;
+        font-family:'Poppins', sans-serif;
+        background:#f5fbfd;
+        color:#18323d;
+    }
+    
+    /* HERO */
+    .hero {
+        position:relative;
+        padding:110px 20px 100px;
+        overflow:hidden;
+        background:
+            radial-gradient(circle at 10% 20%, rgba(0,200,230,.18), transparent 30%),
+            radial-gradient(circle at 90% 80%, rgba(0,130,200,.12), transparent 30%),
+            linear-gradient(135deg,#f8feff,#eafaff);
+    }
+
+    .hero-content {
+        max-width:900px;
+        margin:auto;
+        text-align:center;
+    }
+
+    .category {
+        display:inline-block;
+        padding:8px 18px;
+        border-radius:50px;
+        background:rgba(0,190,220,.12);
+        color:#009bb8;
+        font-size:14px;
+        font-weight:700;
+        margin-bottom:22px;
+    }
+
+    .hero h1 {
+        font-size:clamp(38px, 6vw, 70px);
+        line-height:1.05;
+        font-weight:800;
+        letter-spacing:-2px;
+        color:#123b50;
+        margin-bottom:25px;
+    }
+
+    .hero h1 span {
+        background:linear-gradient(90deg, #00a8c6, #0077a8);
+        background-clip:text;
+        -webkit-background-clip:text;
+        color:transparent;
+        -webkit-text-fill-color:transparent;
+    }
+    
+    .hero-description {
+        max-width:700px;
+        margin:auto;
+        color:#607781;
+        font-size:18px;
+        line-height:1.8;
+    }
+
+    .meta {
+        margin-top:30px;
+        display:flex;
+        justify-content:center;
+        gap:25px;
+        flex-wrap:wrap;
+        color:#71848b;
+        font-size:14px;
+    }
+
+    .meta i {
+        color:#00a8c6;
+        margin-right:7px;
+    }
+
+    /* ARTICLE IMAGE */
+    .article-wrapper {
+        max-width:1050px;
+        margin:-55px auto 80px;
+        position:relative;
+        z-index:2;
+        padding:0 20px;
+    }
+
+    .main-image {
+        width:100%;
+        height:520px;
+        object-fit:cover;
+        border-radius:28px;
+        box-shadow:0 25px 60px rgba(0,70,100,.15);
+    }
+
+    /* ARTICLE */
+    .article {
+        max-width:850px;
+        margin:60px auto 0;
+        background:white;
+        padding:55px;
+        border-radius:28px;
+        box-shadow:0 15px 45px rgba(0,0,0,.06);
+    }
+    
+    .article h2 {
+        font-size:30px;
+        font-weight:750;
+        color:#123b50;
+        margin-top:40px;
+        margin-bottom:18px;
+    }
+
+    .article h2:first-child {
+        margin-top:0;
+    }
+
+    .article p {
+        font-size:17px;
+        line-height:1.9;
+        color:#5c7078;
+        margin-bottom:20px;
+    }
+
+    /* HIGHLIGHT */
+    .highlight {
+        position:relative;
+        margin:35px 0;
+        padding:25px 30px;
+        background:linear-gradient(135deg,#e9fbff,#f6fdff);
+        border-radius:18px;
+        border:1px solid rgba(0,180,210,.15);
+    }
+
+    .highlight i {
+        color:#00a8c6;
+        font-size:25px;
+        margin-right:10px;
+    }
+
+    /* LIST */
+    .article ul {
+        padding-left:0;
+        list-style:none;
+    }
+
+    .article li {
+        padding:13px 15px;
+        margin-bottom:10px;
+        background:#f6fbfd;
+        border-radius:10px;
+        color:#526b74;
+    }
+
+    .article li i {
+        color:#00a8c6;
+        margin-right:10px;
+    }
+
+    /* BACK BUTTON */
+    .back-button {
+        display:inline-flex;
+        align-items:center;
+        gap:10px;
+        margin-top:35px;
+        padding:14px 24px;
+        border-radius:50px;
+        background:#123b50;
+        color:white;
+        text-decoration: none;
+        font-weight:600;
+        transition:.3s;
+    }
+
+    .back-button:hover {
+        background:#00a8c6;
+        transform:translateX(-5px);
+        color:white;
+    }
+
+    /* FOOTER */
+    footer {
+        background:#102f3e;
+        color:#a9c1c9;
+        text-align:center;
+        padding:35px 20px;
+    }
+
+    footer strong {
+        color:white;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:768px) {
+
+        .hero {
+            padding:80px 20px 90px;
+        }
+
+        .hero h1 {
+            letter-spacing: -1px;
+        }
+
+        .main-image {
+            height:300px;
+            border-radius:20px;
+        }
+
+        .article {
+            padding:30px 22px;
+            border-radius:20px;
+        }
+
+        .article h2 {
+            font-size: 25px;
+        }
+
+        .article p {
+            font-size: 16px;
+        }
+
+    }
+
+    </style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <span class="category">HEALTHCARE</span>
+        <h1>Medical <span>Ozone Uses</span></h1>
+        <p class="hero-description">
+            Understanding the role of ozone technology in hygiene,
+            sanitation and healthcare environments.
+        </p>
+
+        <div class="meta">
+            <span><i class="fa-regular fa-calendar"></i>August 2026</span>
+            <span><i class="fa-regular fa-clock"></i>5 min read</span>
+            <span><i class="fa-solid fa-user"></i>Athineel OZONE</span>
+        </div>
+    </div>
+</section>
+
+<!-- ARTICLE -->
+<div class="article-wrapper">
+    <img src="/Assets/Images/m.jpg" alt="Medical Ozone Uses" class="main-image">
+    <article class="article">
+        <h2>What is Medical Ozone?</h2>
+        <p>
+            Ozone is a form of oxygen containing three oxygen atoms.
+            Its strong oxidizing properties have made ozone technology
+            useful in several controlled sanitation and water-treatment
+            applications.
+        </p>
+        <div class="highlight"><i class="fa-solid fa-circle-info"></i>
+            <strong>Safety First:</strong>
+                Ozone is a powerful gas and should only be used with
+                appropriate equipment, controls and professional guidance.
+        </div>
+        <h2>Ozone in Hygiene & Sterilization</h2>
+        <p>
+            Ozone can be used as an antimicrobial agent in controlled
+            environments. Its oxidizing action can help reduce
+            microorganisms in suitable water-treatment and sanitation
+            applications.
+        </p>
+        
+        <ul>
+            <li><i class="fa-solid fa-check"></i>Water treatment applications</li>
+            <li><i class="fa-solid fa-check"></i>Controlled surface sanitation</li>
+            <li><i class="fa-solid fa-check"></i>Equipment sanitation systems</li>
+            <li><i class="fa-solid fa-check"></i>Odor reduction applications</li>
+        </ul>
+        <h2>Healthcare Environment Applications</h2>
+        <p>
+            Specialized ozone systems may be incorporated into
+            environmental hygiene and sanitation processes.
+            Applications should always follow equipment specifications
+            and applicable safety requirements.
+        </p>
+        <p>
+            Because ozone can irritate the respiratory system,
+            controlled concentrations and proper ventilation are
+            important considerations when using ozone technology.
+        </p>
+        <h2>Key Benefits of Ozone Technology</h2>
+
+        <ul>
+            <li><i class="fa-solid fa-check"></i>Powerful oxidation capability</li>
+            <li><i class="fa-solid fa-check"></i>Useful for selected sanitation applications</li>
+            <li><i class="fa-solid fa-check"></i>Helps with odor-control applications</li>
+            <li><i class="fa-solid fa-check"></i>Can be generated on-site</li>
+            <li><i class="fa-solid fa-check"></i>Suitable for certain water-treatment systems</li>
+        </ul>
+        <h2>Why Professional Equipment Matters</h2>
+        <p>
+            Ozone is a powerful oxidizing gas and should not be
+            casually released into occupied areas. Professional
+            ozone generators are designed to provide controlled
+            ozone production for specific applications.
+        </p>
+        <p>
+            For healthcare-related applications, qualified
+            professionals should determine whether ozone technology
+            is suitable for the intended purpose.
+        </p>
+        <h2>Conclusion</h2>
+        <p>
+            Ozone technology has applications in water treatment,
+            sanitation and environmental hygiene. With appropriate
+            equipment, operating procedures and safety controls,
+            ozone can be an effective technology for specific
+            professional applications.
+        </p>
+        
+        <!-- BACK -->
+        <a href="blog.html" class="back-button">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to Blog
+        </a>
+    </article>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p class="mb-0">© 2022 <strong>Athineel OZONE</strong>.All Rights Reserved.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
