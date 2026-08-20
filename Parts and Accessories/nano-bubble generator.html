@@ -8,163 +8,165 @@
 
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <link rel="icon" href="../Assets/Images/Athineel Ozone Logo.jpg">
+    
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-        *{
-            margin:0;
-            padding:0;
-        }
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+    
+    *{
+        margin:0;
+        padding:0;
+    }
 
-        body{
-            font-family:'Poppins',sans-serif;
-            color:#444;
-            line-height:1.7;
-        }
+    body{
+        font-family:'Poppins',sans-serif;
+        color:#444;
+        line-height:1.7;
+    }
 
-        /* Internal Banner */
-        .page-banner{
-            position:relative;
-            height:350px;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            overflow:hidden;
-            color:#fff;
-            text-align:center;
+    /* Internal Banner */
+    .page-banner{
+        position:relative;
+        height:350px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        overflow:hidden;
+        color:#fff;
+        text-align:center;
+        background-image:url("https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1600&q=80");
+        background-size:120%;
+        background-position:center;
+        background-repeat:no-repeat;
+        animation:zoomMove 20s infinite alternate ease-in-out;
+    }
 
-            background-image:url("https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1600&q=80");
+    .overlay{
+        position:absolute;
+        inset:0;
+        background:rgba(0,90,150,.60);
+    }
+
+    .page-banner .container{
+        z-index:2;
+    }
+
+    .page-banner h1{
+        font-size:48px;
+        font-weight:700;
+        margin-bottom:10px;
+    }
+
+    .page-banner p{
+        font-size:18px;
+    }
+
+    @keyframes zoomMove{
+
+        0%{
             background-size:120%;
-            background-position:center;
-            background-repeat:no-repeat;
-
-            animation:zoomMove 20s infinite alternate ease-in-out;
+            background-position:center top;
         }
 
-        .overlay{
-            position:absolute;
-            inset:0;
-            background:rgba(0,90,150,.60);
+            
+        50%{
+            background-size:130%;
+            background-position:center center;
         }
 
-        .page-banner .container{
-            z-index:2;
+        100%{
+            background-size:120%;
+            background-position:center bottom;
         }
+    
+    }
 
-        .page-banner h1{
-            font-size:48px;
-            font-weight:700;
-            margin-bottom:10px;
-        }
+    /* Section Title */
+    .section-title{
+        color:#0066cc;
+        font-weight:bold;
+        margin-bottom:20px;
+    }
 
-        .page-banner p{
-            font-size:18px;
-        }
+    /* Feature Card */
+    .feature-card{
+        padding:35px;
+        border-radius:15px;
+        background:#fff;
+        text-align:center;
+        transition:0.4s;
+        height:100%;
+        box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    }
 
-        @keyframes zoomMove{
+    .feature-card i{
+        font-size:45px;
+        color:#005bea;
+        margin-bottom:20px;
+    }
 
-            0%{
-                background-size:120%;
-                background-position:center top;
-            }
+    .feature-card:hover{
+        transform:translateY(-8px);
+        background:linear-gradient(135deg,#0056ff,#00cfff);
+    }
 
-            50%{
-                background-size:130%;
-                background-position:center center;
-            }
+    .feature-card:hover h5,
+    .feature-card:hover p{
+        color:#fff;
+    }
 
-            100%{
-                background-size:120%;
-                background-position:center bottom;
-            }
+    .feature-card:hover i{
+        color:#fff;
+    }
 
-        }
+    /* Light Blue Background */
+    .bg-light-blue{
+        background:#f7fbff;
+    }
 
-        /* Section Title */
-        .section-title{
-            color:#0066cc;
-            font-weight:bold;
-            margin-bottom:20px;
-        }
+    /* Images */
+    .content-img{
+        width:100%;
+        height:350px;
+        object-fit:cover;
+        border-radius:12px;
+    }
 
-        /* Feature Card */
-        .feature-card{
-            padding:35px;
-            border-radius:15px;
-            background:#fff;
-            text-align:center;
-            transition:0.4s;
-            height:100%;
-            box-shadow:0 10px 25px rgba(0,0,0,0.08);
-        }
+    /* CTA */
+    .cta{
+        background:#4f91f4;
+        color:#fff;
+        padding:70px 0;
+        text-align:center;
+    }
 
-        .feature-card i{
-            font-size:45px;
-            color:#005bea;
-            margin-bottom:20px;
-        }
+    /* Table */
+    .table th{
+        background:#0d6efd;
+        color:#fff;
+    }
 
-        .feature-card:hover{
-            transform:translateY(-8px);
-            background:linear-gradient(135deg,#0056ff,#00cfff);
-        }
+    /* Application List */
+    .application-list li{
+         margin-bottom:10px;
+    }
 
-        .feature-card:hover h5,
-        .feature-card:hover p{
-            color:#fff;
-        }
+    .application-list i{
+        color:#0d6efd;
+        margin-right:8px;
+    }
 
-        .feature-card:hover i{
-            color:#fff;
-        }
-
-        /* Light Blue Background */
-        .bg-light-blue{
-            background:#f7fbff;
-        }
-
-        /* Images */
-        .content-img{
-            width:100%;
-            height:350px;
-            object-fit:cover;
-            border-radius:12px;
-        }
-
-        /* CTA */
-        .cta{
-            background:#4f91f4;
-            color:#fff;
-            padding:70px 0;
-            text-align:center;
-        }
-
-        /* Table */
-        .table th{
-            background:#0d6efd;
-            color:#fff;
-        }
-
-        /* Application List */
-        .application-list li{
-            margin-bottom:10px;
-        }
-
-        .application-list i{
-            color:#0d6efd;
-            margin-right:8px;
-        }
-
-        /* Footer */
-        footer{
-            background:#212529;
-            color:#ddd;
-            text-align:center;
-            padding:20px;
-        }
+    /* Footer */
+    footer{
+        background:#212529;
+        color:#ddd;
+        text-align:center;
+        padding:20px;
+    }
 
     </style>
 </head>
@@ -174,12 +176,10 @@
 <!-- INTERNAL BANNER -->
 <section class="page-banner">
     <div class="overlay"></div>
+    
     <div class="container position-relative text-center">
         <h1>Nano Bubble Generator</h1>
-        <p>
-            Advanced Nano Bubble Technology for Water Treatment,
-            Aquaculture, Agriculture and Industrial Applications
-        </p>
+        <p>Advanced Nano Bubble Technology for Water Treatment, Aquaculture, Agriculture and Industrial Applications</p>
     </div>
 </section>
 
@@ -217,10 +217,7 @@
                 <div class="feature-card">
                     <i class="bi bi-droplet-half"></i>
                     <h5>Ultra-Fine Bubbles</h5>
-                    <p>
-                        Generates extremely small bubbles for efficient
-                        gas-liquid interaction and improved gas transfer.
-                    </p>
+                    <p>Generates extremely small bubbles for efficient gas-liquid interaction and improved gas transfer.</p>
                 </div>
             </div>
             
@@ -228,10 +225,7 @@
                 <div class="feature-card">
                     <i class="bi bi-wind"></i>
                     <h5>High Gas Transfer</h5>
-                    <p>
-                        Provides efficient oxygen, ozone or other gas
-                        transfer into water.
-                    </p>
+                    <p>Provides efficient oxygen, ozone or other gas transfer into water.</p>
                 </div>
             </div>
             
@@ -239,10 +233,7 @@
                 <div class="feature-card">
                     <i class="bi bi-lightning-charge"></i>
                     <h5>Energy Efficient</h5>
-                    <p>
-                        Designed for efficient operation with optimized
-                        water circulation and gas utilization.
-                    </p>
+                    <p>Designed for efficient operation with optimized water circulation and gas utilization.</p>
                 </div>
             </div>
             
@@ -250,10 +241,7 @@
                 <div class="feature-card">
                     <i class="bi bi-gear-wide-connected"></i>
                     <h5>Easy Maintenance</h5>
-                    <p>
-                        Simple system design allows convenient inspection,
-                        cleaning and routine maintenance.
-                    </p>
+                    <p>Simple system design allows convenient inspection, cleaning and routine maintenance.</p>
                 </div>
             </div>
         </div>
@@ -307,69 +295,23 @@
         <div class="row mt-4">
             <div class="col-lg-6">
                 <ul class="list-group application-list">
-                    <li class="list-group-item">
-                        <i class="bi bi-check-circle-fill"></i>
-                        Aquaculture & Fish Farming
-                    </li>
-
-                    <li class="list-group-item">
-                        <i class="bi bi-check-circle-fill"></i>
-                        Water Treatment Plants
-                    </li>
-
-                    <li class="list-group-item">
-                        <i class="bi bi-check-circle-fill"></i>
-                        Wastewater Treatment
-                    </li>
-
-                    <li class="list-group-item">
-                        <i class="bi bi-check-circle-fill"></i>
-                        Agricultural Irrigation
-                    </li>
-
-                    <li class="list-group-item">
-                        <i class="bi bi-check-circle-fill"></i>
-                        Hydroponic Farming
-                    </li>
-
-                    <li class="list-group-item">
-                        <i class="bi bi-check-circle-fill"></i>
-                        Industrial Water Treatment
-                    </li>
+                    <li class="list-group-item"><i class="bi bi-check-circle-fill"></i>Aquaculture & Fish Farming</li>
+                    <li class="list-group-item"><i class="bi bi-check-circle-fill"></i>Water Treatment Plants</li>
+                    <li class="list-group-item"><i class="bi bi-check-circle-fill"></i>Wastewater Treatment</li>
+                    <li class="list-group-item"><i class="bi bi-check-circle-fill"></i>Agricultural Irrigation</li>
+                    <li class="list-group-item"><i class="bi bi-check-circle-fill"></i>Hydroponic Farming</li>
+                    <li class="list-group-item"><i class="bi bi-check-circle-fill"></i>Industrial Water Treatment</li>
                 </ul>
             </div>
             
             <div class="col-lg-6">
                 <ul class="list-group application-list">
-                    <li class="list-group-item">
-                        <i class="bi bi-check-circle-fill"></i>
-                        Ozone Water Treatment
-                    </li>
-
-                    <li class="list-group-item">
-                        <i class="bi bi-check-circle-fill"></i>
-                        Drinking Water Treatment
-                    </li>
-
-                    <li class="list-group-item">
-                        <i class="bi bi-check-circle-fill"></i>
-                        Cooling Water Systems
-                    </li>
-
-                    <li class="list-group-item">
-                        <i class="bi bi-check-circle-fill"></i>
-                        Swimming Pool Treatment
-                    </li>
-
-                    <li class="list-group-item">
-                        <i class="bi bi-check-circle-fill"></i>
-                        Environmental Restoration
-                    </li>
-
-                    <li class="list-group-item">
-                        <i class="bi bi-check-circle-fill"></i>
-                        Industrial Process Water
-                    </li>
+                    <li class="list-group-item"><i class="bi bi-check-circle-fill"></i>Ozone Water Treatment</li>
+                    <li class="list-group-item"><i class="bi bi-check-circle-fill"></i>Drinking Water Treatment</li>
+                    <li class="list-group-item"><i class="bi bi-check-circle-fill"></i>Cooling Water Systems</li>
+                    <li class="list-group-item"><i class="bi bi-check-circle-fill"></i>Swimming Pool Treatment</li>
+                    <li class="list-group-item"><i class="bi bi-check-circle-fill"></i>Environmental Restoration</li>
+                    <li class="list-group-item"><i class="bi bi-check-circle-fill"></i>Industrial Process Water</li>
                 </ul>
             </div>
         </div>
