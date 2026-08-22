@@ -130,15 +130,15 @@ p{
     color:var(--primary)!important;
 }
 .navbar-brand img {
-    height: 90px;
-    width: auto;
+    height:90px;
+    width:auto;
 }
 
 .navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1030;
-    background: #fff;
+    position:sticky;
+    top:0;
+    z-index:1030;
+    background:#fff;
 }
 
 /* Quote Model */
@@ -162,12 +162,12 @@ p{
     font-weight:600;
     background:linear-gradient(135deg,#02c315,#02d793);
     border:none;
-    color: #fff;
+    color:#fff;
 }
 
 .quote-btn1:hover{
     transform:translateY(-3px);
-    background-color: #026e0d;
+    background-color:#026e0d;
 }
 
 /* BUTTONS */

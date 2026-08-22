@@ -27,7 +27,7 @@ img{
 /* HERO */
 .blog-hero{
     background:linear-gradient(135deg,#0056ff,#00c6ff);
-    color:#fff;
+    color:#fff !important;
     padding:120px 0;
 }
 

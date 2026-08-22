@@ -1,3 +1,8 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet" href="/Components/navbar.css">
+
 <nav class="navbar navbar-expand-md navbar-light sticky-top">
     <div class="container-fluid px-4">
 
@@ -95,6 +100,8 @@
                         <li><a class="dropdown-item" href="/Blog/industrial-ozone.html">Industrial Ozone Applications</a></li>
                         <li><a class="dropdown-item" href="/Blog/ozone-vs-chlorine.html">Ozone vs Chlorine</a></li>
                         <li><a class="dropdown-item" href="/Blog/ozonator-maintenance-tips.html">Ozonator Maintenance Tips</a></li>
+                        <li><a class="dropdown-item" href="/Blog/future-of-ozone.html">Feature Of Ozone System</a></li>
+                        <li><a class="dropdown-item" href="/Blog/medical-ozone-uses.html">Medical Ozone Uses</a></li>
                     </ul>
                 </li>
 
@@ -108,14 +115,73 @@
                 </li>
 
                 <li class="nav-item ms-lg-2">
-                    <a class="btn btn-success"
-                       href="https://wa.me/919160011136"
-                       target="_blank">
+                    <a class="btn btn-wa"
+                        href="https://wa.me/919160011136?text=Hello,%20I%20want%20to%20know%20about%20your%20ATHINEEL%20OZONATORS."
+                        target="_blank">
                         WhatsApp
                     </a>
                 </li>
-
             </ul>
         </div>
     </div>
 </nav>
+
+<!-- QUOTE MODAL -->
+<div class="modal fade" id="quoteModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h4 class="modal-title">Get a Free Quote</h4>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            
+            <div class="modal-body">
+                <form onsubmit="sendQuoteEmail(event)">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <input type="text" id="fullName" class="form-control" placeholder="Full Name" required>
+                        </div>
+                        
+                        <div class="col-md-6 mb-3">
+                            <input type="email" id="email" class="form-control" placeholder="Email Address" required>
+                        </div>
+                        
+                        <div class="col-md-6 mb-3">
+                            <input type="tel" id="phone" class="form-control" placeholder="Phone Number" required>
+                        </div>
+                        
+                        <div class="col-md-6 mb-3">
+                            <input type="text" id="company" class="form-control" placeholder="Company Name">
+                        </div>
+                        
+                        <div class="col-12 mb-3">
+                            <select id="product" class="form-select" required>
+                                <option value="">Select Product</option>
+                                <option>5Gram Ozonator</option>
+                                <option>10Gram Ozonator</option>
+                                <option>25Gram Ozonator</option>
+                                <option>50Gram Ozonator</option>
+                                <option>100Gram Ozonator</option>
+                                <option>200Gram Ozonator</option>
+                                <option>500Gram Ozonator</option>
+                                <option>1KG Ozonator</option>
+                            </select>
+                        </div>
+                        
+                        <div class="col-12 mb-3">
+                            <textarea id="requirements" class="form-control" rows="5" 
+                                placeholder="Project Requirements" required>
+                            </textarea>
+                        </div>
+                        
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary px-5">
+                                Submit Quote
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

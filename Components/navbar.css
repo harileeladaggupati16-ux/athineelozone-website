@@ -1,0 +1,226 @@
+body {
+    padding-top:105px;
+}
+
+/* NAVBAR */
+
+.navbar {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:9999;
+    background:#fff;
+    padding:18px 0;
+    box-shadow:0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-brand img {
+    height:90px;
+    width:auto;
+}
+
+.nav-link {
+    font-weight:500;
+    margin-left:18px;
+    color:#222 !important;
+    transition:0.3s;
+}
+
+.nav-link:hover {
+    color:var(--primary) !important;
+}
+
+.nav-link.active {
+    color:var(--primary) !important;
+}
+
+/* QUOTE BUTTON */
+.quote-btn {
+    margin-left:25px;
+    padding:12px 28px;
+    border-radius:40px;
+    font-weight:600;
+    background:linear-gradient(135deg, #0056ff, #00cfff);
+    border:none;
+    transition:0.3s;
+}
+
+.quote-btn:hover {
+    transform:translateY(-3px);
+}
+
+/* GREEN QUOTE BUTTON */
+.quote-btn1 {
+    margin-left:25px;
+    padding:12px 28px;
+    border-radius:40px;
+    font-weight:600;
+    background:linear-gradient(135deg, #02c315, #02d793);
+    border:none;
+    color:#fff;
+    transition:0.3s;
+}
+
+.quote-btn1:hover {
+    transform:translateY(-3px);
+    background:#026e0d;
+}
+
+/* PRIMARY BUTTON */
+.btn-primary {
+    background:linear-gradient(135deg, #0056ff, #00bfff);
+    border:none;
+    border-radius:50px;
+    padding:13px 35px;
+    font-weight:600;
+    transition:0.4s;
+}
+
+.btn-primary:hover {
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(0, 86, 255, 0.35);
+}
+
+/* LIGHT BUTTONS */
+.btn-light {
+    padding:13px 35px;
+    border-radius:50px;
+    font-weight:600;
+}
+
+.btn-outline-light {
+    padding:13px 35px;
+    border-radius:50px;
+    font-weight:600;
+}
+
+/* WHATSAPP BUTTON */
+.btn-wa {
+    background:#25D366;
+    border:none;
+    color:#fff;
+    font-weight:600;
+    padding:12px 20px;
+    border-radius:50px;
+    transition:all 0.3s ease;
+}
+
+.btn-wa:hover {
+    background:#1EBE5D;
+    color:#fff;
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(37, 211, 102, 0.35);
+}
+
+.btn-wa i {
+    font-size:20px;
+    vertical-align:middle;
+}
+
+/* DROPDOWN MENU */
+.dropdown-menu {
+    position:absolute;
+    min-width:250px;
+    padding:10px;
+    border:1px solid #1380f4;
+    border-radius:18px;
+    background:#fff;
+    box-shadow:0 12px 30px rgba(0, 0, 0, 0.12);
+    overflow:hidden;
+    z-index:10000;
+}
+
+/* Animated Gradient Border */
+.dropdown-menu::before {
+    content: "";
+    position:absolute;
+    inset:0;
+    padding:2px;
+    border-radius:inherit;
+    background:linear-gradient(90deg,#0d6efd,#00c6ff,#4da3ff,#0d6efd);
+    background-size:300% 300%;
+    animation:borderRotate 4s linear infinite;
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    mask-composite:exclude;
+    pointer-events:none;
+    z-index:-1;
+}
+
+/* Dropdown Items */
+
+.dropdown-menu .dropdown-item {
+    color:#1f2937;
+    font-size:15px;
+    font-weight:500;
+    padding:12px 18px;
+    border-radius:10px;
+    transition:all 0.3s ease;
+    position:relative;
+}
+
+/* Dropdown Hover */
+.dropdown-menu .dropdown-item:hover {
+    background:linear-gradient(135deg,#2777ee,#00b4ff,#41ce93);
+    color:#fff;
+    transform:translateX(5px);
+}
+
+/* Arrow */
+.dropdown-menu .dropdown-item::after {
+    content:"→";
+    float:right;
+    opacity:0;
+    transition:all 0.3s ease;
+}
+
+.dropdown-menu .dropdown-item:hover::after {
+    opacity:1;
+    transform:translateX(4px);
+}
+
+/* Dropdown Glow */
+.dropdown-menu:hover {
+    border-color:#00c6ff;
+    box-shadow:
+        0 0 10px rgba(77, 163, 255, 0.7),
+        0 0 20px rgba(0, 198, 255, 0.5),
+        0 0 35px rgba(13, 110, 253, 0.3);
+}
+
+/* NAVBAR MOBILE */
+@media (max-width:991px) {
+
+    .navbar {
+        padding:10px 0;
+    }
+
+    .navbar-brand img {
+        height:65px;
+    }
+
+    .nav-link {
+        margin-left:0;
+        padding:10px 15px;
+    }
+
+    .quote-btn,
+    .quote-btn1 {
+        margin-left:0;
+        margin-top:8px;
+    }
+
+    .btn-wa {
+        margin-top:8px;
+    }
+}
