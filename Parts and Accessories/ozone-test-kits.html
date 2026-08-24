@@ -11,440 +11,540 @@
   
   <link rel="icon" href="../Assets/Images/Athineel Ozone Logo.jpg">
   
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   
   <style>
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
   
   * {
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
 
-    body {
-      font-family:'Poppins', sans-serif;
-      color:#222;
-      background:#f6fbff;
-      line-height:1.6;
-    }
+  body {
+    font-family:'Poppins', sans-serif;
+    color:#222;
+    background:#f6fbff;
+    line-height:1.6;
+  }
 
-    a {
-      text-decoration:none;
-    }
+  a {
+    text-decoration:none;
+  }
     
-    /* HERO */
-    .hero {
-      min-height:520px;
-      padding:80px 7%;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:50px;
-      background:
-        linear-gradient(135deg, rgba(0,126,255,0.95), rgba(0,154,108,0.92)),
-        url("images/ozone-test-kit-banner.jpg");
-      background-size:cover;
-      background-position:center;
-      color:white;
-    }
+  /* HERO */
+  .hero {
+    min-height:520px;
+    padding:80px 7%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:50px;
+    background:linear-gradient(135deg, rgba(0,126,255,0.95), rgba(0,154,108,0.92)),
+      url("/Assets/Images/ozone-residual-test-kit.jpg");
+    background-size:cover;
+    background-position:center;
+    color:white;
+  }
 
-    .hero-content {
-      max-width:650px;
-    }
+  .hero-content {
+    max-width:650px;
+  }
 
-    .hero-tag {
-      display:inline-block;
-      padding:8px 18px;
-      background:rgba(255,255,255,0.18);
-      border:1px solid rgba(255,255,255,0.4);
-      border-radius:30px;
-      margin-bottom:20px;
-      font-size:14px;
-    }
+  .hero-tag {
+    display:inline-block;
+    padding:8px 18px;
+    background:rgba(255,255,255,0.18);
+    border:1px solid rgba(255,255,255,0.4);
+    border-radius:30px;
+    margin-bottom:20px;
+    font-size:14px;
+  }
 
-    .hero h1 {
-      font-size:52px;
-      line-height:1.15;
-      margin-bottom:20px;
-    }
+  .hero h1 {
+    font-size:52px;
+    line-height:1.15;
+    margin-bottom:20px;
+  }
 
-    .hero h1 span {
-      color:#d7fff0;
-    }
+  .hero h1 span {
+    color:#d7fff0;
+  }
 
-    .hero p {
-      font-size:18px;
-      max-width:600px;
-      margin-bottom:30px;
-      opacity:0.95;
-    }
+  .hero p {
+    font-size:18px;
+    max-width:600px;
+    margin-bottom:30px;
+    opacity:0.95;
+  }
 
-    .hero-buttons {
-      display:flex;
-      gap:15px;
-      flex-wrap:wrap;
-    }
+  .hero-buttons {
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+  }
 
-    .btn {
-      display:inline-block;
-      padding:13px 25px;
-      border-radius:30px;
-      font-weight:600;
-      transition:0.3s;
-    }
+  .btn {
+    display:inline-block;
+    padding:13px 25px;
+    border-radius:30px;
+    font-weight:600;
+    transition:0.3s;
+  }
 
-    .btn-primary {
-      background:white;
-      color:#087fda;
-    }
+  .btn-primary {
+    background:white;
+    color:#f3f6f8;
+  }
 
-    .btn-primary:hover {
-      transform:translateY(-3px);
-    }
+  .btn-primary:hover {
+    transform:translateY(-3px);
+  }
 
-    .btn-outline {
-      border:2px solid white;
-      color:white;
-    }
+  .btn-outline {
+    border:2px solid white;
+    color:white;
+  }
 
-    .btn-outline:hover {
-      background:white;
-      color:#087fda;
-    }
+  .btn-outline:hover {
+    background:white;
+    color:#087fda;
+  }
 
-    /* SECTION */
-    .section {
-      padding:75px 7%;
-    }
+  /* SECTION */
+  .section {
+    padding:75px 7%;
+  }
 
-    .section-title {
-      text-align:center;
-      margin-bottom:45px;
-    }
+  .section-title {
+    text-align:center;
+    margin-bottom:45px;
+  }
 
-    .section-title h2 {
-      font-size:36px;
-      color:#123;
-      margin-bottom:10px;
-    }
+  .section-title h2 {
+    font-size:36px;
+    color:#123;
+    margin-bottom:10px;
+  }
 
-    .section-title p {
-      color:#68737d;
-      max-width:700px;
-      margin:auto;
-    }
+  .section-title p {
+    color:#68737d;
+    max-width:700px;
+    margin:auto;
+  }
 
-    /* TEST KIT CARDS */
-    .products {
-      display:grid;
-      grid-template-columns:repeat(3, 1fr);
-      gap:28px;
-    }
+  /* TEST KIT CARDS */
+  .products {
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:28px;
+  }
 
-    .product-card {
-      background:white;
-      border-radius:18px;
-      overflow:hidden;
-      box-shadow:0 8px 30px rgba(0,0,0,0.08);
-      transition:0.35s;
-      border:1px solid #e8f1f5;
-    }
+  .product-card {
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 8px 30px rgba(0,0,0,0.08);
+    transition:0.35s;
+    border:1px solid #e8f1f5;
+  }
 
-    .product-card:hover {
-      transform:translateY(-10px);
-      box-shadow:0 18px 40px rgba(0,0,0,0.13);
-    }
+  .product-card:hover {
+    transform:translateY(-10px);
+    box-shadow:0 18px 40px rgba(0,0,0,0.13);
+  }
 
-    .product-image {
-      height:220px;
-      background:linear-gradient(135deg, #e8f8ff, #eafff7);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      overflow:hidden;
-    }
+  .product-image {
+    height:220px;
+    background:linear-gradient(135deg, #e8f8ff, #eafff7);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+  }
 
-    .product-image img {
-      width:85%;
-      height:85%;
-      object-fit:contain;
-      transition:0.4s;
-    }
+  .product-image img {
+    width:85%;
+    height:85%;
+    object-fit:contain;
+    transition:0.4s;
+  }
 
-    .product-card:hover .product-image img {
-      transform:scale(1.08);
-    }
+  .product-card:hover .product-image img {
+    transform:scale(1.08);
+  }
 
-    .product-info {
-      padding:25px;
-    }
+  .product-info {
+    padding:25px;
+  }
 
-    .product-info h3 {
-      color:#087fda;
-      margin-bottom:10px;
-      font-size:21px;
-    }
+  .product-info h3 {
+    color:#087fda;
+    margin-bottom:10px;
+    font-size:21px;
+  }
 
-    .product-info p {
-      color:#68737d;
-      font-size:14px;
-      margin-bottom:18px;
-    }
+  .product-info p {
+    color:#68737d;
+    font-size:14px;
+    margin-bottom:18px;
+  }
 
-    .product-list {
-      list-style:none;
-      margin-bottom:20px;
-    }
+  .product-list {
+    list-style:none;
+    margin-bottom:20px;
+  }
 
-    .product-list li {
-      margin-bottom:8px;
-      font-size:14px;
-    }
+  .product-list li {
+    margin-bottom:8px;
+    font-size:14px;
+  }
 
-    .product-list i {
-      color:#08a36c;
-      margin-right:8px;
-    }
+  .product-list i {
+    color:#08a36c;
+    margin-right:8px;
+  }
 
-    .product-btn {
-      display:inline-block;
-      padding:10px 20px;
-      background:#087fda;
-      color:white;
-      border-radius:25px;
-      font-size:14px;
-      font-weight:600;
-    }
+  .product-btn {
+    display:inline-block;
+    padding:10px 20px;
+    background:#087fda;
+    color:white;
+    border-radius:25px;
+    font-size:14px;
+    font-weight:600;
+  }
 
-    /* BENEFITS */
-    .benefits-section {
-      background:#eef9ff;
-    }
+  /* BENEFITS */
+  .benefits-section {
+    background:#eef9ff;
+  }
 
-    .benefits {
-      display:grid;
-      grid-template-columns:repeat(4, 1fr);
-      gap:25px;
-    }
+  .benefits {
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:25px;
+  }
 
-    .benefit-card {
-      background:white;
-      text-align:center;
-      padding:30px 20px;
-      border-radius:15px;
-      transition:0.3s;
-      border:1px solid #e2eef5;
-    }
+  .benefit-card {
+    background:white;
+    text-align:center;
+    padding:30px 20px;
+    border-radius:15px;
+    transition:0.3s;
+    border:1px solid #e2eef5;
+  }
 
-    .benefit-card:hover {
-      transform:translateY(-7px);
-    }
+  .benefit-card:hover {
+    transform:translateY(-7px);
+  }
 
-    .benefit-icon {
-      width:70px;
-      height:70px;
-      border-radius:50%;
-      background:#e7f7ff;
-      color:#087fda;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      margin:0 auto 18px;
-      font-size:28px;
-    }
+  .benefit-icon {
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:#e7f7ff;
+    color:#087fda;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 18px;
+    font-size:28px;
+  }
 
-    .benefit-card h3 {
-      margin-bottom:8px;
-      color:#123;
-    }
+  .benefit-card h3 {
+    margin-bottom:8px;
+    color:#123;
+  }
 
-    .benefit-card p {
-      color:#68737d;
-      font-size:14px;
-    }
+  .benefit-card p {
+    color:#68737d;
+    font-size:14px;
+  }
 
-    /* APPLICATIONS */
-    .applications {
-      display:grid;
-      grid-template-columns:repeat(3, 1fr);
-      gap:25px;
-    }
+  /* APPLICATIONS */
+  .applications {
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:25px;
+  }
 
-    .application-card {
-      background:white;
-      padding:30px;
-      border-radius:16px;
-      box-shadow:0 6px 25px rgba(0,0,0,0.07);
-      transition:0.3s;
-    }
+  .application-card {
+    background:white;
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 6px 25px rgba(0,0,0,0.07);
+    transition:0.3s;
+  }
 
-    .application-card:hover {
-      transform:translateY(-6px);
-    }
+  .application-card:hover {
+    transform:translateY(-6px);
+  }
 
-    .application-card i {
-      font-size:35px;
-      color:#08a36c;
-      margin-bottom:18px;
-    }
+  .application-card i {
+    font-size:35px;
+    color:#08a36c;
+    display:block;
+    width: fit-content;
+    margin:0 auto 18px;
+  }
 
-    .application-card h3 {
-      margin-bottom:10px;
-    }
+  .application-card h3 {
+    margin-bottom:10px;
+    text-align:center;
+  }
 
-    .application-card p {
-      color:#68737d;
-      font-size:14px;
-    }
+  .application-card p {
+    color:#68737d;
+    font-size:14px;
+    text-align:center;
+  }
 
-    /* INFO BOX */
-    .info-box {
-      background:linear-gradient(135deg, #087fda, #08a36c);
-      color:white;
-      padding:45px;
-      border-radius:22px;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:30px;
-    }
+  /* INFO BOX */
+  .info-box {
+    background:linear-gradient(135deg, #087fda, #08a36c);
+    color:white;
+    padding:45px;
+    border-radius:22px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+  }
 
-    .info-box h2 {
-      font-size:30px;
-      margin-bottom:10px;
-    }
+  .info-box h2 {
+    font-size:30px;
+    margin-bottom:10px;
+  }
 
-    .info-box p {
-      opacity:0.95;
-    }
+  .info-box p {
+    opacity:0.95;
+  }
 
-    /* FAQ */
+  /* MODERN FAQ SECTION */
+  .faq-container {
+    max-width:1000px;
+    margin:45px auto 0;
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:22px;
+    padding:0 20px;
+  }
+
+  /* FAQ CARD */
+  .faq {
+    position:relative;
+    padding:28px 30px;
+    background:rgba(255, 255, 255, 0.95);
+    border:1px solid rgba(0, 157, 108, 0.12);
+    border-radius:18px;
+    box-shadow:0 8px 30px rgba(0, 80, 100, 0.08);
+    overflow:hidden;
+    transition:all 0.35s ease;
+  }
+
+  /* Green accent line */
+  .faq::before {
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:5px;
+    height:100%;
+    background:linear-gradient(180deg,#0571c8,#009d6c);
+    border-radius:18px 0 0 18px;
+  }
+
+  /* Hover effect */
+  .faq:hover {
+    transform:translateY(-6px);
+    box-shadow:0 15px 40px rgba(0, 120, 150, 0.15);
+    border-color:rgba(0, 157, 108, 0.3);
+  }
+
+  /* QUESTION */
+  .faq h3 {
+    margin:0 0 12px;
+    padding-left:8px;
+    font-size:19px;
+    font-weight:600;
+    color:#0571c8;
+    line-height:1.4;
+  }
+
+  /* ANSWER */
+  .faq p {
+    margin:0;
+    padding-left:8px;
+    font-size:15px;
+    line-height:1.8;
+    color:#4f626b;
+  }
+
+  /* Question icon */
+  .faq h3::before {
+    content:"?";
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:28px;
+    height:28px;
+    margin-right:10px;
+    border-radius:50%;
+    background:linear-gradient(135deg, #0571c8, #009d6c);
+    color:white;
+    font-size:15px;
+    font-weight:700;
+    vertical-align:middle;
+  }
+
+  /* SECTION TITLE */
+  .section-title {
+    text-align:center;
+    margin-bottom:10px;
+  }
+
+  .section-title h2 {
+    margin-bottom:10px;
+    font-size:34px;
+    font-weight:700;
+    color:#123b4a;
+  }
+
+  .section-title p {
+    color:#6b7c84;
+    font-size:16px;
+  }
+
+  /* MOBILE */
+  @media (max-width:768px) {
+    
     .faq-container {
-      max-width:900px;
-      margin:auto;
+      grid-template-columns:1fr;
+      gap:16px;
+      margin-top:30px;
+      padding:0 15px;
     }
 
     .faq {
-      background:white;
-      margin-bottom:15px;
-      padding:22px 25px;
-      border-radius:12px;
-      box-shadow:0 5px 20px rgba(0,0,0,0.05);
+      padding:23px 22px;
+    }
+
+    .section-title h2 {
+      font-size:27px;
+    }
+
+    .section-title p {
+      font-size:14px;
     }
 
     .faq h3 {
-      color:#087fda;
       font-size:17px;
-      margin-bottom:8px;
     }
 
     .faq p {
-      color:#68737d;
       font-size:14px;
+      line-height:1.7;
+    }
+  
+  }
+  
+  /* CTA */
+  .cta {
+    text-align:center;
+    background:linear-gradient(135deg, #087fda, #08a36c);
+    color:white;
+    padding:75px 7%;
+  }
+
+  .cta h2 {
+    font-size:38px;
+    margin-bottom:15px;
+  }
+
+  .cta p {
+    max-width:700px;
+    margin:0 auto 25px;
+    color:#d5e6ec;
+  }
+
+  /* FOOTER */
+  footer {
+    background:#064f6e;
+    color:#b9ccd3;
+    padding:35px 7%;
+    text-align:center;
+  }
+
+  footer p {
+    font-size:14px;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width:1000px) {
+
+    .products {
+      grid-template-columns:repeat(2, 1fr);
     }
 
-    /* CTA */
-    .cta {
-      text-align:center;
-      background:linear-gradient(135deg, #087fda, #08a36c);
-      color:white;
-      padding:75px 7%;
+    .benefits {
+      grid-template-columns:repeat(2, 1fr);
     }
 
-    .cta h2 {
-      font-size:38px;
-      margin-bottom:15px;
+    .applications {
+      grid-template-columns:repeat(2, 1fr);
     }
 
-    .cta p {
-      max-width:700px;
-      margin:0 auto 25px;
-      color:#d5e6ec;
+    .hero h1 {
+      font-size:42px;
     }
+  
+  }
 
-    /* Quote Modal */
-    .quote-btn {
-      margin-left:25px;
-      padding:12px 28px;
-      border-radius:40px;
-      font-weight:600;
-      border:none;
-    }
-
-    .quote-btn:hover{
-      transform:translateY(-3px);
-    }
-
-    /* FOOTER */
-    footer {
-      background:#064f6e;
-      color:#b9ccd3;
-      padding:35px 7%;
-      text-align:center;
-    }
-
-    footer p {
-      font-size:14px;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width:1000px) {
-
-      .products {
-        grid-template-columns:repeat(2, 1fr);
-      }
-
-      .benefits {
-        grid-template-columns:repeat(2, 1fr);
-      }
-
-      .applications {
-        grid-template-columns:repeat(2, 1fr);
-      }
-
-      .hero h1 {
-        font-size:42px;
-      }
-    }
-
-    @media (max-width:700px) {
+  @media (max-width:700px) {
       
-      .hero {
-        text-align:center;
-        padding:65px 5%;
-      }
-
-      .hero-buttons {
-        justify-content:center;
-      }
-
-      .hero h1 {
-        font-size:35px;
-      }
-
-      .products,
-      .benefits,
-      .applications {
-        grid-template-columns:1fr;
-      }
-
-      .info-box {
-        flex-direction:column;
-        text-align:center;
-      }
-
-      .section-title h2 {
-        font-size:30px;
-      }
+    .hero {
+      text-align:center;
+      padding:65px 5%;
     }
+
+    .hero-buttons {
+      justify-content:center;
+    }
+
+    .hero h1 {
+      font-size:35px;
+    }
+
+    .products,
+    .benefits,
+    .applications {
+      grid-template-columns:1fr;
+    }
+
+    .info-box {
+      flex-direction:column;
+      text-align:center;
+    }
+
+    .section-title h2 {
+      font-size:30px;
+    }
+  
+  }
+
   </style>
 </head>
 
 <body>
+
+<!-- Navbar -->
+<div id="navbar"></div>  
 
 <!-- HERO -->
 <section class="hero">
@@ -459,12 +559,7 @@
     
     <div class="hero-buttons">
       <a href="../Parts and Accessories/test-kits.html" class="btn btn-primary">View Test Kits</a>
-      <a href="#quoteModel" 
-        class="btn btn-primary quote-btn"
-        data-bs-toggle="modal"
-        data-bs-target="#quoteModal">
-        Get a Free Quote
-      </a>
+      <a href="#quoteModel" class="btn btn-primary quote-btn" data-bs-toggle="modal" data-bs-target="#quoteModal">Get a Free Quote</a>
     </div>
   </div>
 </section>
@@ -473,10 +568,7 @@
 <section class="section" id="products">
   <div class="section-title">
     <h2>Our Ozone Test Kits</h2>
-    <p>
-      Choose the right ozone testing solution for routine
-      monitoring and water-treatment applications.
-    </p>
+    <p>Choose the right ozone testing solution for routine monitoring and water-treatment applications.</p>
   </div>
   
   <div class="products">
@@ -517,6 +609,7 @@
             <li><i class="fas fa-check-circle"></i>Portable design</li>
             <li><i class="fas fa-check-circle"></i>Easy-to-use procedure</li>
           </ul>
+
           <a href="/index.html#contact" class="product-btn">Enquire Now</a>
         </div>
     </div>
@@ -524,7 +617,7 @@
     <!-- KIT 3 -->
     <div class="product-card">
       <div class="product-image">
-        <img src="images/ozone-residual-test-kit.jpg" alt="Ozone Residual Test Kit">
+        <img src="/Assets/Images/ozone-residual-test-kit.jpg" alt="Ozone Residual Test Kit">
       </div>
       
       <div class="product-info">
@@ -552,35 +645,25 @@
   
   <div class="benefits">
     <div class="benefit-card">
-      <div class="benefit-icon">
-        <i class="fas fa-bullseye"></i>
-      </div>
-      
+      <div class="benefit-icon"><i class="fas fa-bullseye"></i></div>
       <h3>Accurate Monitoring</h3>
       <p>Monitor ozone levels during water treatment processes.</p>
     </div>
     
     <div class="benefit-card">
-      <div class="benefit-icon">
-        <i class="fas fa-vial"></i>
-      </div>
+      <div class="benefit-icon"><i class="fas fa-vial"></i></div>
       <h3>Simple Testing</h3>
       <p>Designed for convenient routine testing without complicated equipment.</p>
     </div>
     
     <div class="benefit-card">
-      <div class="benefit-icon">
-        <i class="fas fa-stopwatch"></i>
-      </div>
-      
+      <div class="benefit-icon"><i class="fas fa-stopwatch"></i></div>
       <h3>Fast Results</h3>
       <p>Quickly check ozone levels and make treatment adjustments when required.</p>
     </div>
     
     <div class="benefit-card">
-      <div class="benefit-icon">
-        <i class="fas fa-toolbox"></i>
-      </div>
+      <div class="benefit-icon"><i class="fas fa-toolbox"></i></div>
       <h3>Portable</h3>
       <p>Compact testing solutions are convenient for field and plant use.</p>
     </div>
@@ -595,38 +678,32 @@
   </div>
   
   <div class="applications">
-    <div class="application-card">
-      <i class="fas fa-droplet"></i>
+    <div class="application-card"><i class="fas fa-droplet"></i>
       <h3>Drinking Water</h3>
       <p>Monitoring ozone treatment in drinking-water processing systems.</p>
     </div>
     
-    <div class="application-card">
-      <i class="fas fa-industry"></i>
+    <div class="application-card"><i class="fas fa-industry"></i>
       <h3>Industrial Water</h3>
       <p>Suitable for industrial water treatment and process-water monitoring.</p>
     </div>
     
-    <div class="application-card">
-      <i class="fas fa-swimming-pool"></i>
+    <div class="application-card"><i class="fas fa-swimming-pool"></i>
       <h3>Swimming Pools</h3>
       <p>Useful for monitoring ozone-treated pool water systems.</p>
     </div>
     
-    <div class="application-card">
-      <i class="fas fa-fish"></i>
+    <div class="application-card"><i class="fas fa-fish"></i>
       <h3>Aquaculture</h3>
       <p>Supports ozone treatment monitoring in aquaculture water systems.</p>
     </div>
     
-    <div class="application-card">
-      <i class="fas fa-flask"></i>
+    <div class="application-card"><i class="fas fa-flask"></i>
       <h3>Laboratories</h3>
       <p>Convenient for laboratory testing and process verification.</p>
     </div>
     
-    <div class="application-card">
-      <i class="fas fa-water"></i>
+    <div class="application-card"><i class="fas fa-water"></i>
       <h3>Water Treatment Plants</h3>
       <p>Routine monitoring of ozone-treated water in treatment facilities.</p>
     </div>
@@ -636,8 +713,7 @@
 <!-- INFORMATION -->
 <section class="section">
   <div class="info-box">
-    <div>
-      <h2>Need Help Selecting a Test Kit?</h2>
+    <div><h2>Need Help Selecting a Test Kit?</h2>
       <p>
         Our team can help you choose a suitable ozone
         testing solution based on your water-treatment
@@ -649,66 +725,6 @@
   </div>
 </section>
 
-<!-- QUOTE MODAL -->
-<div class="modal fade" id="quoteModal" tabindex="-1">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header bg-primary text-white">
-        <h4 class="modal-title">Get a Free Quote</h4>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-      </div>
-      
-      <div class="modal-body">
-        <form onsubmit="sendQuoteEmail(event)">
-          <div class="row">
-            <div class="col-md-6 mb-3">
-              <input type="text" id="fullName" class="form-control" placeholder="Full Name" required>
-            </div>
-            
-            <div class="col-md-6 mb-3">
-              <input type="email" id="email" class="form-control" placeholder="Email Address" required>
-            </div>
-            
-            <div class="col-md-6 mb-3">
-              <input type="tel" id="phone" class="form-control" placeholder="Phone Number" required>
-            </div>
-            
-            <div class="col-md-6 mb-3">
-              <input type="text" id="company" class="form-control" placeholder="Company Name">
-            </div>
-            
-            <div class="col-12 mb-3">
-              <select id="product" class="form-select" required>
-                <option value="">Select Product</option>
-                <option>5Gram Ozonator</option>
-                <option>10Gram Ozonator</option>
-                <option>25Gram Ozonator</option>
-                <option>50Gram Ozonator</option>
-                <option>100Gram Ozonator</option>
-                <option>200Gram Ozonator</option>
-                <option>500Gram Ozonator</option>
-                <option>1KG Ozonator</option>
-              </select>
-            </div>
-            
-            <div class="col-12 mb-3">
-              <textarea id="requirements" class="form-control" rows="5" 
-                placeholder="Project Requirements" required>
-              </textarea>
-            </div>
-            
-            <div class="text-center">
-              <button type="submit" class="btn btn-primary px-5">
-                Submit Quote
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- FAQ -->
 <section class="section">
   <div class="section-title">
@@ -719,38 +735,22 @@
   <div class="faq-container">
     <div class="faq">
       <h3>What is an ozone test kit?</h3>
-      <p>
-        An ozone test kit is a testing tool used to
-        determine the concentration of ozone in water
-        during ozone treatment processes.
-      </p>
+      <p>An ozone test kit is a testing tool used to determine the concentration of ozone in water during ozone treatment processes.</p>
     </div>
     
     <div class="faq">
       <h3>Why should ozone levels be monitored?</h3>
-      <p>
-        Monitoring helps operators verify treatment
-        performance and maintain the desired ozone
-        concentration for the application.
-      </p>
+      <p>Monitoring helps operators verify treatment performance and maintain the desired ozone concentration for the application.</p>
     </div>
     
     <div class="faq">
       <h3>Where can ozone test kits be used?</h3>
-      <p>
-        They can be used in drinking water treatment,
-        industrial water treatment, swimming pools,
-        aquaculture and laboratory applications.
-      </p>
+      <p>They can be used in drinking water treatment, industrial water treatment, swimming pools, aquaculture and laboratory applications.</p>
     </div>
     
     <div class="faq">
       <h3>Are the test kits portable?</h3>
-      <p>
-        Many ozone test kits are designed in a compact
-        format, making them convenient for field and
-        plant testing.
-      </p>
+      <p>Many ozone test kits are designed in a compact format, making them convenient for field and plant testing.</p>
     </div>
   </div>
 </section>
@@ -760,7 +760,7 @@
   <h2>Measure Ozone. Control Your Process.</h2>
   <p>Choose a reliable ozone testing solution for your water-treatment system.</p>
   
-  <a href="contact.html" class="btn btn-primary">Request a Quote</a>
+  <a href="/index.html#contact" class="btn btn-light">Contact Our Experts</a>
 </section>
 
 <!-- FOOTER -->
@@ -768,8 +768,12 @@
   <p>© 2022 ATHINEEL & OZONE SYSTEMS. All Rights Reserved.</p>
 </footer>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Navbar JavaScript -->
+<script src="/JS/navbar.js"></script>
+
 </body>
 </html>
 

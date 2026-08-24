@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Venturi Injectors</title>
+    
+    <link rel="icon" href="../Assets/Images/Athineel Ozone Logo.jpg">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+        
+    * {
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+
+    body {
+        margin:0;
+        font-family:'Poppins',sans-serif;
+        background:#f5fbff;
+        color:#222;
+    }
+
+    /* HEADER */
+    .header {
+        background:#08a36c;
+        color:white;
+        text-align:center;
+        padding:90px 20px;
+    }
+
+    .header h1 {
+        margin:0 0 10px;
+        font-size:40px;
+    }
+
+    .header p {
+        margin:0;
+        font-size:17px;
+    }
+
+    /* EXPLORE INJECTORS SECTION  */
+    .products-section {
+        padding:90px 20px;
+        background:#f7fbf9;
+    }
+
+    .products-heading {
+        max-width:750px;
+        margin:0 auto 50px;
+        text-align:center;
+    }
+
+    .products-heading span {
+        color:#08a36c;
+        font-size:14px;
+        font-weight:700;
+        letter-spacing:2px;
+    }
+
+    .products-heading h2 {
+        margin:10px 0 15px;
+        color:#12352b;
+        font-size:38px;
+        font-weight:700;
+    }
+
+    .products-heading p {
+        color:#666;
+        font-size:16px;
+        line-height:1.7;
+    }   
+    
+    /* PRODUCT GRID */
+    .products-grid {
+        max-width:1200px;
+        margin:auto;
+        display:grid;
+        grid-template-columns:repeat(3, 1fr);
+        gap:25px;
+    }
+
+    /* PRODUCT CARD */
+    .product-card {
+        background:#ffffff;
+        padding:35px 30px;
+        border-radius:18px;
+        text-align:center;
+        box-shadow:0 8px 30px rgba(0, 0, 0, 0.08);
+        transition:all 0.3s ease;
+    }
+
+    .product-card:hover {
+        transform:translateY(-8px);
+        box-shadow:0 15px 35px rgba(0, 0, 0, 0.12);
+    }
+
+    /* ICON */
+    .product-icon {
+        width:75px;
+        height:75px;
+        margin:0 auto 22px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        background:#e4f7ef;
+        border-radius:50%;
+    }
+
+    .product-icon i {
+        font-size:32px;
+        color:#08a36c;
+    }
+    
+    /* TITLE */
+    .product-card h3 {
+        margin-bottom:15px;
+        color:#12352b;
+        font-size:22px;
+        font-weight:700;
+    }
+
+    /* DESCRIPTION */
+    .product-card p {
+        color:#666;
+        line-height:1.7;
+        font-size:15px;
+        margin-bottom:20px;
+    }
+    
+    /* FEATURES */
+    .product-card ul {
+        padding:0;
+        margin:0 0 25px;
+        list-style:none;
+    }
+
+    .product-card ul li {
+        color:#555;
+        font-size:14px;
+        margin-bottom:9px;
+    }
+
+    .product-card ul li::before {
+        content:"✓";
+        color:#08a36c;
+        font-weight:bold;
+        margin-right:8px;
+    }
+
+    /* BUTTON */
+    .product-btn {
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        gap:8px;
+        padding:12px 22px;
+        background:#08a36c;
+        color:#ffffff;
+        text-decoration:none;
+        border-radius:8px;
+        font-size:14px;
+        font-weight:600;
+        transition:0.3s ease;
+    }
+
+    .product-btn:hover {
+        background:#067a51;
+        color:#ffffff;
+    }
+
+    /* MOBILE */
+    @media (max-width:900px) {
+        
+        .products-grid {
+            grid-template-columns:1fr 1fr;
+        }
+
+    }
+
+    @media (max-width:600px) {
+        
+        .products-section {
+            padding:65px 15px;
+        }
+        
+        .products-heading h2 {
+            font-size:30px;
+        }
+
+        .products-grid {
+            grid-template-columns:1fr;
+        }
+
+        .product-card {
+            padding:30px 22px;
+        }
+
+    }
+    
+    /* CARD */
+    .card {
+        background:white;
+        padding:25px;
+        text-align:center;
+        border-radius:12px;
+        box-shadow:0 5px 20px rgba(0,0,0,0.08);
+        transition:0.3s ease;
+    }
+
+    .card:hover {
+        transform:translateY(-5px);
+        box-shadow:0 8px 25px rgba(0,0,0,0.12);
+    }
+
+    /* PRODUCT IMAGE */
+    .card img {
+        width:100%;
+        height:200px;
+        object-fit:contain;
+        margin-bottom:15px;
+    }
+
+    /* PRODUCT TITLE */
+    .card h2 {
+        color:#087fda;
+        font-size:22px;
+        margin-bottom:12px;
+    }
+
+    /* DESCRIPTION */
+    .card p {
+        color:#666;
+        line-height:1.6;
+        font-size:15px;
+    }
+
+    /* BUTTON */
+    .btn {
+        display:inline-block;
+        background:#08a36c;
+        color:white;
+        padding:10px 22px;
+        border-radius:25px;
+        text-decoration:none;
+        margin-top:10px;
+        transition:0.3s ease;
+    }
+
+    .btn:hover {
+        background:#065fa3;
+        color:white;
+    }
+
+    /* BACK BUTTON */
+    .back {
+        text-align:center;
+        margin:30px;
+    }
+
+    /* MOBILE */
+    @media (max-width:800px) {
+
+        .products {
+            grid-template-columns:1fr;
+        }
+
+        .header h1 {
+            font-size:32px;
+        }
+
+    }
+
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div id="navbar"></div>
+
+<!-- HERO -->
+<div class="header">
+    <h1>Venturi Injectors</h1>
+    <p>Efficient ozone injection solutions for water treatment and industrial applications</p>
+</div>
+
+<!-- EXPLORE INJECTORS -->
+<section id="products" class="products-section">
+    <div class="container">
+        <div class="products-heading">
+            <span>OUR PRODUCTS</span>
+            <h2>Explore Our Venturi Injectors</h2>
+            <p>High-performance Venturi injectors designed for efficient ozone injection, water treatment and industrial applications.</p>
+        </div>
+
+        <div class="products-grid">
+            
+            <!-- PRODUCT 1 -->
+            <div class="product-card">
+                <div class="product-icon"><i class="fas fa-water"></i></div>
+                <h3>Ozone Venturi Injector</h3>
+                <p>Efficiently injects ozone into water systems for disinfection and advanced water treatment applications.</p>
+
+                <ul>
+                    <li>High ozone transfer efficiency</li>
+                    <li>Reliable operation</li>
+                    <li>Low maintenance</li>
+                </ul>
+
+                <a href="/index.html#contact" class="product-btn">Enquire Now<i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <!-- PRODUCT 2 -->
+            <div class="product-card">
+                <div class="product-icon"><i class="fas fa-industry"></i></div>
+                <h3>Industrial Venturi Injector</h3>
+                <p>Designed for industrial water treatment systems requiring consistent and reliable ozone injection.</p>
+
+                <ul>
+                    <li>Industrial-grade construction</li>
+                    <li>Excellent mixing performance</li>
+                    <li>Long service life</li>
+                </ul>
+
+                <a href="/index.html#contact" class="product-btn">Enquire Now<i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <!-- PRODUCT 3 -->
+            <div class="product-card">
+                <div class="product-icon"><i class="fas fa-droplet"></i></div>
+                <h3>Water Treatment Injector</h3>
+                <p>A dependable solution for ozone-based water purification, disinfection and treatment processes.</p>
+
+                <ul>
+                    <li>Efficient water treatment</li>
+                    <li>Easy installation</li>
+                    <li>Reliable performance</li>
+                </ul>
+
+                <a href="/index.html#contact" class="product-btn">Enquire Now<i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BACK BUTTON -->
+<div class="back">
+    <a href="/index.html" class="btn">← Back to Home</a>
+</div>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Navbar JavaScript -->
+<script src="/JS/navbar.js"></script>
+
+</body>
+</html>
