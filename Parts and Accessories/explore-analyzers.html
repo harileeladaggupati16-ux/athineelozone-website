@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Explore Ozone Analyzers</title>
+
+    <link rel="icon" href="../Assets/Images/Athineel Ozone Logo.jpg">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');    
+    * {
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+
+    body {
+        font-family:'Poppins',sans-serif;
+        background:#f5faff;
+        color:#222;
+    }
+    
+    /* HERO */
+    .hero {
+        min-height:200px;
+        padding:50px 7%;
+        display:flex;
+        align-items:center;
+        justify-content:center;   /* centers horizontally */
+        background:linear-gradient(135deg, #0571c8, #009d6c);
+        color:white;
+        text-align:center;        /* centers the text */
+    }
+    
+    .hero-content {
+        max-width:750px;
+        margin:0 auto;
+    }
+    
+    .hero h1 {
+        font-size:52px;
+        margin-bottom:20px;
+    }
+
+    .hero p {
+        font-size:18px;
+        margin-bottom:30px;
+    }
+    
+    /* PRODUCTS */
+    .products-section {
+        padding:70px 7%;
+        background:white;
+    }
+
+    .section-title {
+        text-align:center;
+        margin-bottom:45px;
+    }
+
+    .section-title h2 {
+        font-size:38px;
+        color:#0571c8;
+        margin-bottom:10px;
+    }
+
+    .section-title p {
+        color:#666;
+        font-size:16px;
+    }
+
+    .products-container {
+        display:grid;
+        grid-template-columns:repeat(3, 1fr);
+        gap:25px;
+    }
+    
+    .product-card {
+        background:#fff;
+        border-radius:15px;
+        padding:25px;
+        text-align:center;
+        box-shadow:0 5px 20px rgba(0,0,0,0.1);
+        transition:0.3s;
+    }
+
+    .product-card:hover {
+        transform:translateY(-8px);
+        box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .product-card img {
+        width:100%;
+        height:220px;
+        object-fit:contain;
+        margin-bottom:20px;
+    }
+
+    .product-card h3 {
+        color:#0571c8;
+        margin-bottom:12px;
+        font-size:22px;
+    }
+
+    .product-card p {
+        color:#666;
+        line-height:1.6;
+        margin-bottom:20px;
+    }
+
+    .btn-product {
+        display:inline-block;
+        background:linear-gradient(135deg, #0571c8, #009d6c);
+        color:white;
+        padding:10px 20px;
+        border-radius:25px;
+        text-decoration:none;
+        font-weight:bold;
+        font-size:14px;
+    }
+
+    .btn-product:hover {
+        background:#0b66ee;
+    }
+
+    /* MOBILE */
+    @media (max-width:900px) {
+        
+        .products-container {
+            grid-template-columns:repeat(2, 1fr);
+        }
+        
+        .hero h1 {
+            font-size:42px;
+        }
+    }
+
+    @media (max-width:600px) {
+        
+        .products-container {
+            grid-template-columns:1fr;
+        }
+
+        .hero {
+            min-height:450px;
+            padding:60px 6%;
+        }
+
+        .hero h1 {
+            font-size:34px;
+        }
+
+        .hero p {
+            font-size:16px;
+        }
+    
+    }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div id="navbar"></div>    
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Ozone Analyzers</h1>
+        <p>Accurate and reliable ozone measurement solutions designed for ozone generation systems, water treatment, air treatment and industrial process monitoring.</p>
+    </div>
+</section>
+
+<!-- PRODUCTS SECTION -->
+<section class="products-section" id="products">
+    <div class="section-title">
+        <h2>Our Ozone Analyzers</h2>
+        <p>Reliable ozone monitoring solutions for different industrial and water treatment applications.</p>
+    </div>
+    
+    <div class="products-container">
+        
+        <!-- PRODUCT 1 -->
+        <div class="product-card">
+            <img src="../Assets/Images/ozone-analyzer.jpg" alt="Online Ozone Analyzer">
+            <h3>Online Ozone Analyzer</h3>
+            <p>Continuous ozone concentration monitoring for water and industrial treatment systems.</p>
+            
+            <a href="/Parts and Accessories/view-analyzer-details.html" class="btn-product">View Details</a>
+        </div>
+        
+        <!-- PRODUCT 2 -->
+        <div class="product-card">
+            <img src="../Assets/Images/dissolved-ozone-analyzer.jpg" alt="Dissolved Ozone Analyzer">
+            <h3>Dissolved Ozone Analyzer</h3>
+            <p>Accurate dissolved ozone measurement for water treatment and ozone disinfection systems.</p>
+            
+            <a href="#" class="btn-product">View Details</a>
+        </div>
+        
+        <!-- PRODUCT 3 -->
+        <div class="product-card">
+            <img src="../Assets/Images/portable-ozone-analyzer.jpg" alt="Portable Ozone Analyzer">
+            <h3>Portable Ozone Analyzer</h3>
+            <p>Compact ozone measurement solution for field testing and maintenance applications.</p>
+            
+            <a href="#" class="btn-product">View Details</a>
+        </div>
+        
+        <!-- PRODUCT 4 -->
+        <div class="product-card">
+            <img src="../Assets/Images/gas-ozone-analyzer.jpg" alt="Gas Ozone Analyzer">
+            <h3>Gas Ozone Analyzer</h3>
+            <p>Reliable ozone concentration measurement in gas-phase ozone generation systems.</p>
+            
+            <a href="#" class="btn-product">View Details</a>
+        </div>
+
+
+        <!-- PRODUCT 5 -->
+        <div class="product-card">
+            <img src="../Assets/Images/industrial-ozone-analyzer.jpg" alt="Industrial Ozone Analyzer">
+            <h3>Industrial Ozone Analyzer</h3>
+            <p>Designed for continuous monitoring and demanding industrial ozone applications.</p>
+            
+            <a href="#" class="btn-product">View Details</a>
+        </div>
+
+        <!-- PRODUCT 6 -->
+        <div class="product-card">
+            <img src="../Assets/Images/ozone-monitor.jpg" alt="Ozone Monitor">
+            <h3>Ozone Monitor</h3>
+            <p>Fast and dependable ozone monitoring for process control and safety applications.</p>
+            <a href="#" class="btn-product">View Details</a>
+        </div>
+    </div>
+</section>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Navbar JavaScript -->
+<script src="/JS/navbar.js"></script>
+
+</body>
+</html>

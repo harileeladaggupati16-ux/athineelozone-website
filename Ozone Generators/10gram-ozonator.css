@@ -44,6 +44,7 @@ body{
 }
 
 @keyframes float{
+    
     0%{
         transform:translateY(0);
     }
@@ -55,6 +56,17 @@ body{
     100%{
         transform:translateY(0);
     }
+
+}
+
+.hero p{
+    font-size:16px;
+}
+
+.btn-primary-custom,
+.btn-outline-custom{
+    display:block;
+    margin:15px auto;
 }
 
 .btn-primary-custom{
@@ -74,7 +86,7 @@ body{
     color:#fff;
     text-decoration:none;
     font-weight:bold;
-    }
+}
 
 .btn-primary-custom:hover{
     background:#005bea;
@@ -142,7 +154,7 @@ section{
 }
 
 .table-striped {
-    --bs-table-striped-bg: #dbeafe;
+    --bs-table-striped-bg:#dbeafe;
 }
 
 /* Applications */
@@ -216,13 +228,5 @@ section{
     }
 }
 
-.hero p{
-    font-size:16px;
-}
 
-.btn-primary-custom,
-.btn-outline-custom{
-    display:block;
-    margin:15px auto;
-}
 

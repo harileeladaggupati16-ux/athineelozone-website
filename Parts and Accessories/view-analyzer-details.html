@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>View Ozone Analyzer</title>
+
+    <link rel="icon" href="../Assets/Images/Athineel Ozone Logo.jpg">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+    * {
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+
+    body {
+        font-family:Arial, sans-serif;
+        background:#f5faff;
+        color:#222;
+    }
+
+    /* HERO */
+    .hero {
+        padding:70px 7%;
+        background:linear-gradient(135deg, #0571c8, #009d6c);
+        color:white;
+        text-align:center;
+    }
+
+    .hero h1 {
+        font-size:48px;
+        margin-bottom:15px;
+    }
+
+    .hero p {
+        font-size:18px;
+    }
+
+    /* PRODUCT */
+    .product-section {
+        padding:70px 7%;
+    }
+
+    .product-container {
+        max-width:1100px;
+        margin:auto;
+        background:white;
+        border-radius:20px;
+        padding:40px;
+        display:flex;
+        gap:50px;
+        align-items:center;
+        box-shadow:0 8px 30px rgba(0,0,0,0.1);
+    }
+
+    .product-image {
+        flex:1;
+        text-align:center;
+    }
+
+    .product-image img {
+        width:100%;
+        max-width:450px;
+        height:350px;
+        object-fit:contain;
+    }
+
+    .product-info {
+        flex:1;
+    }
+
+    .product-info h2 {
+        color:#0571c8;
+        font-size:34px;
+        margin-bottom:20px;
+    }
+
+    .product-info p {
+        color:#555;
+        line-height:1.8;
+        margin-bottom:20px;
+    }
+
+    .features {
+        margin:20px 0;
+        padding-left:20px;
+    }
+
+    .features li {
+        margin-bottom:10px;
+    }
+
+    .btn-quote {
+        display:inline-block;
+        padding:12px 25px;
+        background:#0571c8;
+        color:white;
+        text-decoration:none;
+        border-radius:30px;
+        font-weight:bold;
+    }
+
+    .btn-quote:hover {
+        background:#009d6c;
+    }
+
+    /* MOBILE */
+    @media (max-width:768px) {
+        
+        .product-container {
+            flex-direction:column;
+            padding:25px;
+        }
+
+        .hero h1 {
+            font-size:36px;
+        }
+
+        .product-info h2 {
+            font-size:28px;
+        }
+
+    }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div id="navbar"></div>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Ozone Analyzer</h1>
+    <p>Accurate and reliable ozone measurement solution</p>
+</section>
+
+<!-- PRODUCT DETAILS -->
+<section class="product-section">
+    <div class="product-container">
+        
+        <!-- IMAGE -->
+        <div class="product-image">
+            <img src="../Assets/Images/ozone-analyzer.jpg" alt="Ozone Analyzer">
+        </div>
+        
+        <!-- DETAILS -->
+        <div class="product-info">
+            <h2>Online Ozone Analyzer</h2>
+            <p>
+                Our ozone analyzer provides accurate and reliable
+                ozone concentration measurement for water treatment,
+                air treatment, ozone generation systems and industrial
+                process monitoring.
+            </p>
+
+            <h3>Key Features</h3>
+            
+            <ul class="features">
+                <li>Accurate ozone concentration measurement</li>
+                <li>Continuous online monitoring</li>
+                <li>Easy-to-read display</li>
+                <li>Reliable industrial operation</li>
+                <li>Suitable for water and air treatment</li>
+                <li>Low maintenance requirements</li>
+            </ul>
+
+            <a href="/index.html#contact" class="btn-quote">Contact Us</a>
+        </div>
+    </div>
+</section>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Navbar JavaScript -->
+<script src="/JS/navbar.js"></script>
+
+</body>
+</html>

@@ -25,6 +25,16 @@ body{
     margin:20px 0;
 }
 
+.product-tag{
+    display:inline-block;
+    background:#f8f9fa;
+    color:#005bea;
+    padding:8px 18px;
+    border-radius:30px;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
 .product-img{
     max-height:420px;
     border-radius:20px;

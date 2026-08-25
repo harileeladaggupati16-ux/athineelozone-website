@@ -78,6 +78,7 @@ p{
     color:#fff;
     font-size:14px;
     padding:10px 0;
+    position: relative;
 }
 
 .top-bar i{
@@ -99,46 +100,6 @@ p{
     position:relative;
     z-index:9999;
     cursor:pointer;
-}
-
-/* NAVBAR */
-.navbar{
-    background:#fff;
-    padding:18px 0;
-    box-shadow:0 5px 25px rgba(0,0,0,.08);
-    position:sticky;
-    top:0;
-    z-index:999;
-}
-
-.navbar-brand img{
-    height:60px;
-}
-
-.nav-link{
-    font-weight:500;
-    margin-left:18px;
-    color:#222 !important;
-    transition:.3s;
-}
-
-.nav-link:hover{
-    color:var(--primary)!important;
-}
-
-.nav-link.active{
-    color:var(--primary)!important;
-}
-.navbar-brand img {
-    height:90px;
-    width:auto;
-}
-
-.navbar {
-    position:sticky;
-    top:0;
-    z-index:1030;
-    background:#fff;
 }
 
 /* Quote Model */
