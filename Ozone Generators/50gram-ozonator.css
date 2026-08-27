@@ -15,7 +15,7 @@ body{
 
 /* Hero Section */
 .hero{
-    background:linear-gradient(135deg,#0d6efd,#0dcaf0);
+    background:linear-gradient(135deg,#3983f1,#0dcaf0);
     color:#fff;
     padding:90px 0;
 }
@@ -40,12 +40,15 @@ body{
     0%{
         transform:translateY(0px);
     }
+    
     50%{
         transform:translateY(-12px);
     }
+    
     100%{
         transform:translateY(0px);
     }
+
 }
 
 /* Section Titles */
@@ -212,6 +215,7 @@ ul li{
     .section-title{
         font-size:2rem;
     }
+    
 }
 
 @media(max-width:768px){
@@ -235,6 +239,7 @@ ul li{
     .application-card{
         margin-bottom:20px;
     }
+
 }
 
 @media(max-width:576px){
