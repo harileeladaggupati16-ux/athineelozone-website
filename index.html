@@ -79,7 +79,7 @@
 <div id="navbar"></div>
 
 <!-- Hero -->
-<section class="hero">
+<section id="home" class="hero">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
@@ -112,7 +112,7 @@
 </section>
 
 <!-- About Preview -->
-<section class="about py-5">
+<section id="about" class="about py-5">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
@@ -135,7 +135,7 @@
 </section>
 
 <!-- Why Ozone -->
-<section class="why-ozone">
+<section id="why-choose" class="why-ozone">
     <div class="container">
         <div class="text-center mb-5">
             <h2>Why Choose Ozone?</h2>
@@ -175,7 +175,7 @@
 </section>
 
 <!-- Ozone Generators -->
-<section class="products py-5">
+<section id="our-products" class="products py-5">
     <div class="container">
         <div class="text-center mb-5">
             <span class="section-title">OUR PRODUCTS</span>
@@ -222,7 +222,7 @@
 </section>
 
 <!-- Parts & Accessories -->
-<section class="accessories py-5 bg-light">
+<section id="accessories" class="accessories py-5 bg-light">
     <div class="container">
         <div class="text-center mb-5">
             <span class="section-title">ACCESSORIES</span>
@@ -298,7 +298,7 @@
 </section>
 
 <!-- Industries -->
-<section class="industries py-5">
+<section id="industries" class="industries py-5">
     <div class="container">
         <div class="text-center mb-5">
             <h2>Industries We Serve</h2>
@@ -392,7 +392,7 @@
 </section>
 
 <!-- Our Customers -->
-<section class="customers py-5">
+<section id="our-customers" class="customers py-5">
     <div class="container">
         <div class="text-center mb-5">
             <h2>Our Customers</h2>
@@ -449,7 +449,7 @@
 </section>
 
 <!-- FAQ Section -->
-<section class="faq py-5">
+<section id="faq" class="faq py-5">
     <div class="container">
         <div class="text-center mb-5">
             <span class="section-title">FAQ</span>
@@ -504,7 +504,7 @@
 </section>
 
 <!-- Latest Blogs -->
-<section class="blogs py-5 bg-light">
+<section id="latest-blogs" class="blogs py-5 bg-light">
     <div class="container">
         <div class="text-center mb-5">
             <span class="section-title">LATEST BLOGS</span>
@@ -626,11 +626,14 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4">
-                <img src="Assets/Images/Athineel Ozone Logo.jpg" height="70">
+                <a href="index.html" class="footer-logo-link">
+                    <img src="/Assets/Images/Athineel Ozone Logo.jpg" alt="Athineel UV Logo" class="footer-logo">
+                </a>
                 <p class="mt-3">
                     Athineel Ozone manufactures Industrial Ozone Generators and advanced water 
                     treatment systems for commercial and industrial applications.
                 </p>
+                <hr>
 
                 <div class="social-icons">
                     <a href="https://www.facebook.com/mineralrowaterplants"><i class="bi bi-facebook"></i></a>
@@ -645,21 +648,29 @@
             <div class="col-lg-2">
                 <h5>Quick Links</h5>
                 <ul class="list-unstyled">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Customers</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#why-choose">Why Choose Ozone</a></li>
+                    <li><a href="#our-products">Our Products</a></li>
+                    <li><a href="#accessories">Accessories</a></li>
+                    <li><a href="#industries">Industries</a></li>
+                    <li><a href="#our-customers">Our Customers</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#latest-blogs">Latest Blogs</a></li>
                 </ul>
             </div>
             
             <div class="col-lg-3">
-                <h5>Products</h5>
+                <h5>Ozone Generators</h5>
                 <ul class="list-unstyled">
-                    <li><a href="#">Industrial Ozone Generator</a></li>
-                    <li><a href="#">Accessories</a></li>
-                    <li><a href="#">Water Treatment</a></li>
-                    <li><a href="#">Air Treatment</a></li>
+                    <li><a href="/Ozone Generators/5gram-ozonator.html">5 Gram Ozonator</a></li>
+                    <li><a href="/Ozone Generators/10gram-ozonator.html">10 Gram Ozonator</a></li>
+                    <li><a href="/Ozone Generators/25gram-ozonator.html">25 Gram Ozonator</a></li>
+                    <li><a href="/Ozone Generators/50gram-ozonator.html">50 Gram Ozonator</a></li>
+                    <li><a href="/Ozone Generators/100gram-ozonator.html">100 Gram Ozonator</a></li>
+                    <li><a href="/Ozone Generators/200gram-ozonator.html">200 Gram Ozonator</a></li>
+                    <li><a href="/Ozone Generators/500gram-ozonator.html">500 Gram Ozonator</a></li>
+                    <li><a href="/Ozone Generators/1kg-ozonator.html">1kg Ozonator</a></li>    
                 </ul>
             </div>
             
@@ -668,6 +679,8 @@
                 <p>📞+91 96761 11136</p>
                 <p>✉sales.rhppl@gmail.com</p>
                 <p>📍 Hyderabad, Telangana</p>
+                <hr>
+                <hr>
                 <a href="#" 
                     class="btn btn-primary quote-btn"
                     data-bs-toggle="modal"
@@ -677,12 +690,13 @@
             </div>
         </div>
         <hr>
-        <div class="text-center">
-            © 2022 Reddy's Hygiene Products Pvt. Ltd. All Rights Reserved.<br>
-            Designed for Clean Water Solutions
-        </div>
     </div>
 </footer>
+
+<div class="text-center footer-copyright">
+    © 2022 Reddy's Hygiene Products Pvt. Ltd. All Rights Reserved.<br>
+    Designed for Clean Water Solutions
+</div>
 
 <!-- Scroll Top -->
 <a href="/index.html" class="scroll-top">

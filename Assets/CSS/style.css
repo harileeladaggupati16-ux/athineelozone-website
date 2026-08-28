@@ -880,22 +880,25 @@ iframe{
     padding:70px 0 20px;
 }
 
-.footer h5{
+.footer h5 {
     color:#fff;
     margin-bottom:20px;
+    font-size:20px;
 }
 
-.footer p{
+.footer p {
     color:#cfd8e6;
+    font-size:16px;
 }
 
-.footer ul{
+.footer ul {
     padding:0;
     list-style:none;
 }
 
-.footer ul li{
+.footer ul li {
     margin-bottom:12px;
+    font-size:16px;
 }
 
 .footer ul li a{
@@ -909,12 +912,38 @@ iframe{
 }
 
 .footer hr{
-    border-color:rgba(255,255,255,.1);
+    border-color:rgba(251, 247, 247, 0.1);
     margin:40px 0 20px;
 }
 
-.footer img{
-    filter: brightness(0) saturate(100%) invert(27%) sepia(97%) saturate(1976%) hue-rotate(190deg) brightness(96%) contrast(96%);
+.footer-copyright {
+    background-color:#06295d;
+    color:#fff;
+    font-size:18px;
+}
+
+.footer .container {
+    max-width:1400px;
+    margin:0 auto;
+}
+
+.footer .col-lg-4:first-child {
+    padding-left:0;
+}
+
+.footer-logo-link {
+    display:inline-block;
+    background:#fff;
+    padding:0;
+    border-radius:10px;
+    line-height:0;
+}
+
+.footer-logo {
+    display:block;
+    margin:0;
+    width:250px;
+    height:auto;
 }
 
 /* SOCIAL ICONS */
@@ -1002,6 +1031,7 @@ iframe{
     .contact-box{
         margin-top:40px;
     }
+
 }
 
 @media(max-width:768px){
@@ -1072,35 +1102,36 @@ iframe{
         font-size:12px;
     }
 
-.btn-primary,
-.btn-light,
-.btn-outline-light{
-    width:100%;
-}
+    .btn-primary,
+    .btn-light,
+    .btn-outline-light{
+        width:100%;
+    }
 
-.product-card,
-.feature-box,
-.icon-box,
-.industry-card{
-    padding:25px;
-}
+    .product-card,
+    .feature-box,
+    .icon-box,
+    .industry-card{
+        padding:25px;
+    }
 
-.counter-section{
-    padding:60px 0;
-}
+    .counter-section{
+        padding:60px 0;
+    }
 
-.counter-section h2{
-    font-size:34px;
-}
+    .counter-section h2{
+        font-size:34px;
+    }
 
-.blog-card img{
-    height:200px;
-}
+    .blog-card img{
+        height:200px;
+    }
 
-.scroll-top{
-    width:45px;
-    height:45px;
-    right:15px;
-    bottom:15px;
-}
+    .scroll-top{
+        width:45px;
+        height:45px;
+        right:15px;
+        bottom:15px;
+    }
+
 }
