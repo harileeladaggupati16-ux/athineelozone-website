@@ -62,82 +62,62 @@
         text-decoration:none;
     }
         
-    /* HERO */
-    .hero {
-        min-height:500px;
-        padding:80px 7%;
+    /* Internal Banner */
+    .page-banner{
+        position:relative;
+        height:350px;
         display:flex;
+        justify-content:center;
         align-items:center;
-        background:linear-gradient(135deg,rgba(5,113,200,0.94),rgba(0,157,108,0.90)),
-                url("/Assets/Images/blog-feature.jpg");
-        background-size:cover;
+        overflow:hidden;
+        color:#fff;
+        text-align:center;
+        background-image:url("/Assets/Images/static-mixer.jpg");
+        background-size:120%;
         background-position:center;
-        color:white;
+        background-repeat:no-repeat;
+        animation:zoomMove 20s infinite alternate ease-in-out;
     }
 
-    .hero-content {
-        max-width:750px;
+    .overlay{
+        position:absolute;
+        inset:0;
+        background:rgba(0,90,150,.60);
     }
 
-    .hero-tag {
-        display:inline-block;
-        padding:8px 18px;
-        border-radius:30px;
-        background:rgba(255,255,255,0.18);
-        border:1px solid rgba(255,255,255,0.4);
-        margin-bottom:20px;
-        font-size:14px;
+    .page-banner .container{
+        z-index:2;
     }
 
-    .hero h1 {
-        font-size:52px;
-        line-height:1.15;
-        margin-bottom:20px;
+    .page-banner h1{
+        font-size:48px;
+        font-weight:700;
+        margin-bottom:10px;
     }
 
-    .hero h1 span {
-        color:#d9fff0;
-    }
-
-    .hero p {
+    .page-banner p{
         font-size:18px;
-        max-width:700px;
-        margin-bottom:30px;
     }
 
-    .hero-buttons {
-        display:flex;
-        gap:15px;
-        flex-wrap:wrap;
+    @keyframes zoomMove{
+
+        0%{
+            background-size:120%;
+            background-position:center top;
+        }
+
+        50%{
+            background-size:130%;
+            background-position:center center;
+        }
+
+        100%{
+            background-size:120%;
+            background-position:center bottom;
+        }
+    
     }
 
-    .btn {
-        display:inline-block;
-        padding:13px 25px;
-        border-radius:30px;
-        font-weight:600;
-        transition:0.3s;
-    }
-
-    .btn-primary {
-        background:white;
-        color:#f4f6f8;
-    }
-
-    .btn-primary:hover {
-        transform:translateY(-3px);
-    }
-
-    .btn-outline {
-        border:2px solid white;
-        color:white;
-    }
-
-    .btn-outline:hover {
-        background:white;
-        color:#087fda;
-    }
-        
     /* SECTION */
     .section {
         padding:75px 7%;
@@ -508,17 +488,24 @@
 <!-- Navbar -->
 <div id="navbar"></div>
 
-<!-- HERO -->
-<section class="hero">
-    <div class="hero-content">
+<!-- INTERNAL BANNER -->
+<section class="page-banner">
+    <div class="overlay"></div>
+        <div class="container position-relative text-center">
         <span class="hero-tag"><i class="fas fa-water"></i>Advanced Mixing Technology</span>
-        <h1>Static <span>Mixer</span>Solutions</h1>
-        <p>High-performance static mixers designed for efficient inline mixing of ozone, water, chemicals and other fluids in water treatment and industrial applications.</p>
+    
+        <h1>Static <span>Mixer</span> Solutions</h1>
+        <p>
+            High-performance static mixers designed for efficient inline
+            mixing of ozone, water, chemicals and other fluids in water
+            treatment and industrial applications.
+        </p>
 
-        <div class="hero-buttons">
-            <a href="#features" class="btn btn-primary">Explore Product</a>
-            <a href="/index.html#contact" class="btn btn-outline">Contact Our Experts</a>
-        </div>
+        <!-- <div class="hero-buttons">
+            <a href="#features" class="hero-btn">Explore Product</a>
+
+            <a href="/index.html#contact" class="hero-btn outline-btn">Contact Our Experts</a>
+        </div> -->
     </div>
 </section>
 
