@@ -51,6 +51,31 @@
     <!-- YOUR CSS -->
     <link rel="stylesheet" href="Assets/CSS/style.css">
 
+    <!-- STRUCTURED DATA -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://athineelozone.com/#organization",
+    "name": "Athineel Ozone Technologies",
+    "url": "https://athineelozone.com/",
+    "logo": {
+        "@type": "ImageObject",
+        "url": "https://athineelozone.com/images/logo.png"
+    },
+    "description": "UV water disinfection, ozone water treatment and advanced water treatment systems for industrial, commercial and municipal applications.",
+    "telephone": "+91-9676111136",
+    "email": "sales.rhppl@gmail.com",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "H.no. 06-105/1/A/64P/B, Godavari Homes, Suchitra",
+        "addressLocality": "Qutubullapur",
+        "addressRegion": "Telangana",
+        "postalCode": "500067",
+        "addressCountry": "IN"
+    }
+    }
+    </script>
 </head>
 
 <body>
@@ -614,7 +639,7 @@
 </section>
 
 <!-- Footer -->
-<footer class="footer">
+<!-- <footer class="footer">
     <div class="container">
         <div class="row">
             <div class="col-lg-4">
@@ -683,12 +708,15 @@
         </div>
         <hr>
     </div>
-</footer>
+</footer> -->
 
-<div class="text-center footer-copyright">
+<!-- Footer -->
+<div id="footer"></div>
+
+<!-- <div class="text-center footer-copyright">
     © 2022 Reddy's Hygiene Products Pvt. Ltd. All Rights Reserved.<br>
     Designed for Clean Water Solutions
-</div>
+</div> -->
 
 <!-- Scroll Top -->
 <a href="/index.html" class="scroll-top"><i class="bi bi-arrow-up"></i></a>
@@ -759,6 +787,8 @@
 <!-- JS -->
 <script src="JS/script.js"></script>
 <script src="JS/navbar.js"></script>
+<script src="JS/footer.js"></script>
+
 
 </body>
 </html>
