@@ -25,6 +25,7 @@ body{
     margin:20px 0;
 }
 
+
 .product-tag{
     display:inline-block;
     background:#f8f9fa;
@@ -38,7 +39,23 @@ body{
 .product-img{
     max-height:420px;
     border-radius:20px;
-    box-shadow:0 20px 40px rgba(0,0,0,.3);
+    animation:float 4s infinite ease-in-out;
+}
+
+@keyframes float{
+    
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
 }
 
 .feature-card{

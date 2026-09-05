@@ -46,10 +46,27 @@ body{
 .product-image{
     width:100%;
     transition:.5s;
+    animation:float 4s infinite ease-in-out;
 }
 
 .product-image:hover{
     transform:scale(1.05) rotate(-2deg);
+}
+
+@keyframes float{
+    
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
 }
 
 .feature-card{
