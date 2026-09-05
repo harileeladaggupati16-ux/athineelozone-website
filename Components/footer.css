@@ -1,5 +1,8 @@
 /* FOOTER */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
 .footer{
+    font-family:'Poppins',sans-serif;
     background:#041c40;
     color:#fff;
     padding:70px 0 20px;

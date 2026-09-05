@@ -60,8 +60,12 @@
         <h1>Latest Insights</h1>
         <p>Explore articles about Ozone Technology, Water Treatment, Air Purification & Industrial Solutions.</p>
         
-        <div class="search-box">
+        <!-- <div class="search-box">
             <input type="text" class="form-control" placeholder="Search Blog...">
+        </div> -->
+
+        <div class="search-box">
+            <input type="text" id="blogSearch" class="form-control" placeholder="Search Blog...">
         </div>
     </div>
 </section>
@@ -88,7 +92,7 @@
                         
                         <div class="blog-footer">
                             <span><i class="fa-solid fa-user"></i>Admin</span>
-                            <span><i class="fa-solid fa-calendar"></i>04 Aug 2026</span>
+                            <span><i class="fa-solid fa-calendar"></i>24 Sep 2026</span>
                         </div>
                         <a href="/Blog/read-article.html" class="btn btn-primary btn-read mt-4">Read Article</a>
                     </div>
@@ -112,7 +116,7 @@
                         <p>Learn how ozone is becoming the safest and most effective disinfection technology.</p>
                         
                         <div class="blog-footer">
-                            <span><i class="fa-solid fa-calendar"></i> Aug 2026</span>
+                            <span><i class="fa-solid fa-calendar"></i> Sep 2026</span>
                             <a href="/Blog/b-of-ozone.html" class="read-btn">Read More<i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
@@ -128,7 +132,7 @@
                         <p>Discover how ozone improves drinking water quality and removes harmful microbes.</p>
                         
                         <div class="blog-footer">
-                            <span><i class="fa-solid fa-calendar"></i> Aug 2026</span>
+                            <span><i class="fa-solid fa-calendar"></i> Sep 2026</span>
                             <a href="../Blog/water-treatment.html" class="read-btn">Read More<i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
@@ -144,7 +148,7 @@
                         <p>Improve indoor air quality with advanced ozone air purification systems.</p>
                         
                         <div class="blog-footer">
-                            <span><i class="fa-solid fa-calendar"></i> Aug 2026</span>
+                            <span><i class="fa-solid fa-calendar"></i> Sep 2026</span>
                             <a href="../Blog/air-purification.html" class="read-btn">Read More <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
@@ -160,7 +164,7 @@
                         <p>See how industries use ozone for wastewater treatment and food processing.</p>
                         
                         <div class="blog-footer">
-                            <span><i class="fa-solid fa-calendar"></i> Aug 2026</span>
+                            <span><i class="fa-solid fa-calendar"></i> Sep 2026</span>
                             <a href="../Blog/industrial-ozone.html" class="read-btn">Read More<i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
@@ -176,7 +180,7 @@
                         <p>Compare ozone and chlorine for water disinfection and understand the advantages of ozone technology.</p>
                         
                         <div class="blog-footer">
-                            <span><i class="fa-solid fa-calendar"></i> Aug 2026</span>
+                            <span><i class="fa-solid fa-calendar"></i> Sep 2026</span>
                             <a href="../Blog/ozone-vs-chlorine.html" class="read-btn">Read More<i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
@@ -192,7 +196,7 @@
                         <p>Latest innovations and smart ozone generators for homes and industries.</p>
                         
                         <div class="blog-footer">
-                            <span><i class="fa-solid fa-calendar"></i> Aug 2026</span>
+                            <span><i class="fa-solid fa-calendar"></i> Sep 2026</span>
                             <a href="../Blog/future-of-ozone.html" class="read-btn">Read More <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
@@ -211,6 +215,26 @@
 <!-- Navbar JavaScript -->
 <script src="/JS/navbar.js"></script>
 <script src="/JS/footer.js"></script>
+
+<script>
+document.getElementById("blogSearch").addEventListener("keyup", function () {
+
+    let searchValue = this.value.toLowerCase();
+    let blogs = document.querySelectorAll(".blog-card");
+
+    blogs.forEach(function (blog) {
+
+        let text = blog.innerText.toLowerCase();
+
+        if (text.includes(searchValue)) {
+            blog.parentElement.style.display = "";
+        } else {
+            blog.parentElement.style.display = "none";
+        }
+
+    });
+});
+</script>
 
 </body>
 </html>
