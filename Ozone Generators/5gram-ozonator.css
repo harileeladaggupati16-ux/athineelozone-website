@@ -112,9 +112,16 @@ body{
 }
 
 .cta{
-    background:#02409e;
+    background:#2a569a;
     color:white;
     padding:80px 0;
+}
+
+/* Footer */
+.footer{
+    background:#003366;
+    color:#fff;
+    padding:25px 0;
 }
 
 .btn-light{

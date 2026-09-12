@@ -54,22 +54,62 @@
 
     /* Hero */
     .hero{
-        background:linear-gradient(rgba(0,90,160,.8),rgba(0,60,120,.8)),
-        url('/Assets/Images/50\ Grams\ Ozonator\ 2.png') center/cover;
+        position:relative;
+        min-height:380px;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
         color:#fff;
         text-align:center;
-        padding:100px 20px;
+        padding:80px 20px;
+        background-image:
+            linear-gradient(rgba(0, 70, 140, 0.65), rgba(0, 50, 110, 0.65)),
+            url('/Assets/Images/50%20Grams%20Ozonator%202.png');
+        background-size:120%;
+        background-position:center top;
+        background-repeat:no-repeat;
+        overflow:hidden;
+        animation:zoomMove 20s ease-in-out infinite alternate;
     }
 
+    /* Hero Heading */
     .hero h1{
+        position:relative;
+        z-index:2;
         font-size:42px;
+        font-weight:700;
         margin-bottom:20px;
     }
 
+    /* Hero Paragraph */
     .hero p{
+        position:relative;
+        z-index:2;
         max-width:800px;
-        margin:auto;
+        margin:0 auto;
         font-size:18px;
+        line-height:1.7;
+    }
+
+    /* Background Movement */
+    @keyframes zoomMove{
+        
+        0%{
+            background-size:120%;
+            background-position:center top;
+        }
+
+        50%{
+            background-size:130%;
+            background-position:center center;
+        }
+
+        100%{
+            background-size:120%;
+            background-position:center bottom;
+        }
+
     }
 
     /* Container */
@@ -425,7 +465,7 @@
 
 <!-- Footer -->
 <footer>
-    <p>© 2022 Ozone Solutions. All Rights Reserved.</p>
+    <p>© 2022 ATHINEEL OZONE SYSTEMS. All Rights Reserved.</p>
 </footer>
 
 <!-- Bootstrap JavaScript -->

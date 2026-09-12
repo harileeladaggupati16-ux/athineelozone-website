@@ -178,13 +178,9 @@ body{
 
 /* Footer */
 .footer{
-    background:#0d6efd;
+    background:#003366;
     color:#fff;
-    padding:20px 0;
-}
-
-.footer p{
-    margin:0;
+    padding:25px 0;
 }
 
 /* List Style */
