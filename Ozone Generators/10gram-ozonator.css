@@ -183,7 +183,7 @@ section{
 
 .app-card:hover i{
     color:#fff;
-}
+}  
 
 /* CTA */
 .cta{
@@ -222,6 +222,7 @@ section{
     .hero-img{
         margin-top:40px;
     }
+
 }
 
 @media(max-width:768px){
@@ -233,6 +234,7 @@ section{
     .section-title h2{
         font-size:30px;
     }
+    
 }
 
 
